@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top">
+	<TextView
+        android:id="@+id/tvPedido"
+        style="@style/LabelInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:text="Pedido:" />
+	<TextView
+        android:id="@+id/lblPedido"
+        style="@style/LabelAnswerInForm.Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvPedido"
+        android:layout_toRightOf="@id/tvPedido"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:text="5161981" />
+	<TextView
+        android:id="@+id/lblCondicao"
+        style="@style/LabelAnswerInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvPedido"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:text="Boleto 21 Dias" />
+	<TextView
+        style="@style/LabelInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvPedido"
+        android:layout_toLeftOf="@id/lblCondicao"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:text="Condição:" />
+	<TextView
+        android:id="@+id/tvOperacao"
+        style="@style/LabelInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tvPedido"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:paddingBottom="@dimen/padding_two_line_grid"
+        android:text="Operação:" />
+	<TextView
+        android:id="@+id/lblOperacao"
+        style="@style/LabelAnswerInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPedido"
+        android:layout_toRightOf="@id/tvOperacao"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:paddingBottom="@dimen/padding_two_line_grid"
+        android:text="Venda de Mercadoria" />
+	<TextView
+        android:id="@+id/lblValor"
+        style="@style/LabelAnswerInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/lblCondicao"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:paddingBottom="@dimen/padding_two_line_grid"
+        android:text="53.091,13" />
+	<TextView
+        style="@style/LabelInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblCondicao"
+        android:layout_toLeftOf="@id/lblValor"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:paddingBottom="@dimen/padding_two_line_grid"
+        android:text="R$:" />
+	<TextView
+        android:id="@+id/lblEmailPergunta"
+        style="@style/LabelInForm"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblOperacao"
+        android:paddingBottom="@dimen/padding_two_line_grid"
+        android:text="E-mail:" />
+	<TextView
+        android:id="@+id/lblEmailResposta"
+        style="@style/LabelAnswerInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblOperacao"
+        android:layout_toRightOf="@id/lblEmailPergunta"
+        android:text="Sim" />
+</RelativeLayout>

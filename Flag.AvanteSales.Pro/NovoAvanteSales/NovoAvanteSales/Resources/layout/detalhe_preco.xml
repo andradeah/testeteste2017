@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:layout_marginTop="5dp">
+
+	<TableRow>
+
+		<TextView
+			android:id="@+id/lblDescontoTotal"
+			style="@style/LabelInForm"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:text="Desc Total:" />
+
+		<TextView
+			android:id="@+id/txtDescontoTotal"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			style="@style/LabelAnswerInForm.Right"
+			android:text="0" />
+
+		<TextView
+			android:id="@+id/lblAdicionalTotal"
+			style="@style/LabelInForm"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:text="Ad.F. Total:" />
+
+		<TextView
+			android:id="@+id/txtADFTotal"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			style="@style/LabelAnswerInForm.Right"
+			android:text="0" />
+	</TableRow>
+
+	<TableRow>
+
+		<TextView
+			android:id="@+id/lblDescMax"
+			style="@style/LabelInForm"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:text="Desc Máx:" />
+
+		<TextView
+			android:id="@+id/txtDescMax"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			style="@style/LabelAnswerInForm.Right"
+			android:text="0" />
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_weight="1"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_weight="1"/>
+	</TableRow>
+</TableLayout>

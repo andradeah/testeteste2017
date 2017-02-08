@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+	<LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+		<TextView
+            android:id="@+id/lblPesquisaMercado"
+            style="@style/LabelInForm.Center"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="@dimen/widgets_height" />
+		<TableLayout
+            style="@style/TableBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+			<TableRow
+                android:layout_width="match_parent"
+                android:background="@color/white">
+				<TextView
+                    android:id="@+id/lblNumeroPergunta"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    style="@style/LabelInForm.Right" />
+				<TextView
+                    android:id="@+id/lblPergunta"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:layout_width="0dp"
+                    style="@style/LabelAnswerInForm.Left" />
+			</TableRow>
+			<TableRow
+                android:layout_width="match_parent"
+                android:background="@color/white">
+				<TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    style="@style/LabelInForm.Right"
+                    android:text="Instruções: " />
+				<TextView
+                    android:id="@+id/lblIntrucoes"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    style="@style/LabelAnswerInForm.Left" />
+			</TableRow>
+			<TableRow
+                android:layout_width="match_parent"
+                android:background="@color/white">
+				<TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    style="@style/LabelInForm.Right"
+                    android:text="Marca: " />
+				<Spinner
+                    android:id="@+id/cboMarca"
+                    style="@style/LabelAnswerInForm.Right"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+			</TableRow>
+			<TableRow
+                android:layout_width="match_parent">
+				<TextView
+                    android:id="@+id/lblResposta"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    style="@style/LabelInForm.Right"
+                    android:text="Resposta: " />
+				<LinearLayout
+                    android:id="@+id/llResposta"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+	<Button
+        android:id="@+id/btnResponder"
+        android:text="Responder"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp" />
+	<LinearLayout
+        android:id="@+id/HeaderListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_marginColor"
+        android:orientation="horizontal">
+		<TextView
+            style="@style/HeaderGrid"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Pergunta" />
+		<TextView
+            android:id="@+id/lblMarca"
+            style="@style/HeaderGrid"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Marca" />
+	</LinearLayout>
+	<ListView
+		  android:cacheColorHint="#00000000"
+		  android:id="@+id/lvwPesquisa"
+		  android:layout_width="match_parent"
+		  android:layout_height="match_parent" />
+</LinearLayout>

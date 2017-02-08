@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+    android:id="@+id/headerContent"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+            style="@style/HeaderGrid"
+            android:layout_width="140dp"
+            android:text="Tipo Doc."
+            android:tag="@string/TipoDoc"/>
+
+    <TextView
+        style="@style/HeaderGrid"
+        android:layout_width="45dp"
+        android:text="Qtd"
+        android:tag="@string/Quantidade"/>
+
+    <TextView
+        style="@style/HeaderGrid.Right"
+        android:layout_width="match_parent"
+        android:text="R$"
+        android:tag="@string/Total"/>
+
+  </LinearLayout>
+    
+</LinearLayout>

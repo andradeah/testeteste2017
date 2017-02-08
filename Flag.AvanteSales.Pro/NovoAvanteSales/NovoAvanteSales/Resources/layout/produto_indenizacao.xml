@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+		<ImageView
+            android:id="@+id/imgLogo"
+            android:src="@drawable/logoavante_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center" />
+	</android.support.v7.widget.Toolbar>
+	<RelativeLayout
+        android:id="@+id/Cabecalho"
+        android:layout_below="@id/tbToolbar"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray">
+		<TextView
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblCodPdv"
+            android:text="123456" />
+		<TextView
+            android:layout_below="@id/lblCodPdv"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNomePdv"
+            android:text="nome pdv" />
+		<!--<Chronometer
+            android:id="@+id/cronometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />-->
+	</RelativeLayout>
+	<ScrollView
+		android:layout_below="@id/Cabecalho"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="top">
+			<LinearLayout
+				android:id="@+id/llItem"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_alignParentTop="true"
+				android:orientation="vertical">
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:id="@+id/lblCodigoProduto"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/LabelInForm.Center" />
+					<TextView
+						android:id="@+id/lblProduto"
+						android:ellipsize="end"
+						android:singleLine="true"
+						style="@style/LabelAnswerInForm"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content" />
+				</LinearLayout>
+				<TableLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp" />
+				<TableLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp">
+					<TableRow
+						android:layout_width="match_parent"
+						android:layout_marginTop="1px">
+						<TextView
+							style="@style/LabelInForm.Center"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="% Taxa indenização" />
+						<TextView
+							style="@style/LabelInForm.Center"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="Qtd. Inteira" />
+						<TextView
+							android:id="@+id/lblQtdeUnitaria"
+							style="@style/LabelInForm.Center"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="Qtd. Unitária" />
+						<TextView
+							style="@style/LabelInForm.Center"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+					</TableRow>
+					<TableRow
+						android:layout_width="match_parent">
+						<EditText
+							style="@style/EditText"
+							android:id="@+id/txtTaxaIndenizacao"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:hint="0"
+							android:inputType="numberDecimal"
+							android:digits="0123456789,."
+							android:maxLength="5" />
+						<EditText
+							style="@style/EditText"
+							android:id="@+id/txtQtdeInteiro"
+							android:imeOptions="actionGo"
+							android:nextFocusDown="@+id/txtQtdeUnidade"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:hint="0"
+							android:inputType="numberDecimal"
+							android:digits="0123456789,."
+							android:maxLength="5" />
+						<EditText
+							style="@style/EditText"
+							android:id="@+id/txtQtdeUnidade"
+							android:imeOptions="actionGo"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:hint="0"
+							android:inputType="number"
+							android:digits="0123456789"
+							android:maxLength="5" />
+						<Button
+							android:id="@+id/btnCalcular"
+							android:layout_width="0dp"
+							android:layout_gravity="center"
+							android:layout_weight="1"
+							android:text="Calc." />
+					</TableRow>
+				</TableLayout>
+				<TableLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp">
+					<TableRow
+						android:layout_width="match_parent"
+						android:layout_marginTop="1px">
+						<TextView
+							android:id="@+id/lblDesc"
+							style="@style/LabelInForm.Left"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="R$ Taxa" />
+						<TextView
+							style="@style/LabelInForm.Center"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="R$ Sem taxa" />
+						<TextView
+							style="@style/LabelInForm.Right"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="R$ Final" />
+					</TableRow>
+					<TableRow
+						android:layout_width="match_parent">
+						<TextView
+							android:id="@+id/lblTaxaIndenizacao"
+							style="@style/LabelAnswerInForm.Left"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="0,00" />
+						<TextView
+							android:id="@+id/lblValorSemIndenizacao"
+							style="@style/LabelAnswerInForm.Center"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="0,00" />
+						<TextView
+							android:id="@+id/lblValorTotalItem"
+							style="@style/LabelAnswerInForm.Right"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="0,00" />
+					</TableRow>
+					<TableRow
+						android:layout_width="match_parent"
+						android:layout_marginTop="1px">
+						<TextView
+							android:id="@+id/lblDesc"
+							style="@style/LabelInForm.Left"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="Motivo" />
+						<TextView
+							style="@style/LabelInForm.Center"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="R$ Unitário" />
+						<TextView
+							style="@style/LabelInForm.Right"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="KG Peso total" />
+					</TableRow>
+					<TableRow
+						android:layout_width="match_parent">
+						<Spinner
+							android:id="@+id/cboMotivo"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<TextView
+							android:id="@+id/lblValorUnitario"
+							style="@style/LabelAnswerInForm.Center"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="0,00" />
+						<TextView
+							android:id="@+id/lblPeso"
+							style="@style/LabelAnswerInForm.Right"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="0,00" />
+					</TableRow>
+					<TableRow>
+						<Button
+							android:id="@+id/btnCancelar"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:text="Cancelar indenização" />
+					</TableRow>
+				</TableLayout>
+			</LinearLayout>
+		</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

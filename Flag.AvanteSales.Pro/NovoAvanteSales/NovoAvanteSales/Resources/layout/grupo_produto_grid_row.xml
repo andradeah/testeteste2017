@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_gridview_items_snow">
+	<TextView
+		android:textColor="@color/defaultBlue"
+        android:lines="2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/lblGrupoProduto"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+	<LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+		<TextView
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:id="@+id/lblGrupoComercializacao"
+            android:layout_height="wrap_content"
+            android:layout_width="0px"
+			android:layout_weight="1"
+            android:textSize="12sp" />
+		<TextView
+            android:paddingLeft="3dp"
+            android:paddingRight="5dp"
+            android:id="@+id/lblQuantidadeVenda"
+            android:layout_height="wrap_content"
+            android:layout_width="0px"
+            android:textSize="12sp"
+			android:layout_weight="0.5"
+            android:textColor="@color/defaultBlue" />
+		<TextView
+			android:paddingRight="3dp"
+			android:id="@+id/lblMarkup"
+			android:layout_height="wrap_content"
+			android:layout_width="0px"
+			android:layout_weight="0.5"
+			android:textSize="12sp" />
+	</LinearLayout>
+</LinearLayout>

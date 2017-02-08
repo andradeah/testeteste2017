@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+	<TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+		<TableRow>
+			<TextView
+                android:id="@+id/lblGrupoComercial"
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Grupo comercialização:" />
+			<Spinner
+                android:id="@+id/cmbGrupoComercializacao"
+                style="@style/LabelAnswerInForm"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+		</TableRow>
+		<TableRow>
+			<Spinner
+                android:id="@+id/cmbGrupoProduto"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+			<Spinner
+                android:id="@+id/cmbFamiliaProduto"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+		</TableRow>
+	</TableLayout>
+	<LinearLayout
+        android:id="@+id/HeaderListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_marginColor"
+        android:orientation="horizontal">
+		<TextView
+            style="@style/HeaderGrid"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:text="Cód" />
+		<TextView
+            style="@style/HeaderGrid"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:text="Grupo" />
+		<TextView
+            style="@style/HeaderGrid"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:text="Família" />
+	</LinearLayout>
+	<ListView
+        android:cacheColorHint="#00000000"
+        android:id="@+id/lvwProdutos"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

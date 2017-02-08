@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+		<ImageView
+            android:id="@+id/imgLogo"
+            android:src="@drawable/logoavante_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center" />
+	</android.support.v7.widget.Toolbar>
+	<RelativeLayout
+        android:id="@+id/Cabecalho"
+        android:layout_below="@id/tbToolbar"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray">
+		<TextView
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblCodPdv"
+            android:text="123456" />
+		<TextView
+            android:layout_below="@id/lblCodPdv"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNomePdv"
+            android:text="nome pdv" />
+		<!--<Chronometer
+            android:id="@+id/cronometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />-->
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_below="@id/Cabecalho"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:id="@+id/llFooter"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:orientation="horizontal">
+			<Button
+				android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginBottom="10dp"
+				android:id="@+id/btnPesquisar"
+				android:text="Pesquisar produto"
+				android:layout_width="0dp"
+				android:layout_weight="1" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_above="@id/llFooter"
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="top"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/lblProduto"
+				style="@style/TextInGrid.Line1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				android:gravity="center"
+				android:singleLine="true" />
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:orientation="horizontal">
+				<EditText
+					style="@style/EditText"
+					android:id="@+id/txtProduto"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					android:hint="Código"
+					android:inputType="number" />
+				<Button
+					android:id="@+id/btnProduto"
+					android:layout_width="0dp"
+					android:layout_weight=".3"
+					android:text="Ok" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:id="@+id/lblQtdeInteiro"
+					style="@style/LabelInForm"
+					android:layout_width="0dp"
+					android:layout_weight="0.8"
+					android:gravity="center_horizontal"
+					android:text="Qtd. Inteira." />
+				<EditText
+					style="@style/EditText"
+					android:id="@+id/txtQtdeInteiro"
+					android:layout_width="0dp"
+					android:layout_weight=".9"
+					android:hint="0"
+					android:inputType="number"
+					android:digits="0123456789"
+					android:maxLength="6" />
+				<TextView
+					android:id="@+id/lblQtdeUnidade"
+					style="@style/LabelInForm"
+					android:layout_width="0dp"
+					android:layout_weight="0.8"
+					android:gravity="center_horizontal"
+					android:text="Qtd. Unit." />
+				<EditText
+					style="@style/EditText"
+					android:id="@+id/txtQtdeUnidade"
+					android:layout_width="0dp"
+					android:layout_weight=".9"
+					android:hint="0"
+					android:inputType="number"
+					android:digits="0123456789"
+					android:maxLength="6" />
+				<Button
+					android:id="@+id/btnColetar"
+					android:layout_width="0dp"
+					android:layout_gravity="center"
+					android:layout_weight="1"
+					android:text="Coletar" />
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/HeaderListView"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/background_marginColor"
+				android:orientation="horizontal">
+				<TextView
+					style="@style/HeaderGrid"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					android:text="Produto" />
+				<TextView
+					style="@style/HeaderGrid.Right"
+					android:layout_width="0dp"
+					android:layout_weight=".25"
+					android:text="Qtd." />
+			</LinearLayout>
+			<ListView
+				android:cacheColorHint="#00000000"
+				android:id="@+id/lvwEstoque"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

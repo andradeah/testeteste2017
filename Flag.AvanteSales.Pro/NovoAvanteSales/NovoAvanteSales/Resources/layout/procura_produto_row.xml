@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="top"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+  <TextView
+      android:id="@+id/tvDescricao"
+      style="@style/TextInGrid.Line1" />
+
+  <LinearLayout
+      android:layout_height="wrap_content"
+      android:layout_gravity="left"
+      android:orientation="horizontal" >
+
+    <ImageView
+      android:id="@+id/imgProdEspecifico"
+      android:layout_width="12dp"
+      android:layout_height="12dp"
+      android:layout_gravity="center_vertical"
+      android:src="@drawable/circulo_azul"/>
+
+  <TextView
+      android:id="@+id/tvCodigo"
+      style="@style/TextInGrid.Line2"
+      android:layout_width="0dp"
+      android:layout_weight=".35" />
+
+  <TextView
+      android:id="@+id/tvQuantidade"
+      style="@style/TextInGrid.Line2"
+      android:layout_width="0dp"
+      android:layout_weight=".35" />
+  
+  </LinearLayout>
+</LinearLayout>

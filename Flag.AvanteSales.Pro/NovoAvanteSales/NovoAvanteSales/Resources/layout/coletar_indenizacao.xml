@@ -1,0 +1,280 @@
+﻿<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+		<ImageView
+            android:id="@+id/imgLogo"
+            android:src="@drawable/logoavante_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center" />
+	</android.support.v7.widget.Toolbar>
+	<RelativeLayout
+        android:id="@+id/Cabecalho"
+        android:layout_below="@id/tbToolbar"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray">
+		<TextView
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblCodPdv"
+            android:text="123456" />
+		<TextView
+            android:layout_below="@id/lblCodPdv"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNomePdv"
+            android:text="nome pdv" />
+		<!--<Chronometer
+            android:id="@+id/cronometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />-->
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_below="@id/Cabecalho"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+			<TableLayout
+				style="@style/TableBackground"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true">
+				<TableRow
+					style="@style/TableRowWithBorder"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<Button
+						android:layout_marginRight="10dp"
+						android:layout_marginLeft="10dp"
+						android:id="@+id/btnNovoProduto"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:text="Novo" />
+					<Button
+						android:layout_marginRight="10dp"
+						android:id="@+id/btnListaProdutos"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:text="Lista (999)" />
+				</TableRow>
+			</TableLayout>
+		</LinearLayout>
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@id/Cabecalho"
+			android:layout_above="@id/llFooter"
+			android:layout_alignParentTop="true">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="top"
+				android:orientation="vertical">
+				<TableLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_gravity="center_horizontal"
+					android:layout_margin="1dp">
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Indenização:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<TextView
+							android:id="@+id/lblIndenizacao"
+							style="@style/LabelAnswerInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<TextView
+							android:text="Vendedor:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<TextView
+							android:id="@+id/lblVendedor"
+							style="@style/LabelAnswerInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+					</TableRow>
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Nº nota:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<EditText
+							style="@style/EditText"
+							android:id="@+id/txtNumNota"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:digits="0123456789"
+							android:maxLength="10"
+							android:inputType="number"
+							android:imeOptions="actionNext" />
+						<TextView
+							android:text="Série nota:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<EditText
+							style="@style/EditText"
+							android:id="@+id/txtSerie"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:digits="0123456789abcdefghijklmnopqrstuvxzwyABCDEFGHIJKLMNOPQRSTUVXZWY"
+							android:maxLength="3"
+							android:imeOptions="actionNext" />
+					</TableRow>
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Data de cadastro:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<avantesales.pro.controles.CustomDatePicker
+							android:id="@+id/dpCadastro"
+							android:layout_width="0dp"
+							android:layout_column="2"
+							android:layout_weight="1"
+							android:enabled="false"
+							android:imeOptions="actionNext" />
+					</TableRow>
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Data de devolução:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<avantesales.pro.controles.CustomDatePicker
+							android:digits="0123456789"
+							android:id="@+id/dpDevolucao"
+							android:layout_width="0dp"
+							android:layout_column="2"
+							android:layout_weight="1"
+							android:imeOptions="actionNext" />
+					</TableRow>
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Grupo comercialização:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<Spinner
+							android:id="@+id/cboGrupoComercializacao"
+							style="@style/LabelAnswerInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+					</TableRow>
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Condição pagamento:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<Spinner
+							android:id="@+id/cboCondicaoPagamento"
+							style="@style/LabelAnswerInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+					</TableRow>
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Responsável:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<EditText
+							style="@style/EditText"
+							android:id="@+id/txtResponsavel"
+							android:layout_width="0dp"
+							android:layout_weight="1"
+							android:maxLength="40"
+							android:imeOptions="actionNext" />
+					</TableRow>
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Peso total (KG):"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<TextView
+							android:id="@+id/lblPesoTotal"
+							style="@style/LabelAnswerInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+					</TableRow>
+					<TableRow
+						style="@style/TableRowWithBorder"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView
+							android:text="Volume:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<TextView
+							android:id="@+id/lblVolume"
+							style="@style/LabelAnswerInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<TextView
+							android:text="Valor:"
+							style="@style/LabelInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+						<TextView
+							android:id="@+id/lblValor"
+							style="@style/LabelAnswerInForm"
+							android:layout_width="0dp"
+							android:layout_weight="1" />
+					</TableRow>
+				</TableLayout>
+			</LinearLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

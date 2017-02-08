@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+		<ImageView
+            android:id="@+id/imgLogo"
+            android:src="@drawable/logoavante_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center" />
+	</android.support.v7.widget.Toolbar>
+	<RelativeLayout
+        android:id="@+id/Cabecalho"
+        android:layout_below="@id/tbToolbar"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray">
+		<TextView
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblCodPdv"
+            android:text="123456" />
+		<TextView
+            android:layout_below="@id/lblCodPdv"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNomePdv"
+            android:text="nome pdv" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_below="@id/Cabecalho"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+
+		<LinearLayout
+			android:id="@+id/llFooter"
+			android:layout_width="match_parent"
+			android:layout_alignParentBottom="true"
+			android:orientation="horizontal" >
+
+			<TextView
+				   style="@style/LabelInForm.Left"
+				   android:layout_width="0dp"
+				   android:layout_weight="1"
+				   android:text="Total do produto(R$):" />
+
+			<TextView
+				android:id="@+id/tvTotalProduto"
+				style="@style/LabelAnswerInForm.Left"
+				android:layout_width="0dp"
+				android:layout_weight="1" />
+
+			<TextView
+				  style="@style/LabelInForm.Left"
+				  android:layout_width="0dp"
+				  android:layout_weight="1"
+				  android:text="Total do pedido(R$):" />
+
+			<TextView
+				android:id="@+id/tvTotalPedido"
+				style="@style/LabelAnswerInForm.Left"
+				android:layout_width="0dp"
+				android:layout_weight="1" />
+
+		</LinearLayout>
+
+		<ScrollView
+		 android:layout_above="@id/llFooter"
+		 android:layout_height="match_parent"
+		 android:layout_width="match_parent">
+
+			<TableLayout
+				style="@style/TableBackground"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_margin="1dp" >
+
+				<!--<TableRow
+          style="@style/TableRowWithBorder"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/LabelInForm.Left"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:text="Cliente:" />
+
+        <EditText
+            android:id="@+id/txtCliente"
+            style="@style/LabelAnswerInForm.Left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:imeOptions="actionSearch"
+            android:inputType="number"
+            android:digits="0123456789"/>
+      </TableRow>
+
+      <TableRow
+         style="@style/TableRowWithBorder"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/LabelInForm.Left"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:text="Razão social:" />
+
+        <TextView
+            android:id="@+id/tvRazaoSocial"
+            style="@style/LabelAnswerInForm.Left"
+            android:layout_width="0dp"
+            android:layout_weight="1.0" />
+      </TableRow>-->
+
+				<TableRow
+					style="@style/TableRowWithBorder"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content" >
+
+					<TextView
+						style="@style/LabelInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="0.4"
+						android:text="Condição de pagamento:" />
+
+					<Spinner
+						android:id="@+id/cboCondicaoPagamento"
+						android:layout_width="0dp"
+						android:layout_weight="1" />
+				</TableRow>
+
+				<TableRow
+					style="@style/TableRowWithBorder"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content" >
+
+					<TextView
+						style="@style/LabelInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="0.5"
+						android:text="Item:" />
+
+					<EditText
+						style="@style/EditText"
+						android:id="@+id/txtItem"
+						android:layout_width="0dp"
+						android:layout_weight="0.7"
+						android:inputType="number"
+						android:digits="0123456789"
+						android:imeOptions="actionSearch"/>
+
+					<!--<Button
+          android:id="@+id/btnPesquisarProduto"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:text="Pesquisar"/>-->
+					<ImageButton
+					  android:id="@+id/btnPesquisarProduto"
+					  android:layout_width="0dp"
+					  android:layout_weight="0.3"
+					  android:src="@drawable/ic_search" />
+
+					<TextView
+					 style="@style/LabelInForm.Left"
+					 android:layout_width="0dp"
+					 android:layout_weight="0.3"
+					 android:text="UN:" />
+
+					<TextView
+						android:id="@+id/tvUnidadeMedida"
+						style="@style/LabelAnswerInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="0.3" />
+				</TableRow>
+
+				<TableRow
+				   style="@style/TableRowWithBorder"
+				   android:layout_width="match_parent"
+				   android:layout_height="wrap_content" >
+
+					<TextView
+						style="@style/LabelInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="0.4"
+						android:text="Descrição:" />
+
+					<TextView
+						android:id="@+id/tvDescricao"
+						style="@style/LabelAnswerInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="1" />
+				</TableRow>
+
+				<TableRow
+				  style="@style/TableRowWithBorder"
+				  android:layout_width="match_parent"
+				  android:layout_height="wrap_content" >
+
+					<TextView
+					  style="@style/LabelInForm.Left"
+					  android:layout_width="0dp"
+					  android:layout_weight="0.8"
+					  android:text="Tabela de preço:" />
+
+					<Spinner
+						android:id="@+id/cboTabelaPreco"
+						style="@style/LabelAnswerInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="1" />
+
+					<TextView
+					   style="@style/LabelInForm.Left"
+					   android:layout_width="0dp"
+					   android:layout_weight="0.8"
+					   android:text="Preço tabela(R$):" />
+
+					<TextView
+						android:id="@+id/tvPrecoTabela"
+						style="@style/LabelAnswerInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="1" />
+				</TableRow>
+
+				<TableRow
+				   style="@style/TableRowWithBorder"
+				   android:layout_width="match_parent"
+				   android:layout_height="wrap_content" >
+
+					<TextView
+						style="@style/LabelInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="0.6"
+						android:text="Qtd. Inteira:" />
+
+					<EditText
+						style="@style/EditText"
+						android:id="@+id/txtQtdInteira"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:inputType="numberDecimal"
+						android:digits="0123456789,."
+						android:maxLength="8"/>
+
+					<TextView
+						android:id="@+id/tvQtdUnitaria"
+					   style="@style/LabelInForm.Left"
+					   android:layout_width="0dp"
+					   android:layout_weight="0.7"
+					   android:layout_marginLeft="7dp"
+					   android:text="Qtd. Unitária:"/>
+
+					<EditText
+						style="@style/EditText"
+						android:id="@+id/txtQtdUnitaria"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:inputType="number"
+						android:digits="0123456789"
+						android:maxLength="6"/>
+				</TableRow>
+				<TableRow
+						 style="@style/TableRowWithBorder"
+						 android:layout_width="match_parent"
+						 android:layout_height="wrap_content" >
+
+					<TextView
+						android:id="@+id/tvDesconto"
+						style="@style/LabelInForm.Left"
+						android:layout_width="0dp"
+						android:layout_weight="0.4"
+						android:text="Desconto:" />
+
+					<EditText
+						android:id="@+id/txtDesconto"
+						style="@style/EditText"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:inputType="numberDecimal"
+						android:digits="0123456789,."
+						android:maxLength="8"/>
+				</TableRow>
+
+				<TableRow
+				  style="@style/TableRowWithBorder"
+				  android:layout_width="match_parent"
+				  android:layout_height="wrap_content" >
+
+					<Button
+					  android:id="@+id/btnAdicionarLista"
+					  android:layout_width="0dp"
+					  android:layout_weight="1"
+					  android:text="Adicionar à lista"/>
+
+					<Button
+					  android:id="@+id/btnListaProdutos"
+					  android:layout_width="0dp"
+					  android:layout_weight="1"
+					  android:text="Lista ( 0 )"/>
+
+				</TableRow>
+			</TableLayout>
+
+		</ScrollView>
+
+	</RelativeLayout>
+
+
+</RelativeLayout>

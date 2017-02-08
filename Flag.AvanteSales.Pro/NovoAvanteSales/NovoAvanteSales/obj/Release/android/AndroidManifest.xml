@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0.0.32" package="avantesales.pro" android:installLocation="internalOnly">
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.READ_INPUT_STATE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+  <application android:icon="@drawable/ic_avante_sales_pro" android:label="AvanteSales Pro" android:theme="@style/AvanteSalesTheme" android:name="android.app.Application" android:allowBackup="true">
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Camera" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ColetarEstoque" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ColetarIndenizacao" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Cliente" android:windowSoftInputMode="adjustNothing" />
+    <activity android:screenOrientation="portrait" android:name="md5fbed35bf6fb7f7a6426cd33e3bbcefea.DialogAutenticar" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="md5fbed35bf6fb7f7a6426cd33e3bbcefea.DialogCliente" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="md5fbed35bf6fb7f7a6426cd33e3bbcefea.DialogDigitacaoEmail" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="md5fbed35bf6fb7f7a6426cd33e3bbcefea.DialogDigitacaoTelefone" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogFragmentProdutoComum" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogFragmentProdutoImagem" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="md5fbed35bf6fb7f7a6426cd33e3bbcefea.DialogInformacaoProduto" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogMetaLinha" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="md5fbed35bf6fb7f7a6426cd33e3bbcefea.DialogSenhaArquivo" android:theme="@style/AvanteSales.Theme.Dialogs" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.DocumentoReceber" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Entrada" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Expediente" />
+    <activity android:screenOrientation="sensorLandscape" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Layout" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ListaCliente" android:windowSoftInputMode="adjustNothing" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ListaProdutosIndenizacao" />
+    <activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.ListaRelatorio" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Login" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Main" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ProcuraProduto" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Produtos" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ProdutoIndenizacao" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Sincronizacao" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Sobre" />
+    <activity android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.MainActivity" android:icon="@drawable/ic_avante_sales_pro" android:label="AvanteSales Pro">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Cliente" android:parentActivityName="avantesales.pro.activities.Main">
+      <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="avantesales.pro.activities.Main" />
+    </activity>
+    <activity android:screenOrientation="portrait" android:theme="@style/AvanteSales.Theme.Dialogs" android:name="md5fbed35bf6fb7f7a6426cd33e3bbcefea.DialogProdutoComum" />
+    <activity android:label="HistoricoIndenizacao" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.HistoricoIndenizacao" />
+    <activity android:label="ListaIndenizacao" android:screenOrientation="portrait" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ListaIndenizacao" />
+    <activity android:label="ListaRelatorio" android:parentActivityName="md5e93e0e65cca7dbdc8c7c4a87fc493852.Main" android:screenOrientation="portrait" android:theme="@style/AvanteSalesTheme" android:windowSoftInputMode="stateHidden|adjustUnspecified" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.Relatorio" />
+    <activity android:label="Relatorios" android:screenOrientation="portrait" android:theme="@style/AvanteSalesTheme" android:windowSoftInputMode="stateUnspecified|adjustNothing" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.RelatorioPdv" />
+    <service android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ServiceExpediente" />
+    <activity android:label="ServiceMessageBox" android:theme="@style/AvanteSales.Theme.Dialogs" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.ServiceMessageBox" />
+    <activity android:label="SimulacaoPreco" android:name="md5e93e0e65cca7dbdc8c7c4a87fc493852.SimulacaoPreco" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="avantesales.pro.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="14" />
+</manifest>

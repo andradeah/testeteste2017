@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvEmpresa"
+        style="@style/TextInGrid"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black" />
+    <TableLayout
+        style="@style/TableBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/tableRow1"
+            style="@style/TableRowWithBorder"
+            android:layout_width="match_parent">
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".775"
+                android:text="Data:" />
+            <TextView
+                android:id="@+id/tvData"
+                style="@style/LabelAnswerInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".85"
+                android:layout_marginRight="1dp" />
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".95"
+                android:text="R$ Receber:" />
+            <TextView
+                android:id="@+id/tvTotalReceber"
+                style="@style/LabelAnswerInForm.Right"
+                android:layout_width="0dp"
+                android:layout_weight=".75" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow1"
+            style="@style/TableRowWithBorder"
+            android:layout_width="match_parent">
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".775"
+                android:text="Título:" />
+            <TextView
+                android:id="@+id/tvTitulo"
+                style="@style/LabelAnswerInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".85"
+                android:layout_marginRight="1dp" />
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".95"
+                android:text="R$ Juros:" />
+            <TextView
+                android:id="@+id/tvTotalJuros"
+                style="@style/LabelAnswerInForm.Right"
+                android:layout_width="0dp"
+                android:layout_weight=".75" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow1"
+            style="@style/TableRowWithBorder"
+            android:layout_width="match_parent">
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".775"
+                android:text="N. Doc.:" />
+            <TextView
+                android:id="@+id/tvNumeroDoc"
+                style="@style/LabelAnswerInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".85"
+                android:layout_marginRight="1dp" />
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".95"
+                android:text="R$ Multa:" />
+            <TextView
+                android:id="@+id/tvTotalMulta"
+                style="@style/LabelAnswerInForm.Right"
+                android:layout_width="0dp"
+                android:layout_weight=".75" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow1"
+            style="@style/TableRowWithBorder"
+            android:layout_width="match_parent">
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".775"
+                android:text="Classe:" />
+            <TextView
+                android:id="@+id/tvClasse"
+                style="@style/LabelAnswerInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".85"
+                android:layout_marginRight="1dp" />
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".95"
+                android:text="R$ Encargos:" />
+            <TextView
+                android:id="@+id/tvTotalEncargos"
+                style="@style/LabelAnswerInForm.Right"
+                android:layout_width="0dp"
+                android:layout_weight=".75" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow1"
+            style="@style/TableRowWithBorder"
+            android:layout_width="match_parent">
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".775"
+                android:text="Vendedor:" />
+            <TextView
+                android:id="@+id/tvVendedor"
+                style="@style/LabelAnswerInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".85"
+                android:layout_marginRight="1dp" />
+            <TextView
+                style="@style/LabelInForm"
+                android:layout_width="0dp"
+                android:layout_weight=".95"
+                android:text="R$ Desconto:" />
+            <TextView
+                android:id="@+id/tvTotalDesconto"
+                style="@style/LabelAnswerInForm.Right"
+                android:layout_width="0dp"
+                android:layout_weight=".75" />
+        </TableRow>
+    </TableLayout>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/linhabranca_2_telaabout" />
+</LinearLayout>

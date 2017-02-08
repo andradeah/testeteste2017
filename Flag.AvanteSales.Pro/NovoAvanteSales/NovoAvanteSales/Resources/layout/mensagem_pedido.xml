@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+	<CheckBox
+        android:id="@+id/chkFob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frete Destinatário (FOB)" />
+	<TextView
+        android:id="@+id/lblMensagem"
+        style="@style/LabelInForm.Left"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Mensagem" />
+	<EditText
+        android:id="@+id/txtMensagem"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal|left"
+        android:hint="Digite aqui sua mensagem." />
+	<TextView
+        android:id="@+id/lblRecado"
+        style="@style/LabelInForm.Left"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Recado" />
+	<EditText
+        android:id="@+id/txtRecado"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal|left"
+        android:hint="Digite aqui seu recado." />
+</LinearLayout>

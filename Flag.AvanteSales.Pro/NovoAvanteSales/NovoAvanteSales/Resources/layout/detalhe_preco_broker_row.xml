@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+	<TextView
+		  android:id="@+id/tvSeq"
+		  style="@style/TextInGrid.Right"
+		  android:layout_width="0dp"
+		  android:layout_weight="0.48"
+		  android:text="200" />
+
+	<TextView
+		android:id="@+id/tvCondicao"
+		style="@style/TextInGrid.Right"
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:text="ICVA" />
+
+	<TextView
+		android:id="@+id/tvDado"
+		style="@style/TextInGrid.Right"
+		android:layout_width="0dp"
+		android:layout_weight="0.62"
+		android:text="962,10" />
+
+	<TextView
+		android:id="@+id/tvValorResultado"
+		style="@style/TextInGrid.Right"
+		android:layout_width="0dp"
+		android:layout_weight="0.95"
+		android:text="111,30" />
+</LinearLayout>

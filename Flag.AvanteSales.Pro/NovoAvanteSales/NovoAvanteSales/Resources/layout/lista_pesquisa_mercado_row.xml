@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top">
+	<TextView
+        android:id="@+id/tvPesquisa"
+        style="@style/LabelInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:text="Pesquisa:" />
+	<TextView
+        android:id="@+id/lblPesquisa"
+        style="@style/LabelAnswerInForm.Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvPesquisa"
+        android:layout_toRightOf="@id/tvPesquisa"
+        android:paddingTop="@dimen/padding_two_line_grid" />
+	<TextView
+        android:id="@+id/lblQtdPerguntas"
+        style="@style/LabelAnswerInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvPesquisa"
+        android:paddingTop="@dimen/padding_two_line_grid" />
+	<TextView
+        android:id="@+id/tvQtdPerguntas"
+        style="@style/LabelInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvPesquisa"
+        android:layout_toLeftOf="@id/lblQtdPerguntas"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:text="Qtd. Perguntas:" />
+	<TextView
+        android:id="@+id/tvStatus"
+        style="@style/LabelInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tvPesquisa"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:paddingBottom="@dimen/padding_two_line_grid"
+        android:text="Status:" />
+	<TextView
+        android:id="@+id/lblStatus"
+        style="@style/LabelAnswerInForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPesquisa"
+        android:layout_toRightOf="@id/tvStatus"
+        android:paddingTop="@dimen/padding_two_line_grid"
+        android:paddingBottom="@dimen/padding_two_line_grid" />
+</RelativeLayout>

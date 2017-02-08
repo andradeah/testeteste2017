@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="top"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+	<TextView
+		android:id="@+id/tvDescProduto"
+		style="@style/TextInGrid.Line1"
+		android:text="NESCAU ACTIGEN-E ACHOCOLATADO PO LIGHT 30x400gBR" />
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:orientation="horizontal" >
+
+
+		<ImageView
+			android:id="@+id/imgProdEspecifico"
+			android:layout_width="12dp"
+			android:layout_height="12dp"
+			android:layout_marginBottom="4dp"
+			android:src="@drawable/circulo_azul" />
+
+		<TextView
+			android:id="@+id/tvCodigo"
+			style="@style/TextInGrid.Line2"
+			android:layout_width="0dp"
+			android:layout_weight="1" />
+
+		<TextView
+			android:id="@+id/tvVendaMes"
+			style="@style/TextInGrid.Line2"
+			android:layout_width="0dp"
+			android:layout_weight=".38" />
+
+		<TextView
+			android:id="@+id/tvVendaUltimaVisita"
+			style="@style/TextInGrid.Line2"
+			android:layout_width="0dp"
+			android:layout_weight=".38" />
+
+		<TextView
+			android:id="@+id/tvEstoque"
+			style="@style/TextInGrid.Line2"
+			android:layout_width="0dp"
+			android:layout_weight=".62" />
+
+		<TextView
+			android:id="@+id/tvUnidadeMedida"
+			style="@style/TextInGrid.Line2"
+			android:layout_width="0dp"
+			android:layout_weight=".77" />
+
+		<TextView
+			android:id="@+id/tvGrupoComercializacao"
+			style="@style/TextInGrid.Line2"
+			android:layout_width="0dp"
+			android:layout_weight=".85" />
+
+		<TextView
+			android:id="@+id/tvValorUnitario"
+			style="@style/TextInGrid.Line2.Right"
+			android:layout_width="0dp"
+			android:layout_weight=".74" />
+	</LinearLayout>
+</LinearLayout>

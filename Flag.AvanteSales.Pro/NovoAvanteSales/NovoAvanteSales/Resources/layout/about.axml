@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <AbsoluteLayout
+        android:id="@+id/AbsoluteLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:id="@+id/labelFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="81dp"
+            android:layout_y="459dp"
+            android:text="© {0} Flag Intelliwan Ltda"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="20px" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:layout_x="13dp"
+            android:layout_y="278dp"
+            android:src="@drawable/logo_avante_login" />
+        <TextView
+            android:id="@+id/labelVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="120dp"
+            android:layout_y="389dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="20px" />
+        <TextView
+            android:id="@+id/labelVersionWS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="140dp"
+            android:layout_y="410dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="16px"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="68dp"
+            android:layout_height="70dp"
+            android:layout_x="231dp"
+            android:layout_y="264dp"
+            android:src="@drawable/logofabricadeprodutosbranco_telaabout_branco" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="28dp"
+            android:layout_y="439dp"
+            android:src="@drawable/linhabranca_2_telaabout" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="32dp"
+            android:layout_y="179dp"
+            android:text="Sistema de Automação de Vendas"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="25px" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="284dp"
+            android:layout_height="wrap_content"
+            android:layout_x="15dp"
+            android:layout_y="7dp"
+            android:src="@drawable/logo_avante_login" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="64dp"
+            android:layout_height="68dp"
+            android:layout_x="133dp"
+            android:layout_y="262dp"
+            android:src="@drawable/logoandroidbranco_telaabout_branco" />
+    </AbsoluteLayout>
+</ScrollView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<TextView
+	   android:layout_alignParentTop="true"
+	   android:id="@+id/lblTitulo"
+	   style="@style/TitlePage"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:text="RESUMO DE PESO DOS PEDIDOS" />
+
+	<android.support.design.widget.TabLayout
+		android:layout_below="@id/lblTitulo"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/tblTab"
+		android:layout_gravity="center|top"
+		app:tabMode="fixed"
+		app:tabGravity="fill" />
+
+	<android.support.v4.view.ViewPager
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/vwpTab"
+		android:layout_below="@id/tblTab"
+		android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetServerDate">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerDateResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpresas">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmpresasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpresasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravaLogSync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="COD_EMPREGADO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TIPO_OPERACAO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DSC_STATUS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COD_REVENDA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravaLogSyncResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsEmpregado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="COD_EMPREGADO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="COD_REVENDA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsEmpregadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsEmpregadoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arch" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="maj" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="min" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="bld" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateInfoResult" type="tns:UpdateInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsAvailable" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="newVersion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCabFiles">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCabFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCabFilesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaVersaoDLL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mensagem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versaoCompativel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versaoAplicativoAvanteSales.Pro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaVersaoDLLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificaVersaoDLLResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensagem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaImagem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="espacoDisponivelAndroid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="codRevenda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imagensExistentes" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CargaImagemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaImagemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Carga">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaParcial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaParcialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaParcialResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Descarga">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DescargaResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServerDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerDate" />
+  </wsdl:message>
+  <wsdl:message name="GetServerDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpresasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpresasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GravaLogSyncSoapIn">
+    <wsdl:part name="parameters" element="tns:GravaLogSync" />
+  </wsdl:message>
+  <wsdl:message name="GravaLogSyncSoapOut">
+    <wsdl:part name="parameters" element="tns:GravaLogSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsEmpregadoSoapIn">
+    <wsdl:part name="parameters" element="tns:IsEmpregado" />
+  </wsdl:message>
+  <wsdl:message name="IsEmpregadoSoapOut">
+    <wsdl:part name="parameters" element="tns:IsEmpregadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdateInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCabFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCabFiles" />
+  </wsdl:message>
+  <wsdl:message name="GetCabFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCabFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaVersaoDLLSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaVersaoDLL" />
+  </wsdl:message>
+  <wsdl:message name="VerificaVersaoDLLSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaVersaoDLLResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaImagemSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaImagem" />
+  </wsdl:message>
+  <wsdl:message name="CargaImagemSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaImagemResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaSoapIn">
+    <wsdl:part name="parameters" element="tns:Carga" />
+  </wsdl:message>
+  <wsdl:message name="CargaSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaParcialSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaParcial" />
+  </wsdl:message>
+  <wsdl:message name="CargaParcialSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaParcialResponse" />
+  </wsdl:message>
+  <wsdl:message name="DescargaSoapIn">
+    <wsdl:part name="parameters" element="tns:Descarga" />
+  </wsdl:message>
+  <wsdl:message name="DescargaSoapOut">
+    <wsdl:part name="parameters" element="tns:DescargaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AvanteSales.ProSoap">
+    <wsdl:operation name="GetServerDate">
+      <wsdl:input message="tns:GetServerDateSoapIn" />
+      <wsdl:output message="tns:GetServerDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpresas">
+      <wsdl:input message="tns:GetEmpresasSoapIn" />
+      <wsdl:output message="tns:GetEmpresasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GravaLogSync">
+      <wsdl:input message="tns:GravaLogSyncSoapIn" />
+      <wsdl:output message="tns:GravaLogSyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEmpregado">
+      <wsdl:input message="tns:IsEmpregadoSoapIn" />
+      <wsdl:output message="tns:IsEmpregadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateInfo">
+      <wsdl:input message="tns:GetUpdateInfoSoapIn" />
+      <wsdl:output message="tns:GetUpdateInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCabFiles">
+      <wsdl:input message="tns:GetCabFilesSoapIn" />
+      <wsdl:output message="tns:GetCabFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaVersaoDLL">
+      <wsdl:input message="tns:VerificaVersaoDLLSoapIn" />
+      <wsdl:output message="tns:VerificaVersaoDLLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaImagem">
+      <wsdl:input message="tns:CargaImagemSoapIn" />
+      <wsdl:output message="tns:CargaImagemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Carga">
+      <wsdl:input message="tns:CargaSoapIn" />
+      <wsdl:output message="tns:CargaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaParcial">
+      <wsdl:input message="tns:CargaParcialSoapIn" />
+      <wsdl:output message="tns:CargaParcialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Descarga">
+      <wsdl:input message="tns:DescargaSoapIn" />
+      <wsdl:output message="tns:DescargaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AvanteSales.ProSoap" type="tns:AvanteSales.ProSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerDate">
+      <soap:operation soapAction="http://tempuri.org/GetServerDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpresas">
+      <soap:operation soapAction="http://tempuri.org/GetEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravaLogSync">
+      <soap:operation soapAction="http://tempuri.org/GravaLogSync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmpregado">
+      <soap:operation soapAction="http://tempuri.org/IsEmpregado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateInfo">
+      <soap:operation soapAction="http://tempuri.org/GetUpdateInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCabFiles">
+      <soap:operation soapAction="http://tempuri.org/GetCabFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaVersaoDLL">
+      <soap:operation soapAction="http://tempuri.org/VerificaVersaoDLL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaImagem">
+      <soap:operation soapAction="http://tempuri.org/CargaImagem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Carga">
+      <soap:operation soapAction="http://tempuri.org/Carga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaParcial">
+      <soap:operation soapAction="http://tempuri.org/CargaParcial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Descarga">
+      <soap:operation soapAction="http://tempuri.org/Descarga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AvanteSales.ProSoap12" type="tns:AvanteSales.ProSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerDate">
+      <soap12:operation soapAction="http://tempuri.org/GetServerDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpresas">
+      <soap12:operation soapAction="http://tempuri.org/GetEmpresas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravaLogSync">
+      <soap12:operation soapAction="http://tempuri.org/GravaLogSync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmpregado">
+      <soap12:operation soapAction="http://tempuri.org/IsEmpregado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetUpdateInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCabFiles">
+      <soap12:operation soapAction="http://tempuri.org/GetCabFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaVersaoDLL">
+      <soap12:operation soapAction="http://tempuri.org/VerificaVersaoDLL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaImagem">
+      <soap12:operation soapAction="http://tempuri.org/CargaImagem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Carga">
+      <soap12:operation soapAction="http://tempuri.org/Carga" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaParcial">
+      <soap12:operation soapAction="http://tempuri.org/CargaParcial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Descarga">
+      <soap12:operation soapAction="http://tempuri.org/Descarga" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AvanteSales.Pro">
+    <wsdl:port name="AvanteSales.ProSoap" binding="tns:AvanteSales.ProSoap">
+      <soap:address location="http://localhost/AvanteSales.Pro/WSSales/AvanteSales.Pro.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AvanteSales.ProSoap12" binding="tns:AvanteSales.ProSoap12">
+      <soap12:address location="http://localhost/AvanteSales.Pro/WSSales/AvanteSales.Pro.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

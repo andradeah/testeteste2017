@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<group android:checkableBehavior="single">
+
+		<item
+            android:id="@+id/inbox"
+            android:checked="false"
+            android:title="Passo 1: Linha" />
+
+		<item
+		android:id="@+id/inbox"
+		android:checked="false"
+		android:title="Passo 2: Grupo" />
+
+		<item
+            android:id="@+id/inbox"
+            android:checked="false"
+            android:title="Passo 3: Validade de produtos" />
+
+		<item
+		android:id="@+id/inbox"
+		android:checked="false"
+		android:title="Passo 4: Lista de produtos" />
+
+		<item
+		android:id="@+id/inbox"
+		android:checked="false"
+		android:title="Passo 6: Validades coletadas" />
+
+		<item
+		android:id="@+id/inbox"
+		android:checked="false"
+		android:title="Passo 7: Mensagem pedido" />
+
+		<item
+		android:id="@+id/inbox"
+		android:checked="false"
+		android:title="Passo 8: Últimos pedidos" />
+
+		<item
+		android:id="@+id/inbox"
+		android:checked="false"
+		android:title="Passo 9: Documentos a receber" />
+
+		<item
+		android:id="@+id/inbox"
+		android:checked="false"
+		android:title="Passo 10: Resumo pedido" />
+
+	</group>
+</menu>

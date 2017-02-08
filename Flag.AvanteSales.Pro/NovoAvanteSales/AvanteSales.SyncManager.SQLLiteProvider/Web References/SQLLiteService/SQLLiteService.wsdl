@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Carga">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CargaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Descarga">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DescargaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCabFiles">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCabFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCabFilesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CargaSoapIn">
+    <wsdl:part name="parameters" element="tns:Carga" />
+  </wsdl:message>
+  <wsdl:message name="CargaSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DescargaSoapIn">
+    <wsdl:part name="parameters" element="tns:Descarga" />
+  </wsdl:message>
+  <wsdl:message name="DescargaSoapOut">
+    <wsdl:part name="parameters" element="tns:DescargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCabFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCabFiles" />
+  </wsdl:message>
+  <wsdl:message name="GetCabFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCabFilesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SQLLiteServiceSoap">
+    <wsdl:operation name="Carga">
+      <wsdl:input message="tns:CargaSoapIn" />
+      <wsdl:output message="tns:CargaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Descarga">
+      <wsdl:input message="tns:DescargaSoapIn" />
+      <wsdl:output message="tns:DescargaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCabFiles">
+      <wsdl:input message="tns:GetCabFilesSoapIn" />
+      <wsdl:output message="tns:GetCabFilesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SQLLiteServiceSoap" type="tns:SQLLiteServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Carga">
+      <soap:operation soapAction="http://tempuri.org/Carga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Descarga">
+      <soap:operation soapAction="http://tempuri.org/Descarga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCabFiles">
+      <soap:operation soapAction="http://tempuri.org/GetCabFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SQLLiteServiceSoap12" type="tns:SQLLiteServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Carga">
+      <soap12:operation soapAction="http://tempuri.org/Carga" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Descarga">
+      <soap12:operation soapAction="http://tempuri.org/Descarga" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCabFiles">
+      <soap12:operation soapAction="http://tempuri.org/GetCabFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SQLLiteService">
+    <wsdl:port name="SQLLiteServiceSoap" binding="tns:SQLLiteServiceSoap">
+      <soap:address location="http://localhost/Master.CompactFramework.Sync.SQLLiteServer/SQLLiteService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SQLLiteServiceSoap12" binding="tns:SQLLiteServiceSoap12">
+      <soap12:address location="http://localhost/Master.CompactFramework.Sync.SQLLiteServer/SQLLiteService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

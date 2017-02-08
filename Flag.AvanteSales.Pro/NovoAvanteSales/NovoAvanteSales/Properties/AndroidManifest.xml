@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0.0.32" package="avantesales.pro" android:installLocation="internalOnly">
+	<application android:icon="@drawable/ic_avante_sales_pro" android:label="AvanteSales Pro" android:theme="@style/AvanteSalesTheme">
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Camera" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.ColetarEstoque" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.ColetarIndenizacao" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Cliente" android:windowSoftInputMode="adjustNothing" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogAutenticar" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogCliente" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogDigitacaoEmail" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogDigitacaoTelefone" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogFragmentProdutoComum" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogFragmentProdutoImagem" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogInformacaoProduto" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogMetaLinha" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.dialogs.DialogSenhaArquivo" android:theme="@style/AvanteSales.Theme.Dialogs" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.DocumentoReceber" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Entrada" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Expediente" />
+		<activity android:screenOrientation="sensorLandscape" android:name="avantesales.pro.activities.Layout" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.ListaCliente" android:windowSoftInputMode="adjustNothing" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.ListaProdutosIndenizacao" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.ListaRelatorio" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Login" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Main" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.ProcuraProduto" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Produtos" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.ProdutoIndenizacao" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Sincronizacao" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.Sobre" />
+		<activity android:screenOrientation="portrait" android:name="avantesales.pro.activities.MainActivity" android:icon="@drawable/ic_avante_sales_pro" android:label="AvanteSales Pro">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="avantesales.pro.activities.Cliente" android:parentActivityName="avantesales.pro.activities.Main">
+			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="avantesales.pro.activities.Main" />
+		</activity>
+	</application>
+	<uses-sdk android:minSdkVersion="14" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_INPUT_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+</manifest>

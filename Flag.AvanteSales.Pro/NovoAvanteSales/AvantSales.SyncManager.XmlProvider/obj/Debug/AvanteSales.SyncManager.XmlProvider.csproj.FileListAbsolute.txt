@@ -1,0 +1,2 @@
+E:\Projects\Flag.AvanteSales.Xamarin.v6\Flag.AvanteSales.NovoXamarin\Fonte2015\AvantSales.SyncManager.XmlProvider\obj\Debug\AvanteSales.SyncManager.XmlProvider.csprojResolveAssemblyReference.cache
+D:\Projects\Flag.AvanteSales.Xamarin.v6\Flag.AvanteSales.NovoXamarin\Fonte2015\AvantSales.SyncManager.XmlProvider\obj\Debug\AvanteSales.SyncManager.XmlProvider.csprojResolveAssemblyReference.cache

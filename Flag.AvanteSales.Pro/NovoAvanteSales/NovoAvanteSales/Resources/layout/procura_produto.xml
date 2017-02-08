@@ -1,0 +1,190 @@
+﻿<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+		<ImageView
+            android:id="@+id/imgLogo"
+            android:src="@drawable/logoavante_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center" />
+	</android.support.v7.widget.Toolbar>
+	<RelativeLayout
+        android:id="@+id/Cabecalho"
+        android:layout_below="@id/tbToolbar"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray">
+		<TextView
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblCodPdv"
+            android:text="123456" />
+		<TextView
+            android:layout_below="@id/lblCodPdv"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNomePdv"
+            android:text="nome pdv" />
+		<!--<Chronometer
+            android:id="@+id/cronometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />-->
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_below="@id/Cabecalho"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<EditText
+				android:id="@+id/txtPesquisa"
+				android:imeOptions="actionSearch"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:singleLine="true"
+				android:hint="Critério da pesquisa" />
+			<EditText
+				android:id="@+id/txtQtdeInteiro"
+				android:imeOptions="actionSearch"
+				android:layout_width="0dp"
+				android:layout_weight=".4"
+				android:hint="Quant."
+				android:inputType="number"
+				android:visibility="gone" />
+			<Button
+				android:id="@+id/btnPesquisar"
+				android:layout_width="60dp"
+				android:text="OK" />
+		</LinearLayout>
+		<CheckBox
+			android:id="@+id/chkOpcoesAvancadas"
+			android:layout_width="match_parent"
+			android:text="Exibir opções avançadas de pesquisa" />
+		<LinearLayout
+			android:id="@+id/llOpcoesAvancadas"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:visibility="gone">
+			<TableLayout
+				android:layout_height="wrap_content">
+				<TableRow>
+					<CheckBox
+						android:id="@+id/chkCodigo"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:text="Código" />
+					<CheckBox
+						android:id="@+id/chkApelido"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:text="Apelido" />
+				</TableRow>
+				<TableRow>
+					<CheckBox
+						android:id="@+id/chkDescricao"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:text="Descrição" />
+					<CheckBox
+						android:id="@+id/chkItemCombo"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:text="Considerar combo" />
+				</TableRow>
+				<TableRow>
+					<CheckBox
+						android:id="@+id/chkPesquisaRapida"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:text="Pesquisa rápida" />
+				</TableRow>
+			</TableLayout>
+			<!--
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent" >
+
+      <TextView
+          style="@style/LabelInForm.Center"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:text="Pesquisar o valor digitado em" />
+    </LinearLayout>
+         -->
+			<!--
+    <LinearLayout android:layout_width="match_parent" >
+
+      <CheckBox
+          android:id="@+id/chkInicio"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:text="Início" />
+
+      <CheckBox
+          android:id="@+id/chkMeio"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:text="Meio" />
+
+      <CheckBox
+          android:id="@+id/chkFim"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:text="Fim" />
+    </LinearLayout>
+         -->
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/HeaderListView"
+			android:layout_width="match_parent"
+			android:background="@drawable/background_marginColor"
+			android:orientation="horizontal">
+			<TextView
+				style="@style/HeaderGrid"
+				android:id="@+id/tvHeaderCodigo"
+				android:layout_width="0dp"
+				android:layout_weight=".35"
+				android:text="Cód." />
+			<!--<TextView
+        style="@style/HeaderGrid"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="15dp"
+        android:text="Descrição" />-->
+			<TextView
+				android:id="@+id/tvHeaderQuantidade"
+				style="@style/HeaderGrid"
+				android:layout_width="0dp"
+				android:layout_weight=".35"
+				android:visibility="gone"
+				android:text="Qtd." />
+		</LinearLayout>
+		<ListView
+			android:cacheColorHint="#00000000"
+			android:id="@+id/lvResultado"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:choiceMode="singleChoice" />
+		<ExpandableListView
+			  android:cacheColorHint="#00000000"
+			  android:id="@+id/elvResultado"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:visibility="gone" />
+	</LinearLayout>
+</RelativeLayout>

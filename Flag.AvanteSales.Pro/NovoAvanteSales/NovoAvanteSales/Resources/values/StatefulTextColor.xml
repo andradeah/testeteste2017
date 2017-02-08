@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="blackd">#FF000000</color>
+</resources>  
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_pressed="true">
+    <shape>
+      <gradient
+          android:startColor="#FF76A9C9"
+          android:centerColor="#FF94C7DD"
+          android:endColor="#FF7AC8E9"
+          android:angle="270"/>
+    </shape>
+    <solid android:color="#FF94C7DD" />
+  </item>
+  <item android:state_enabled="false">
+    <shape>
+      <solid android:color="@color/default_text_color" />
+    </shape>
+  </item>
+  <item android:state_window_focused="false">
+    <shape>
+      <solid android:color="@color/default_text_color" />
+    </shape>
+  </item>
+  <item android:state_selected="true">
+    <shape>
+      <gradient
+          android:startColor="#76A9C9"
+          android:centerColor="#94C7DD"
+          android:endColor="#7AC8E9"
+          android:angle="270"/>
+    </shape>
+  </item>
+  <item>
+    <shape>
+      <solid android:color="@color/default_text_color" />
+    </shape>
+  </item>
+</selector>-->

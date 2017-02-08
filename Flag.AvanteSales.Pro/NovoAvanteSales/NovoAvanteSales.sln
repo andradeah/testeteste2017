@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanteSales.Pro", "NovoAvanteSales\AvanteSales.Pro.csproj", "{8106AC50-3514-4082-B3C7-DBD39E2E5EF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanteSales.SystemFramework", "AvanteSales.SystemFramework\AvanteSales.SystemFramework.csproj", "{6F68C33F-705D-4035-9F2B-3CC2535DD218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanteSales.SyncManager", "AvanteSales.SyncManager\AvanteSales.SyncManager.csproj", "{91D7418E-667C-4D1F-992C-429BB680D815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanteSales.SyncManager.SQLLiteProvider", "AvanteSales.SyncManager.SQLLiteProvider\AvanteSales.SyncManager.SQLLiteProvider.csproj", "{E569A2D2-C574-4D2F-BE78-8E77EB6EB7E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8106AC50-3514-4082-B3C7-DBD39E2E5EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8106AC50-3514-4082-B3C7-DBD39E2E5EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8106AC50-3514-4082-B3C7-DBD39E2E5EF1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8106AC50-3514-4082-B3C7-DBD39E2E5EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8106AC50-3514-4082-B3C7-DBD39E2E5EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8106AC50-3514-4082-B3C7-DBD39E2E5EF1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6F68C33F-705D-4035-9F2B-3CC2535DD218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F68C33F-705D-4035-9F2B-3CC2535DD218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F68C33F-705D-4035-9F2B-3CC2535DD218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F68C33F-705D-4035-9F2B-3CC2535DD218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91D7418E-667C-4D1F-992C-429BB680D815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D7418E-667C-4D1F-992C-429BB680D815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D7418E-667C-4D1F-992C-429BB680D815}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{91D7418E-667C-4D1F-992C-429BB680D815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D7418E-667C-4D1F-992C-429BB680D815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E569A2D2-C574-4D2F-BE78-8E77EB6EB7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E569A2D2-C574-4D2F-BE78-8E77EB6EB7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E569A2D2-C574-4D2F-BE78-8E77EB6EB7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E569A2D2-C574-4D2F-BE78-8E77EB6EB7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://fiwsrvteam:8090/tfs/defaultcollection
+		SccProjectUniqueName0 = AvanteSales.SystemFramework\\AvanteSales.SystemFramework.csproj
+		SccProjectName0 = AvanteSales.SystemFramework
+		SccLocalPath0 = AvanteSales.SystemFramework
+		SccProjectUniqueName1 = AvanteSales.SyncManager\\AvanteSales.SyncManager.csproj
+		SccProjectName1 = AvanteSales.SyncManager
+		SccLocalPath1 = AvanteSales.SyncManager
+		SccProjectUniqueName2 = AvanteSales.SyncManager.SQLLiteProvider\\AvanteSales.SyncManager.SQLLiteProvider.csproj
+		SccProjectName2 = AvanteSales.SyncManager.SQLLiteProvider
+		SccLocalPath2 = AvanteSales.SyncManager.SQLLiteProvider
+		SccLocalPath3 = .
+		SccProjectUniqueName4 = NovoAvanteSales\\AvanteSales.Pro.csproj
+		SccProjectName4 = NovoAvanteSales
+		SccLocalPath4 = NovoAvanteSales
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+		<ImageView
+            android:id="@+id/imgLogo"
+            android:src="@drawable/logoavante_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center" />
+	</android.support.v7.widget.Toolbar>
+	<RelativeLayout
+        android:id="@+id/Cabecalho"
+        android:layout_below="@id/tbToolbar"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray">
+		<TextView
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblCodPdv"
+            android:text="123456" />
+		<TextView
+            android:layout_below="@id/lblCodPdv"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNomePdv"
+            android:text="nome pdv" />
+		<ImageView
+			android:id="@+id/imgLogoLinha"
+			 android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+		<!--<Chronometer
+            android:id="@+id/cronometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />-->
+	</RelativeLayout>
+	<LinearLayout
+        android:id="@+id/llFooter"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/background_marginColor"
+        android:layout_alignParentBottom="true">
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
+			<TextView
+                android:paddingLeft="10dp"
+                android:text="R$ Pedido: "
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/LabelInForm" />
+			<TextView
+                android:id="@+id/lblValorPedido"
+                android:text="3.000,00"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/LabelAnswerInForm" />
+			<TextView
+                android:paddingLeft="10dp"
+                android:text="SKUs: "
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/LabelInForm" />
+			<TextView
+                android:id="@+id/lblSkus"
+                android:text="25"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/LabelAnswerInForm" />
+		</LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+			<Button
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/btnPassoAnterior"
+                android:text="Passo anterior" />
+			<TextView
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblPasso"
+                android:textSize="@dimen/font_size_big"
+                android:text="Passo {1}/12" />
+			<Button
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/btnProximoPasso"
+                android:text="Próximo passo" />
+		</LinearLayout>
+	</LinearLayout>
+	<android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+		android:layout_below="@id/Cabecalho"
+		android:layout_above="@id/llFooter">
+		<FrameLayout
+			android:id="@+id/frmLayout"
+			android:layout_below="@id/Cabecalho"
+			android:layout_above="@id/llFooter"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent" />
+		<ListView
+			android:id="@+id/left_drawer"
+			android:layout_width="240dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="start"
+			android:background="@color/snow"
+			android:choiceMode="singleChoice"
+			android:divider="@color/gray"
+			android:dividerHeight="0dp" />
+	</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

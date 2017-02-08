@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_gravity="top"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+	<TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/lblDescProduto"
+        style="@style/TextInGrid.Line1"
+        android:text="NESCAU ACTIGEN-E ACHOCOLATADO PO LIGHT 30x400gBR" />
+	<LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="horizontal">
+		<TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/lblCodigo"
+            style="@style/TextInGrid.Line2"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+		<TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/lblDataColeta"
+            style="@style/TextInGrid.Line2"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+		<TextView
+            android:gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:id="@+id/lblQuantidade"
+            style="@style/TextInGrid.Line2"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+		<TextView
+		android:gravity="center_horizontal"
+		android:layout_marginRight="10dp"
+		android:id="@+id/lblDataVencimento"
+		style="@style/TextInGrid.Line2"
+		android:layout_width="0dp"
+		android:layout_weight="1" />
+	</LinearLayout>
+</LinearLayout>

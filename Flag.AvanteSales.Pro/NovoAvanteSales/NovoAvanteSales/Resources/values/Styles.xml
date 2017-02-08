@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="TitlePage">
+    <item name="android:textSize">@dimen/font_size_big</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:padding">10dp</item>
+  </style>
+
+  <style name="LabelInForm">
+    <item name="android:textSize">@dimen/font_size</item>
+    <item name="android:textColor">@color/defaultBlue</item>
+    <item name="android:gravity">right|center_vertical</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">@dimen/widgets_height</item>
+    <item name="android:layout_gravity">right|center_vertical</item>
+  </style>
+
+  <style name="LabelInForm.Smaller">
+    <item name="android:textSize">@dimen/font_size_small</item>
+  </style>
+
+  <style name="LabelInForm.Big">
+    <item name="android:textSize">@dimen/font_size_big</item>
+  </style>
+
+  <style name="LabelInForm.Center">
+    <item name="android:gravity">center</item>
+  </style>
+
+  <style name="TextInGrid.darkBlue">
+    <item name="android:textColor">@color/darkBlue</item>
+  </style>
+
+  <style name="LabelInForm.Left">
+    <item name="android:gravity">left|center_vertical</item>
+  </style>
+
+  <style name="LabelInForm.Right">
+    <item name="android:gravity">right|center_vertical</item>
+    <item name="android:layout_gravity">right|center_vertical</item>
+  </style>
+
+  <style name="TextInGrid.Right.Line2">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_gravity">top</item>
+    <item name="android:paddingBottom">@dimen/padding_two_line_grid</item>
+  </style>
+
+  <style name="LabelAnswerInForm">
+    <item name="android:textColor">@color/gray</item>
+    <item name="android:gravity">center_vertical|left</item>
+    <item name="android:layout_gravity">center_vertical|left</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">@dimen/widgets_height</item>
+  </style>
+
+  <style name="LabelAnswerInForm.Smaller">
+    <item name="android:textSize">@dimen/font_size_small</item>
+  </style>
+
+  <style name="LabelAnswerInForm.Left">
+    <item name="android:gravity">left|center_vertical</item>
+  </style>
+
+  <style name="LabelAnswerInForm.Right">
+    <item name="android:gravity">right|center_vertical</item>
+    <item name="android:layout_gravity">center_vertical|left</item>
+  </style>
+
+  <style name="LabelAnswerInForm.Center">
+    <item name="android:gravity">center</item>
+    <item name="android:layout_gravity">center</item>
+  </style>
+
+  <style name ="LabelAnswerInForm.Big">
+    <item name="android:textSize">@dimen/font_size_big</item>
+  </style>
+
+  <!--Pra cima ta ok-->
+
+  <style name="TextInGrid">
+    <item name="android:textColor">@drawable/text_grid_color_selector_line2</item>
+    <item name="android:paddingLeft">2dp</item>
+    <item name="android:paddingRight">2dp</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:gravity">center_vertical|left</item>
+    <item name="android:layout_gravity">center_vertical|left</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">@dimen/widgets_height</item>
+    <!--<item name="android:marqueeRepeatLimit">marquee_forever</item>-->
+    <!--<item name="android:scrollHorizontally">true</item>-->
+    <!--<item name="android:focusable">true</item>-->
+    <!--<item name="android:focusableInTouchMode">true</item>-->
+  </style>
+
+	<style name="TextInGrid.Black">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="TextInGrid.DefaultBlue">
+		<item name="android:textColor">@color/defaultBlue</item>
+	</style>
+
+	<style name="TextInGrid.Blue">
+    <item name="android:textColor">@color/lightBlue</item>
+  </style>
+
+  <style name="TextInGrid.Right">
+    <item name="android:gravity">center_vertical|right</item>
+  </style>
+
+  <style name="TextInGrid.DefaultBlue.Right">
+    <item name="android:gravity">center_vertical|right</item>
+  </style>
+
+  <style name="TextInGrid.Blue.Right">
+    <item name="android:gravity">center_vertical|right</item>
+  </style>
+
+  <style name="TextInGrid.Line1">
+    <item name="android:textColor">@drawable/text_grid_color_selector_line1</item>
+    <item name="android:paddingTop">@dimen/padding_two_line_grid</item>
+    <item name="android:layout_gravity">bottom</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="TextInGrid.Line1.Right">
+    <item name="android:paddingTop">@dimen/padding_two_line_grid</item>
+    <item name="android:gravity">center_vertical|right</item>
+    <item name="android:layout_gravity">bottom</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="TextInGrid.Line2">
+    <item name="android:textSize">@dimen/font_size_small</item>
+    <item name="android:paddingBottom">@dimen/padding_two_line_grid</item>
+    <item name="android:gravity">center_vertical|left</item>
+    <item name="android:layout_gravity">top</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="TextInGrid.Line2.Right">
+    <item name="android:paddingBottom">@dimen/padding_two_line_grid</item>
+    <item name="android:gravity">center_vertical|right</item>
+    <item name="android:layout_gravity">top</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="TextInGrid.Line2.Left">
+    <item name="android:paddingBottom">@dimen/padding_two_line_grid</item>
+    <item name="android:gravity">center_vertical|left</item>
+    <item name="android:layout_gravity">top</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="TextInGrid.Line2.Center">
+    <item name="android:paddingBottom">@dimen/padding_two_line_grid</item>
+    <item name="android:gravity">center_vertical|center</item>
+    <item name="android:layout_gravity">top</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="HeaderGrid">
+    <item name="android:textSize">@dimen/font_size_big</item>
+  </style>
+
+  <style name="HeaderGrid.Right">
+    <item name="android:gravity">bottom|right</item>
+    <item name="android:layout_gravity">bottom</item>
+    <item name="android:paddingRight">2dp</item>
+  </style>
+
+  <style name="HeaderGrid.Left">
+    <item name="android:gravity">center|left</item>
+    <item name="android:layout_gravity">bottom</item>
+    <item name="android:paddingLeft">2dp</item>
+  </style>
+
+  <style name="HeaderGrid.Center">
+    <item name="android:gravity">center|center</item>
+    <item name="android:layout_gravity">center</item>
+  </style>
+
+  <style name="TableBackground">
+    <item name="android:background">@color/snow</item>
+    <item name="android:layout_gravity">top</item>
+  </style>
+
+  <style name="TableRowWithBorder">
+    <item name="android:background">@color/snow</item>
+    <item name="android:layout_marginBottom">1px</item>
+  </style>
+
+  <style name="MenuItem">
+    <item name="android:textColor">@color/white</item>
+  </style>
+
+  <style name="MarginRightMarginTop">
+    <item name="android:layout_marginRight">20dp</item>
+    <item name="android:layout_marginTop">10dp</item>
+  </style>
+  <style name="MarginLeftMarginTop">
+    <item name="android:layout_marginLeft">20dp</item>
+    <item name="android:layout_marginTop">10dp</item>
+  </style>
+  <style name="MarginHorizontais">
+    <item name="android:layout_marginLeft">20dp</item>
+    <item name="android:layout_marginRight">20dp</item>
+  </style>
+  <style name="MarginHorizontais.MarginVerticais">
+    <item name="android:layout_marginTop">10dp</item>
+    <item name="android:layout_marginBottom">10dp</item>
+  </style>
+  <style name="MarginHorizontais.MarginTop">
+    <item name="android:layout_marginTop">10dp</item>
+  </style>
+  <style name="MarginBottom">
+    <item name="android:layout_marginBottom">10dp</item>
+  </style>
+  <style name="MarginTop">
+    <item name="android:layout_marginTop">10dp</item>
+  </style>
+  <style name="MarginHorizontais.MarginBottom">
+    <item name="android:layout_marginBottom">10dp</item>
+  </style>
+  <style name="InputLabel" parent="TextAppearance.AppCompat.Caption">
+    <item name="android:paddingBottom">@dimen/input_label_vertical_spacing</item>
+    <item name="android:paddingLeft">@dimen/input_label_horizontal_spacing</item>
+    <item name="android:paddingRight">@dimen/input_label_horizontal_spacing</item>
+  </style>
+</resources>

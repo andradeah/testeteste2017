@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="default_widgets_height">50dp</dimen>
+  <dimen name="widgets_height">45dp</dimen>
+  <dimen name ="title_height">37dp</dimen>
+  <dimen name="font_size">14sp</dimen>
+  <dimen name="font_size_small">12sp</dimen>
+  <dimen name="font_size_big">21sp</dimen>
+  <dimen name="padding_two_line_grid">9dp</dimen>
+</resources>

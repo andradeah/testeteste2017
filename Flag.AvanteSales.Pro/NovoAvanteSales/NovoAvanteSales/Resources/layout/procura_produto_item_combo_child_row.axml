@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+    <TextView
+        android:id="@+id/tvProduto"
+        android:layout_marginLeft="45dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        style="@style/TextInGrid.DefaultBlue" />
+    <TextView
+        android:id="@+id/tvQuantidade"
+        style="@style/TextInGrid.DefaultBlue.Right"
+        android:layout_width="0dp"
+        android:layout_weight=".20" />
+</LinearLayout>

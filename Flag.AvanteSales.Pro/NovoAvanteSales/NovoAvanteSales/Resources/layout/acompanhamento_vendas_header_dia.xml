@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<LinearLayout
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content"
+		  android:background="@drawable/background_marginColor"
+		  android:orientation="horizontal" >
+
+		<TextView
+			style="@style/HeaderGrid.Right"
+			android:layout_width="0dp"
+			android:layout_weight="0.8"
+			android:text="Meta" />
+
+		<TextView
+			style="@style/HeaderGrid.Right"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:text="Venda" />
+
+		<TextView
+			style="@style/HeaderGrid.Right"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:text="%M/V" />
+	</LinearLayout>
+	<ListView
+   android:cacheColorHint="#00000000"
+   android:id="@+id/lvwDia"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+    <TextView
+        android:id="@+id/tvCodigo"
+        android:layout_marginLeft="35dp"
+        android:layout_width="0dp"
+        android:layout_weight=".25"
+        style="@style/TextInGrid.Black" />
+    <TextView
+        android:id="@+id/tvDescricao"
+        style="@style/TextInGrid.Black"
+        android:layout_width="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="1" />
+</LinearLayout>

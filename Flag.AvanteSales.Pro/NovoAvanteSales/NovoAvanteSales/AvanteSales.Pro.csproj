@@ -88,9 +88,18 @@
       <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.6.0\lib\MonoAndroid403\Microsoft.Azure.Mobile.Crashes.Android.Bindings.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="mscorlib" />
+    <Reference Include="OxyPlot, Version=2015.1.744.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Core.2015.1.744-alpha\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OxyPlot.Xamarin.Android, Version=2015.1.741.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Mobile.2015.1.744-alpha\lib\MonoAndroid\OxyPlot.Xamarin.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -187,6 +196,7 @@
     <Compile Include="Fragments\DocumentoReceberResumo.cs" />
     <Compile Include="Fragments\DocumentoReceberVendedor.cs" />
     <Compile Include="Fragments\GrupoProduto.cs" />
+    <Compile Include="Fragments\ProdutoInformacao.cs" />
     <Compile Include="Fragments\Informacoes.cs" />
     <Compile Include="Fragments\ListaCombo.cs" />
     <Compile Include="Fragments\ListaEmail.cs" />
@@ -205,6 +215,7 @@
     <Compile Include="Fragments\Pedido.cs" />
     <Compile Include="Fragments\PesquisaMercado.cs" />
     <Compile Include="Fragments\Produto.cs" />
+    <Compile Include="Fragments\ProdutoAbatimento.cs" />
     <Compile Include="Fragments\ProdutoIndenizacao.cs" />
     <Compile Include="Fragments\ProdutosVencer.cs" />
     <Compile Include="Fragments\ProdutoVencimento.cs" />
@@ -228,6 +239,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
@@ -2375,6 +2387,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\lista_produtos_ramo_nao_vendidos_row.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\produto_abatimento.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="oxyplot">
+      <Visible>False</Visible>
+      <Version>2015.1.744</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\produto_informacao.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

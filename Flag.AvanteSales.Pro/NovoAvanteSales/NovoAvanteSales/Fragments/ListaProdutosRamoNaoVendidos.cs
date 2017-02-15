@@ -29,8 +29,8 @@ namespace AvanteSales.Pro.Fragments
         private const int frmProdutoPedido = 1;
         private const int frmMotivoNaoPositivado = 2;
         private bool m_executarMontaProdutos = false;
-        private static Activity CurrentActivity;
-        private static ProgressDialog progressDialog;
+        //private static Activity CurrentActivity;
+        //private static ProgressDialog progressDialog;
 
         public override void OnCreate(Bundle savedInstanceState)
         {

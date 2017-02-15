@@ -31,5 +31,3 @@ D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager.SQLLite
 D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager.SQLLiteProvider\obj\Release\uploadflags.txt
 D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager.SQLLiteProvider\obj\Release\AvanteSales.SyncManager.SQLLiteProvider.dll.mdb
 D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager.SQLLiteProvider\bin\Release\AvanteSales.SyncManager.SQLLiteProvider.dll.mdb
-D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager.SQLLiteProvider\obj\Release\AvanteSales.SyncManager.SQLLiteProvider.dll.mdb
-D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager.SQLLiteProvider\bin\Release\AvanteSales.SyncManager.SQLLiteProvider.dll.mdb

@@ -115,7 +115,7 @@ namespace AvanteSales.Pro.Fragments
                 "Excluir",
                 (_sender, _e) => { FuncaoExcluir(pedidoClicado); }, true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("ListaPedidos-MostraDialogOpcoesPedido", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -155,7 +155,7 @@ namespace AvanteSales.Pro.Fragments
                     ContinuarComEdicao();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("ListaPedidos-MostrarDialogOpcoesPedidoClickEditar", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -226,7 +226,7 @@ namespace AvanteSales.Pro.Fragments
                 CSGlobal.BloquearSaidaCliente = false;
                 CSPDVs.Current.PEDIDOS_PDV.Current = null;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("ListaPedidos-MostrarOpcoesPedidoClickExcluir", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -251,7 +251,7 @@ namespace AvanteSales.Pro.Fragments
                 ((Cliente)Activity).AtualizarValorParcial();
                 ((Cliente)Activity).NavegarParaPasso(10, true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("ListaPedidos-ContinuarComEdicao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -273,7 +273,7 @@ namespace AvanteSales.Pro.Fragments
 
                 listPedidos.SetSelection(CSPDVs.Current.PEDIDOS_PDV.PEDIDO_POSITION);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("ListaPedidos-CarregarListViewPedidos", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }

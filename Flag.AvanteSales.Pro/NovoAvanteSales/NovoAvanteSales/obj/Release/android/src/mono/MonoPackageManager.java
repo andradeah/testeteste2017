@@ -108,6 +108,8 @@ class MonoPackageManager_Resources {
 		"Microsoft.Azure.Mobile.Crashes.Android.Bindings.dll",
 		"Microsoft.Azure.Mobile.Crashes.dll",
 		"Microsoft.Azure.Mobile.dll",
+		"OxyPlot.dll",
+		"OxyPlot.Xamarin.Android.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",

@@ -379,7 +379,7 @@ namespace AvanteSales.Pro.Activities
                 }
                 throw new System.Exception("O código do empregado não está com um valor numérico válido.");
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 MessageBox.AlertErro(CurrentActivity, "Empregado Inválido");
                 return false;
@@ -427,7 +427,7 @@ namespace AvanteSales.Pro.Activities
                 return true;
 
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 MessageBox.AlertErro(CurrentActivity, "Falha na conexão");
                 return false;

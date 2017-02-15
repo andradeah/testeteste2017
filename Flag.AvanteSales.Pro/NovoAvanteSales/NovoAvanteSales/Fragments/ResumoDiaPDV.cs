@@ -99,7 +99,7 @@ namespace AvanteSales.Pro.Fragments
             SQLiteParameter paramCOD_DIA_VISITA = null;
             SQLiteParameter paramDAT_CICLO = null;
             SQLiteParameter paramDAT_PEDIDO = null;
-            SQLiteParameter paramDAT_HISTORICO_MOTIVO = null;
+            //SQLiteParameter paramDAT_HISTORICO_MOTIVO = null;
 
             sqlQuery = new StringBuilder();
 

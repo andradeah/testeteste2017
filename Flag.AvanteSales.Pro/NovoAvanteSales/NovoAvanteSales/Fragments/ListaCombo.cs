@@ -141,7 +141,7 @@ namespace AvanteSales.Pro.Fragments
 
                     return true;
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
                     return false;
                 }
@@ -154,7 +154,7 @@ namespace AvanteSales.Pro.Fragments
             {
                 return CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 2;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -218,7 +218,7 @@ namespace AvanteSales.Pro.Fragments
 
                     return linha;
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
                     return null;
                 }
@@ -259,7 +259,7 @@ namespace AvanteSales.Pro.Fragments
 
                     return linha;
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
                     return null;
                 }
@@ -328,7 +328,7 @@ namespace AvanteSales.Pro.Fragments
                     }
 
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
 
                 }

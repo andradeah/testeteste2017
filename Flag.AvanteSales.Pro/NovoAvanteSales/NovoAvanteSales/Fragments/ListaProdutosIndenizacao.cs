@@ -15,7 +15,7 @@ namespace AvanteSales.Pro.Fragments
 {
     public class ListaProdutosIndenizacao : Android.Support.V4.App.Fragment
     {
-        private int indexProdutoSelecionado;
+        //private int indexProdutoSelecionado;
         ListView lvwProdutos;
         public override void OnCreate(Bundle savedInstanceState)
         {

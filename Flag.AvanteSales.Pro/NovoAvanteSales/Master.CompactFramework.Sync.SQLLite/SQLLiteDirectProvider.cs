@@ -92,12 +92,12 @@ namespace Master.CompactFramework.Sync.SQLLiteProvider
             this.downloadComplete = new AutoResetEvent(false);
             ServicePointManager.DefaultConnectionLimit = 100;
             this.ssceService = new SQLLiteService();
-            this.ssceService.Timeout = Timeout.Infinite;
+            this.ssceService.Timeout = 180000;
 
             //// Configura o loader
             //BaseLoader.SetLicense("Flag Intelliwan - 10 Devices", "TP2SKKNNHT");
             //this.rowLoader = new RowsetLoader();
-
+            
             //this.rowLoader.AutoNull = true;
             //this.rowLoader.Delimiter = "|";
             //this.rowLoader.ParseDates = false;

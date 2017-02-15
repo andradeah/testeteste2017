@@ -45,7 +45,7 @@ namespace AvanteSales.Pro.Activities
         private static bool ChkCodigo;
         private static bool ChkApelido;
         private static bool ChkDescricao;
-        private static bool ChkConsiderarCombo;
+        //private static bool ChkConsiderarCombo;
         private static int PositionItem;
         private Button btnPesquisar;
 
@@ -263,7 +263,7 @@ namespace AvanteSales.Pro.Activities
 
                 ChkApelido = chkApelido.Checked;
                 ChkCodigo = chkCodigo.Checked;
-                ChkConsiderarCombo = false;
+                //ChkConsiderarCombo = false;
                 ChkDescricao = chkDescricao.Checked;
                 MessageBox.ShowShortMessageCenter(this, string.Format("{0} produtos encontrados.", ListView.Adapter.Count));
             }

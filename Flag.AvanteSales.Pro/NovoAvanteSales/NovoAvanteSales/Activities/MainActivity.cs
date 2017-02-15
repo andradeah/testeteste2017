@@ -20,7 +20,7 @@ using Microsoft.Azure.Mobile.Crashes;
 
 namespace AvanteSales.Pro.Activities
 {
-    [Activity(Label = "SplashScreen", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/SplashTheme")]
+    [Activity(Label = "SplashScreen", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/SplashTheme", WindowSoftInputMode = SoftInput.StateAlwaysHidden)]
     public class MainActivity : AppCompatActivity, IRunnable
     {
         WebView wbvWebView;

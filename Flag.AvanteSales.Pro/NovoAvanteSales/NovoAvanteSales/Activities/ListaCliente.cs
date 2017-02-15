@@ -276,7 +276,7 @@ namespace AvanteSales.Pro.Activities
 
                 Inicializacao();
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -838,6 +838,7 @@ namespace AvanteSales.Pro.Activities
 
             // [ Se broker, executa o prepare dos commands para o cálculo... ]
             if (CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 2 &&
+                CSDataAccess.Instance.preparedCommands != null &&
                 CSDataAccess.Instance.preparedCommands.Size() == 0)
             {
             }

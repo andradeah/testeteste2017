@@ -3080,29 +3080,29 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06011c
 			public const int btnAdicionar = 2131099932;
 			
-			// aapt resource value: 0x7f060255
-			public const int btnAdicionarLista = 2131100245;
+			// aapt resource value: 0x7f060272
+			public const int btnAdicionarLista = 2131100274;
 			
 			// aapt resource value: 0x7f06013f
 			public const int btnAlmoco = 2131099967;
 			
-			// aapt resource value: 0x7f060262
-			public const int btnApagarBanco = 2131100258;
+			// aapt resource value: 0x7f06027f
+			public const int btnApagarBanco = 2131100287;
 			
-			// aapt resource value: 0x7f0601f4
-			public const int btnCalcular = 2131100148;
+			// aapt resource value: 0x7f0601fb
+			public const int btnCalcular = 2131100155;
 			
 			// aapt resource value: 0x7f060109
 			public const int btnCancelar = 2131099913;
 			
-			// aapt resource value: 0x7f06025f
-			public const int btnCargaCompleta = 2131100255;
+			// aapt resource value: 0x7f06027c
+			public const int btnCargaCompleta = 2131100284;
 			
-			// aapt resource value: 0x7f060261
-			public const int btnCargaImagens = 2131100257;
+			// aapt resource value: 0x7f06027e
+			public const int btnCargaImagens = 2131100286;
 			
-			// aapt resource value: 0x7f060260
-			public const int btnCargaParcial = 2131100256;
+			// aapt resource value: 0x7f06027d
+			public const int btnCargaParcial = 2131100285;
 			
 			// aapt resource value: 0x7f0600b1
 			public const int btnColetar = 2131099825;
@@ -3122,11 +3122,14 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060104
 			public const int btnDocumentoReceber = 2131099908;
 			
-			// aapt resource value: 0x7f06025e
-			public const int btnEditarDados = 2131100254;
+			// aapt resource value: 0x7f06027b
+			public const int btnEditarDados = 2131100283;
 			
 			// aapt resource value: 0x7f06013b
 			public const int btnExpediente = 2131099963;
+			
+			// aapt resource value: 0x7f06022e
+			public const int btnGiro = 2131100206;
 			
 			// aapt resource value: 0x7f060105
 			public const int btnHistoricoIndenizacao = 2131099909;
@@ -3146,14 +3149,17 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060147
 			public const int btnListarIndenizacao = 2131099975;
 			
-			// aapt resource value: 0x7f060266
-			public const int btnListarPedido = 2131100262;
+			// aapt resource value: 0x7f060283
+			public const int btnListarPedido = 2131100291;
 			
-			// aapt resource value: 0x7f060236
-			public const int btnListarProdutos = 2131100214;
+			// aapt resource value: 0x7f060253
+			public const int btnListarProdutos = 2131100243;
 			
 			// aapt resource value: 0x7f0601a0
 			public const int btnLogin = 2131100064;
+			
+			// aapt resource value: 0x7f060224
+			public const int btnMedia = 2131100196;
 			
 			// aapt resource value: 0x7f06016a
 			public const int btnMeta = 2131100010;
@@ -3227,20 +3233,20 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601c7
 			public const int cboEmissor = 2131100103;
 			
-			// aapt resource value: 0x7f060213
-			public const int cboFamiliaProduto = 2131100179;
+			// aapt resource value: 0x7f060230
+			public const int cboFamiliaProduto = 2131100208;
 			
 			// aapt resource value: 0x7f0600bf
 			public const int cboGrupoComercializacao = 2131099839;
 			
-			// aapt resource value: 0x7f060212
-			public const int cboGrupoProduto = 2131100178;
+			// aapt resource value: 0x7f06022f
+			public const int cboGrupoProduto = 2131100207;
 			
 			// aapt resource value: 0x7f0601da
 			public const int cboMarca = 2131100122;
 			
-			// aapt resource value: 0x7f0601f9
-			public const int cboMotivo = 2131100153;
+			// aapt resource value: 0x7f060200
+			public const int cboMotivo = 2131100160;
 			
 			// aapt resource value: 0x7f0601c8
 			public const int cboOperacao = 2131100104;
@@ -3248,8 +3254,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601df
 			public const int cboResposta = 2131100127;
 			
-			// aapt resource value: 0x7f060205
-			public const int cboTabelaPreco = 2131100165;
+			// aapt resource value: 0x7f060207
+			public const int cboTabelaPreco = 2131100167;
 			
 			// aapt resource value: 0x7f060108
 			public const int cboTipoEmail = 2131099912;
@@ -3308,8 +3314,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601e9
 			public const int chkPesquisaRapida = 2131100137;
 			
-			// aapt resource value: 0x7f060217
-			public const int chkProdutosExclusivos = 2131100183;
+			// aapt resource value: 0x7f060234
+			public const int chkProdutosExclusivos = 2131100212;
 			
 			// aapt resource value: 0x7f0601bf
 			public const int chronometer = 2131100095;
@@ -3320,8 +3326,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060034
 			public const int clip_vertical = 2131099700;
 			
-			// aapt resource value: 0x7f060238
-			public const int cmbFamilia = 2131100216;
+			// aapt resource value: 0x7f060255
+			public const int cmbFamilia = 2131100245;
 			
 			// aapt resource value: 0x7f060081
 			public const int cmbFamiliaProduto = 2131099777;
@@ -3332,11 +3338,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060080
 			public const int cmbGrupoProduto = 2131099776;
 			
-			// aapt resource value: 0x7f060239
-			public const int cmbOperacao = 2131100217;
+			// aapt resource value: 0x7f060256
+			public const int cmbOperacao = 2131100246;
 			
-			// aapt resource value: 0x7f060233
-			public const int cmbPedidos = 2131100211;
+			// aapt resource value: 0x7f060250
+			public const int cmbPedidos = 2131100240;
 			
 			// aapt resource value: 0x7f06001f
 			public const int collapseActionView = 2131099679;
@@ -3386,8 +3392,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06005c
 			public const int edit_query = 2131099740;
 			
-			// aapt resource value: 0x7f060215
-			public const int edtSearch = 2131100181;
+			// aapt resource value: 0x7f060232
+			public const int edtSearch = 2131100210;
 			
 			// aapt resource value: 0x7f0600ed
 			public const int edtSenha = 2131099885;
@@ -3488,14 +3494,14 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060097
 			public const int imgFoto = 2131099799;
 			
-			// aapt resource value: 0x7f06025d
-			public const int imgIconeEmpresa = 2131100253;
+			// aapt resource value: 0x7f06027a
+			public const int imgIconeEmpresa = 2131100282;
 			
 			// aapt resource value: 0x7f060120
 			public const int imgIconeProduto = 2131099936;
 			
-			// aapt resource value: 0x7f060259
-			public const int imgIconeServidor = 2131100249;
+			// aapt resource value: 0x7f060276
+			public const int imgIconeServidor = 2131100278;
 			
 			// aapt resource value: 0x7f060168
 			public const int imgInformacoesPdv = 2131100008;
@@ -3524,8 +3530,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060196
 			public const int imgVendaUltimaVisita = 2131100054;
 			
-			// aapt resource value: 0x7f06027c
-			public const int inbox = 2131100284;
+			// aapt resource value: 0x7f06021b
+			public const int imvAbatimento = 2131100187;
+			
+			// aapt resource value: 0x7f060299
+			public const int inbox = 2131100313;
 			
 			// aapt resource value: 0x7f0601c3
 			public const int info = 2131100099;
@@ -3533,62 +3542,62 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
 			
-			// aapt resource value: 0x7f06027f
-			public const int itmBuscaEmpresa = 2131100287;
+			// aapt resource value: 0x7f06029c
+			public const int itmBuscaEmpresa = 2131100316;
 			
-			// aapt resource value: 0x7f06026c
-			public const int itmClipp = 2131100268;
+			// aapt resource value: 0x7f060289
+			public const int itmClipp = 2131100297;
 			
-			// aapt resource value: 0x7f060277
-			public const int itmColetaEstoque = 2131100279;
+			// aapt resource value: 0x7f060294
+			public const int itmColetaEstoque = 2131100308;
 			
-			// aapt resource value: 0x7f06027e
-			public const int itmConexao = 2131100286;
+			// aapt resource value: 0x7f06029b
+			public const int itmConexao = 2131100315;
 			
-			// aapt resource value: 0x7f060278
-			public const int itmDescartarPedido = 2131100280;
+			// aapt resource value: 0x7f060295
+			public const int itmDescartarPedido = 2131100309;
 			
-			// aapt resource value: 0x7f060279
-			public const int itmDetalhePreco = 2131100281;
+			// aapt resource value: 0x7f060296
+			public const int itmDetalhePreco = 2131100310;
 			
-			// aapt resource value: 0x7f060270
-			public const int itmDocumentoReceber = 2131100272;
+			// aapt resource value: 0x7f06028d
+			public const int itmDocumentoReceber = 2131100301;
 			
-			// aapt resource value: 0x7f06027b
-			public const int itmExpediente = 2131100283;
+			// aapt resource value: 0x7f060298
+			public const int itmExpediente = 2131100312;
 			
-			// aapt resource value: 0x7f060274
-			public const int itmHistoricoIndenizacao = 2131100276;
+			// aapt resource value: 0x7f060291
+			public const int itmHistoricoIndenizacao = 2131100305;
 			
-			// aapt resource value: 0x7f060273
-			public const int itmIndenizacao = 2131100275;
+			// aapt resource value: 0x7f060290
+			public const int itmIndenizacao = 2131100304;
 			
-			// aapt resource value: 0x7f06026f
-			public const int itmInformacoes = 2131100271;
+			// aapt resource value: 0x7f06028c
+			public const int itmInformacoes = 2131100300;
 			
-			// aapt resource value: 0x7f060275
-			public const int itmLayout = 2131100277;
+			// aapt resource value: 0x7f060292
+			public const int itmLayout = 2131100306;
 			
-			// aapt resource value: 0x7f06026d
-			public const int itmListaEmail = 2131100269;
+			// aapt resource value: 0x7f06028a
+			public const int itmListaEmail = 2131100298;
 			
-			// aapt resource value: 0x7f060272
-			public const int itmListaPedido = 2131100274;
+			// aapt resource value: 0x7f06028f
+			public const int itmListaPedido = 2131100303;
 			
-			// aapt resource value: 0x7f06026e
-			public const int itmListaTelefone = 2131100270;
+			// aapt resource value: 0x7f06028b
+			public const int itmListaTelefone = 2131100299;
 			
-			// aapt resource value: 0x7f060271
-			public const int itmPesquisa = 2131100273;
+			// aapt resource value: 0x7f06028e
+			public const int itmPesquisa = 2131100302;
 			
-			// aapt resource value: 0x7f06027d
-			public const int itmPesquisar = 2131100285;
+			// aapt resource value: 0x7f06029a
+			public const int itmPesquisar = 2131100314;
 			
-			// aapt resource value: 0x7f060276
-			public const int itmUltimasVisitas = 2131100278;
+			// aapt resource value: 0x7f060293
+			public const int itmUltimasVisitas = 2131100307;
 			
-			// aapt resource value: 0x7f06027a
-			public const int itmUltimosPedidosProduto = 2131100282;
+			// aapt resource value: 0x7f060297
+			public const int itmUltimosPedidosProduto = 2131100311;
 			
 			// aapt resource value: 0x7f06006a
 			public const int labelFlag = 2131099754;
@@ -3608,14 +3617,14 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060169
 			public const int lblBairro = 2131100009;
 			
-			// aapt resource value: 0x7f060203
-			public const int lblCalcular = 2131100163;
+			// aapt resource value: 0x7f06020e
+			public const int lblCalcular = 2131100174;
 			
 			// aapt resource value: 0x7f0600cc
 			public const int lblCategoria = 2131099852;
 			
-			// aapt resource value: 0x7f060234
-			public const int lblCliente = 2131100212;
+			// aapt resource value: 0x7f060251
+			public const int lblCliente = 2131100241;
 			
 			// aapt resource value: 0x7f06009c
 			public const int lblCodPdv = 2131099804;
@@ -3623,8 +3632,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060181
 			public const int lblCodigo = 2131100033;
 			
-			// aapt resource value: 0x7f0601f1
-			public const int lblCodigoProduto = 2131100145;
+			// aapt resource value: 0x7f0601f0
+			public const int lblCodigoProduto = 2131100144;
 			
 			// aapt resource value: 0x7f0600fd
 			public const int lblComodato = 2131099901;
@@ -3659,14 +3668,20 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0600ce
 			public const int lblDenver = 2131099854;
 			
-			// aapt resource value: 0x7f0601f5
-			public const int lblDesc = 2131100149;
+			// aapt resource value: 0x7f0601fc
+			public const int lblDesc = 2131100156;
 			
 			// aapt resource value: 0x7f06015e
 			public const int lblDescDenver = 2131099998;
 			
-			// aapt resource value: 0x7f0601fe
-			public const int lblDescIncond = 2131100158;
+			// aapt resource value: 0x7f06020b
+			public const int lblDescDesconto = 2131100171;
+			
+			// aapt resource value: 0x7f06020f
+			public const int lblDescFixo = 2131100175;
+			
+			// aapt resource value: 0x7f06020c
+			public const int lblDescIncond = 2131100172;
 			
 			// aapt resource value: 0x7f0600e4
 			public const int lblDescMax = 2131099876;
@@ -3677,8 +3692,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060180
 			public const int lblDescProduto = 2131100032;
 			
-			// aapt resource value: 0x7f060210
-			public const int lblDescSaldoEstoque = 2131100176;
+			// aapt resource value: 0x7f060219
+			public const int lblDescSaldoEstoque = 2131100185;
 			
 			// aapt resource value: 0x7f0601d3
 			public const int lblDescontoIndenizacao = 2131100115;
@@ -3710,6 +3725,21 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060096
 			public const int lblErro = 2131099798;
 			
+			// aapt resource value: 0x7f060225
+			public const int lblEstoque = 2131100197;
+			
+			// aapt resource value: 0x7f06022a
+			public const int lblEstoqueAnterior = 2131100202;
+			
+			// aapt resource value: 0x7f06022c
+			public const int lblEstoqueAtual = 2131100204;
+			
+			// aapt resource value: 0x7f06022d
+			public const int lblEstoqueGiro = 2131100205;
+			
+			// aapt resource value: 0x7f06022b
+			public const int lblEstoqueVenda = 2131100203;
+			
 			// aapt resource value: 0x7f06013e
 			public const int lblFimAlmoco = 2131099966;
 			
@@ -3730,6 +3760,30 @@ namespace AvanteSales.Pro
 			
 			// aapt resource value: 0x7f0600b9
 			public const int lblIndenizacao = 2131099833;
+			
+			// aapt resource value: 0x7f060226
+			public const int lblInfo1 = 2131100198;
+			
+			// aapt resource value: 0x7f060227
+			public const int lblInfo2 = 2131100199;
+			
+			// aapt resource value: 0x7f060228
+			public const int lblInfo3 = 2131100200;
+			
+			// aapt resource value: 0x7f060229
+			public const int lblInfo4 = 2131100201;
+			
+			// aapt resource value: 0x7f06021f
+			public const int lblInfoMedia = 2131100191;
+			
+			// aapt resource value: 0x7f06021c
+			public const int lblInfoQ1 = 2131100188;
+			
+			// aapt resource value: 0x7f06021d
+			public const int lblInfoQ2 = 2131100189;
+			
+			// aapt resource value: 0x7f06021e
+			public const int lblInfoQ3 = 2131100190;
 			
 			// aapt resource value: 0x7f0601ad
 			public const int lblInformativo = 2131100077;
@@ -3761,6 +3815,9 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060146
 			public const int lblMarkup = 2131099974;
 			
+			// aapt resource value: 0x7f060223
+			public const int lblMediaQ = 2131100195;
+			
 			// aapt resource value: 0x7f0601b3
 			public const int lblMensagem = 2131100083;
 			
@@ -3782,32 +3839,32 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060175
 			public const int lblNota = 2131100021;
 			
-			// aapt resource value: 0x7f060248
-			public const int lblNumeroPedidos = 2131100232;
+			// aapt resource value: 0x7f060265
+			public const int lblNumeroPedidos = 2131100261;
 			
 			// aapt resource value: 0x7f0601d7
 			public const int lblNumeroPergunta = 2131100119;
 			
-			// aapt resource value: 0x7f060249
-			public const int lblNumeroProdutos = 2131100233;
+			// aapt resource value: 0x7f060266
+			public const int lblNumeroProdutos = 2131100262;
 			
-			// aapt resource value: 0x7f060246
-			public const int lblOcupacaoVeiculo = 2131100230;
+			// aapt resource value: 0x7f060263
+			public const int lblOcupacaoVeiculo = 2131100259;
 			
 			// aapt resource value: 0x7f060179
 			public const int lblOperacao = 2131100025;
 			
-			// aapt resource value: 0x7f060209
-			public const int lblOrganizVendas = 2131100169;
+			// aapt resource value: 0x7f060210
+			public const int lblOrganizVendas = 2131100176;
 			
-			// aapt resource value: 0x7f06020f
-			public const int lblOrganizVendasBunge = 2131100175;
+			// aapt resource value: 0x7f060218
+			public const int lblOrganizVendasBunge = 2131100184;
 			
-			// aapt resource value: 0x7f060208
-			public const int lblOrganizVendasTit = 2131100168;
+			// aapt resource value: 0x7f06020a
+			public const int lblOrganizVendasTit = 2131100170;
 			
-			// aapt resource value: 0x7f06020e
-			public const int lblOrganizVendasTitBunge = 2131100174;
+			// aapt resource value: 0x7f060217
+			public const int lblOrganizVendasTitBunge = 2131100183;
 			
 			// aapt resource value: 0x7f0600a3
 			public const int lblPasso = 2131099811;
@@ -3815,11 +3872,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601d1
 			public const int lblPctLucratividade = 2131100113;
 			
-			// aapt resource value: 0x7f060244
-			public const int lblPctOcupacao = 2131100228;
+			// aapt resource value: 0x7f060261
+			public const int lblPctOcupacao = 2131100257;
 			
-			// aapt resource value: 0x7f060247
-			public const int lblPctOcupacaoVeiculo = 2131100231;
+			// aapt resource value: 0x7f060264
+			public const int lblPctOcupacaoVeiculo = 2131100260;
 			
 			// aapt resource value: 0x7f060172
 			public const int lblPedido = 2131100018;
@@ -3833,17 +3890,17 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0600fb
 			public const int lblPeriodicidade = 2131099899;
 			
-			// aapt resource value: 0x7f0601fb
-			public const int lblPeso = 2131100155;
+			// aapt resource value: 0x7f060202
+			public const int lblPeso = 2131100162;
 			
 			// aapt resource value: 0x7f0601d2
 			public const int lblPesoBruto = 2131100114;
 			
-			// aapt resource value: 0x7f06024a
-			public const int lblPesoForaRota = 2131100234;
+			// aapt resource value: 0x7f060267
+			public const int lblPesoForaRota = 2131100263;
 			
-			// aapt resource value: 0x7f06024b
-			public const int lblPesoNaRota = 2131100235;
+			// aapt resource value: 0x7f060268
+			public const int lblPesoNaRota = 2131100264;
 			
 			// aapt resource value: 0x7f0600c2
 			public const int lblPesoTotal = 2131099842;
@@ -3857,23 +3914,23 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06016c
 			public const int lblPolitica = 2131100012;
 			
-			// aapt resource value: 0x7f060232
-			public const int lblPorcCoberturaDia = 2131100210;
+			// aapt resource value: 0x7f06024f
+			public const int lblPorcCoberturaDia = 2131100239;
 			
-			// aapt resource value: 0x7f06022e
-			public const int lblPorcNaoPositivados = 2131100206;
+			// aapt resource value: 0x7f06024b
+			public const int lblPorcNaoPositivados = 2131100235;
 			
-			// aapt resource value: 0x7f06022c
-			public const int lblPorcPositivados = 2131100204;
+			// aapt resource value: 0x7f060249
+			public const int lblPorcPositivados = 2131100233;
 			
-			// aapt resource value: 0x7f060230
-			public const int lblPorcPositivadosForaRota = 2131100208;
+			// aapt resource value: 0x7f06024d
+			public const int lblPorcPositivadosForaRota = 2131100237;
 			
-			// aapt resource value: 0x7f060228
-			public const int lblPorcPrevistas = 2131100200;
+			// aapt resource value: 0x7f060245
+			public const int lblPorcPrevistas = 2131100229;
 			
-			// aapt resource value: 0x7f06022a
-			public const int lblPorcRealizadas = 2131100202;
+			// aapt resource value: 0x7f060247
+			public const int lblPorcRealizadas = 2131100231;
 			
 			// aapt resource value: 0x7f06007a
 			public const int lblPrimeiraLabel = 2131099770;
@@ -3881,8 +3938,17 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0600aa
 			public const int lblProduto = 2131099818;
 			
-			// aapt resource value: 0x7f060204
-			public const int lblPz = 2131100164;
+			// aapt resource value: 0x7f060206
+			public const int lblPz = 2131100166;
+			
+			// aapt resource value: 0x7f060220
+			public const int lblQ1 = 2131100192;
+			
+			// aapt resource value: 0x7f060221
+			public const int lblQ2 = 2131100193;
+			
+			// aapt resource value: 0x7f060222
+			public const int lblQ3 = 2131100194;
 			
 			// aapt resource value: 0x7f060075
 			public const int lblQtdCaixa = 2131099765;
@@ -3890,32 +3956,38 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06017d
 			public const int lblQtdPerguntas = 2131100029;
 			
-			// aapt resource value: 0x7f060231
-			public const int lblQtdeCoberturaDia = 2131100209;
+			// aapt resource value: 0x7f06024e
+			public const int lblQtdeCoberturaDia = 2131100238;
+			
+			// aapt resource value: 0x7f0601f2
+			public const int lblQtdeIndenizacaoInt = 2131100146;
+			
+			// aapt resource value: 0x7f0601f3
+			public const int lblQtdeIndenizacaoUnit = 2131100147;
 			
 			// aapt resource value: 0x7f0600ad
 			public const int lblQtdeInteiro = 2131099821;
 			
-			// aapt resource value: 0x7f06022d
-			public const int lblQtdeNaoPositivados = 2131100205;
+			// aapt resource value: 0x7f06024a
+			public const int lblQtdeNaoPositivados = 2131100234;
 			
-			// aapt resource value: 0x7f06022b
-			public const int lblQtdePositivados = 2131100203;
+			// aapt resource value: 0x7f060248
+			public const int lblQtdePositivados = 2131100232;
 			
-			// aapt resource value: 0x7f06022f
-			public const int lblQtdePositivadosForaRota = 2131100207;
+			// aapt resource value: 0x7f06024c
+			public const int lblQtdePositivadosForaRota = 2131100236;
 			
-			// aapt resource value: 0x7f060227
-			public const int lblQtdePrevistas = 2131100199;
+			// aapt resource value: 0x7f060244
+			public const int lblQtdePrevistas = 2131100228;
 			
-			// aapt resource value: 0x7f060229
-			public const int lblQtdeRealizadas = 2131100201;
+			// aapt resource value: 0x7f060246
+			public const int lblQtdeRealizadas = 2131100230;
 			
 			// aapt resource value: 0x7f0600af
 			public const int lblQtdeUnidade = 2131099823;
 			
-			// aapt resource value: 0x7f0601f2
-			public const int lblQtdeUnitaria = 2131100146;
+			// aapt resource value: 0x7f0601f9
+			public const int lblQtdeUnitaria = 2131100153;
 			
 			// aapt resource value: 0x7f060183
 			public const int lblQuantidade = 2131100035;
@@ -3947,8 +4019,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601cf
 			public const int lblSaldoDesconto = 2131100111;
 			
-			// aapt resource value: 0x7f060211
-			public const int lblSaldoEstoque = 2131100177;
+			// aapt resource value: 0x7f06021a
+			public const int lblSaldoEstoque = 2131100186;
 			
 			// aapt resource value: 0x7f06007b
 			public const int lblSegundaLabel = 2131099771;
@@ -3965,11 +4037,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06014f
 			public const int lblStatusIndenizacao = 2131099983;
 			
-			// aapt resource value: 0x7f06026b
-			public const int lblStatusPedido = 2131100267;
+			// aapt resource value: 0x7f060288
+			public const int lblStatusPedido = 2131100296;
 			
-			// aapt resource value: 0x7f0601f6
-			public const int lblTaxaIndenizacao = 2131100150;
+			// aapt resource value: 0x7f0601fd
+			public const int lblTaxaIndenizacao = 2131100157;
 			
 			// aapt resource value: 0x7f06007c
 			public const int lblTerceiraLabel = 2131099772;
@@ -3983,14 +4055,14 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601cd
 			public const int lblTotalPed = 2131100109;
 			
-			// aapt resource value: 0x7f060268
-			public const int lblTotalPedi = 2131100264;
+			// aapt resource value: 0x7f060285
+			public const int lblTotalPedi = 2131100293;
 			
-			// aapt resource value: 0x7f060269
-			public const int lblTotalPeso = 2131100265;
+			// aapt resource value: 0x7f060286
+			public const int lblTotalPeso = 2131100294;
 			
-			// aapt resource value: 0x7f060206
-			public const int lblTrib = 2131100166;
+			// aapt resource value: 0x7f060208
+			public const int lblTrib = 2131100168;
 			
 			// aapt resource value: 0x7f060198
 			public const int lblUM = 2131100056;
@@ -3998,50 +4070,53 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0600c4
 			public const int lblValor = 2131099844;
 			
-			// aapt resource value: 0x7f06026a
-			public const int lblValorAbatimento = 2131100266;
+			// aapt resource value: 0x7f060287
+			public const int lblValorAbatimento = 2131100295;
 			
-			// aapt resource value: 0x7f06020b
-			public const int lblValorAdicionalFinanceiro = 2131100171;
+			// aapt resource value: 0x7f060214
+			public const int lblValorAdicionalFinanceiro = 2131100180;
 			
-			// aapt resource value: 0x7f060235
-			public const int lblValorDesconto = 2131100213;
+			// aapt resource value: 0x7f060252
+			public const int lblValorDesconto = 2131100242;
 			
-			// aapt resource value: 0x7f06020a
-			public const int lblValorDescontoUnitario = 2131100170;
+			// aapt resource value: 0x7f060213
+			public const int lblValorDescontoUnitario = 2131100179;
 			
-			// aapt resource value: 0x7f06020c
-			public const int lblValorFinalItem = 2131100172;
+			// aapt resource value: 0x7f060215
+			public const int lblValorFinalItem = 2131100181;
 			
-			// aapt resource value: 0x7f060237
-			public const int lblValorFinalQtd = 2131100215;
+			// aapt resource value: 0x7f060254
+			public const int lblValorFinalQtd = 2131100244;
 			
 			// aapt resource value: 0x7f0600a0
 			public const int lblValorPedido = 2131099808;
 			
-			// aapt resource value: 0x7f0601f7
-			public const int lblValorSemIndenizacao = 2131100151;
+			// aapt resource value: 0x7f0601fe
+			public const int lblValorSemIndenizacao = 2131100158;
 			
-			// aapt resource value: 0x7f060207
-			public const int lblValorTabela = 2131100167;
+			// aapt resource value: 0x7f060209
+			public const int lblValorTabela = 2131100169;
 			
 			// aapt resource value: 0x7f06014e
 			public const int lblValorTotal = 2131099982;
 			
-			// aapt resource value: 0x7f0601f8
-			public const int lblValorTotalItem = 2131100152;
+			// aapt resource value: 0x7f0601ff
+			public const int lblValorTotalItem = 2131100159;
 			
-			// aapt resource value: 0x7f0601fa
-			public const int lblValorUnitario = 2131100154;
+			// aapt resource value: 0x7f060201
+			public const int lblValorUnitario = 2131100161;
 			
-			// aapt resource value: 0x7f060200
-			public const int lblValorUnitarioSemADF = 2131100160;
+			// aapt resource value: 0x7f0601f4
+			public const int lblValorUnitarioIndenizacao = 2131100148;
 			
-			// aapt resource value: 0x7f060245
-			public const int lblVeiculo = 2131100229;
+			// aapt resource value: 0x7f06020d
+			public const int lblValorUnitarioSemADF = 2131100173;
 			
-			// aapt resource value: 0x7f060221
-			public const int lblVencimento = 2131100193;
+			// aapt resource value: 0x7f060262
+			public const int lblVeiculo = 2131100258;
+			
+			// aapt resource value: 0x7f06023e
+			public const int lblVencimento = 2131100222;
 			
 			// aapt resource value: 0x7f0600ba
 			public const int lblVendedor = 2131099834;
@@ -4082,8 +4157,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06000b
 			public const int listMode = 2131099659;
 			
-			// aapt resource value: 0x7f060223
-			public const int listMotivo = 2131100195;
+			// aapt resource value: 0x7f060240
+			public const int listMotivo = 2131100224;
 			
 			// aapt resource value: 0x7f060165
 			public const int listPdvs = 2131100005;
@@ -4100,6 +4175,9 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060041
 			public const int list_item = 2131099713;
 			
+			// aapt resource value: 0x7f0601f1
+			public const int llAbatimento = 2131100145;
+			
 			// aapt resource value: 0x7f060140
 			public const int llBotoes = 2131099968;
 			
@@ -4108,9 +4186,6 @@ namespace AvanteSales.Pro
 			
 			// aapt resource value: 0x7f060073
 			public const int llBottomQTD = 2131099763;
-			
-			// aapt resource value: 0x7f060202
-			public const int llCalcular = 2131100162;
 			
 			// aapt resource value: 0x7f0600cb
 			public const int llCategoriaDenver = 2131099851;
@@ -4130,8 +4205,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06011f
 			public const int llImagem = 2131099935;
 			
-			// aapt resource value: 0x7f0601f0
-			public const int llItem = 2131100144;
+			// aapt resource value: 0x7f0601f8
+			public const int llItem = 2131100152;
 			
 			// aapt resource value: 0x7f06011e
 			public const int llLayoutDialog = 2131099934;
@@ -4145,8 +4220,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601e4
 			public const int llOpcoesAvancadas = 2131100132;
 			
-			// aapt resource value: 0x7f06023e
-			public const int llProdutoQtd = 2131100222;
+			// aapt resource value: 0x7f06025b
+			public const int llProdutoQtd = 2131100251;
 			
 			// aapt resource value: 0x7f060124
 			public const int llRepeater = 2131099940;
@@ -4226,8 +4301,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060029
 			public const int pin = 2131099689;
 			
-			// aapt resource value: 0x7f060222
-			public const int progressBar1 = 2131100194;
+			// aapt resource value: 0x7f060203
+			public const int plot_view = 2131100163;
+			
+			// aapt resource value: 0x7f06023f
+			public const int progressBar1 = 2131100223;
 			
 			// aapt resource value: 0x7f060006
 			public const int progress_circular = 2131099654;
@@ -4238,8 +4316,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060054
 			public const int radio = 2131099732;
 			
-			// aapt resource value: 0x7f06021f
-			public const int rdbAVencer = 2131100191;
+			// aapt resource value: 0x7f06023c
+			public const int rdbAVencer = 2131100220;
 			
 			// aapt resource value: 0x7f060085
 			public const int rdbAcumulado = 2131099781;
@@ -4247,17 +4325,17 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060086
 			public const int rdbDia = 2131099782;
 			
-			// aapt resource value: 0x7f06023b
-			public const int rdbQuantidades = 2131100219;
+			// aapt resource value: 0x7f060258
+			public const int rdbQuantidades = 2131100248;
 			
 			// aapt resource value: 0x7f060087
 			public const int rdbTendencia = 2131099783;
 			
-			// aapt resource value: 0x7f06023a
-			public const int rdbValores = 2131100218;
+			// aapt resource value: 0x7f060257
+			public const int rdbValores = 2131100247;
 			
-			// aapt resource value: 0x7f060220
-			public const int rdbVencidos = 2131100192;
+			// aapt resource value: 0x7f06023d
+			public const int rdbVencidos = 2131100221;
 			
 			// aapt resource value: 0x7f0601b7
 			public const int rdgMotivos = 2131100087;
@@ -4265,8 +4343,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060084
 			public const int rdgRadio = 2131099780;
 			
-			// aapt resource value: 0x7f06021e
-			public const int rdgRdbGroup = 2131100190;
+			// aapt resource value: 0x7f06023b
+			public const int rdgRdbGroup = 2131100219;
 			
 			// aapt resource value: 0x7f060148
 			public const int rgpRadioGroup = 2131099976;
@@ -4385,11 +4463,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060126
 			public const int tableRow1 = 2131099942;
 			
-			// aapt resource value: 0x7f060264
-			public const int tabsLayout = 2131100260;
+			// aapt resource value: 0x7f060281
+			public const int tabsLayout = 2131100289;
 			
-			// aapt resource value: 0x7f060265
-			public const int tabsText = 2131100261;
+			// aapt resource value: 0x7f060282
+			public const int tabsText = 2131100290;
 			
 			// aapt resource value: 0x7f0600eb
 			public const int tbMain = 2131099883;
@@ -4409,8 +4487,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060122
 			public const int tblTab = 2131099938;
 			
-			// aapt resource value: 0x7f060267
-			public const int tblUltimasVisitas = 2131100263;
+			// aapt resource value: 0x7f060284
+			public const int tblUltimasVisitas = 2131100292;
 			
 			// aapt resource value: 0x7f0601c2
 			public const int text = 2131100098;
@@ -4427,20 +4505,20 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601a5
 			public const int tilDataVisita = 2131100069;
 			
-			// aapt resource value: 0x7f06025c
-			public const int tilEmpresa = 2131100252;
+			// aapt resource value: 0x7f060279
+			public const int tilEmpresa = 2131100281;
 			
 			// aapt resource value: 0x7f0601ab
 			public const int tilSenha = 2131100075;
 			
-			// aapt resource value: 0x7f060257
-			public const int tilServidor = 2131100247;
+			// aapt resource value: 0x7f060274
+			public const int tilServidor = 2131100276;
 			
 			// aapt resource value: 0x7f0601a9
 			public const int tilUsuario = 2131100073;
 			
-			// aapt resource value: 0x7f06025a
-			public const int tilVendedor = 2131100250;
+			// aapt resource value: 0x7f060277
+			public const int tilVendedor = 2131100279;
 			
 			// aapt resource value: 0x7f0601be
 			public const int time = 2131100094;
@@ -4460,14 +4538,14 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0600d7
 			public const int touch_outside = 2131099863;
 			
-			// aapt resource value: 0x7f060216
-			public const int trCheckBoxes = 2131100182;
+			// aapt resource value: 0x7f060233
+			public const int trCheckBoxes = 2131100211;
 			
 			// aapt resource value: 0x7f0600ff
 			public const int trLinha = 2131099903;
 			
-			// aapt resource value: 0x7f060214
-			public const int trSearch = 2131100180;
+			// aapt resource value: 0x7f060231
+			public const int trSearch = 2131100209;
 			
 			// aapt resource value: 0x7f06008e
 			public const int tvAcumulado = 2131099790;
@@ -4523,8 +4601,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0600f2
 			public const int tvDenver = 2131099890;
 			
-			// aapt resource value: 0x7f060241
-			public const int tvDesc = 2131100225;
+			// aapt resource value: 0x7f06025e
+			public const int tvDesc = 2131100254;
 			
 			// aapt resource value: 0x7f060116
 			public const int tvDescApelidoProduto = 2131099926;
@@ -4538,8 +4616,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06018a
 			public const int tvDescProduto = 2131100042;
 			
-			// aapt resource value: 0x7f060253
-			public const int tvDesconto = 2131100243;
+			// aapt resource value: 0x7f060270
+			public const int tvDesconto = 2131100272;
 			
 			// aapt resource value: 0x7f0601ed
 			public const int tvDescricao = 2131100141;
@@ -4553,8 +4631,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0600f4
 			public const int tvEndereco = 2131099892;
 			
-			// aapt resource value: 0x7f06021c
-			public const int tvEstoque = 2131100188;
+			// aapt resource value: 0x7f060239
+			public const int tvEstoque = 2131100217;
 			
 			// aapt resource value: 0x7f060118
 			public const int tvFamilia = 2131099928;
@@ -4565,8 +4643,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06015b
 			public const int tvGrupoCliente = 2131099995;
 			
-			// aapt resource value: 0x7f06021d
-			public const int tvGrupoComercializacao = 2131100189;
+			// aapt resource value: 0x7f06023a
+			public const int tvGrupoComercializacao = 2131100218;
 			
 			// aapt resource value: 0x7f0601ea
 			public const int tvHeaderCodigo = 2131100138;
@@ -4574,8 +4652,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601eb
 			public const int tvHeaderQuantidade = 2131100139;
 			
-			// aapt resource value: 0x7f060219
-			public const int tvHeaderValor = 2131100185;
+			// aapt resource value: 0x7f060236
+			public const int tvHeaderValor = 2131100214;
 			
 			// aapt resource value: 0x7f060154
 			public const int tvInscr = 2131099988;
@@ -4589,8 +4667,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060090
 			public const int tvMetaDia = 2131099792;
 			
-			// aapt resource value: 0x7f060224
-			public const int tvMotivo = 2131100196;
+			// aapt resource value: 0x7f060241
+			public const int tvMotivo = 2131100225;
 			
 			// aapt resource value: 0x7f0600ef
 			public const int tvNomeFantasia = 2131099887;
@@ -4631,11 +4709,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060095
 			public const int tvPorcentagemTendencia = 2131099797;
 			
-			// aapt resource value: 0x7f060226
-			public const int tvPorcentagemVisitas = 2131100198;
+			// aapt resource value: 0x7f060243
+			public const int tvPorcentagemVisitas = 2131100227;
 			
-			// aapt resource value: 0x7f06024f
-			public const int tvPrecoTabela = 2131100239;
+			// aapt resource value: 0x7f06026c
+			public const int tvPrecoTabela = 2131100268;
 			
 			// aapt resource value: 0x7f060192
 			public const int tvPrecoUnitario = 2131100050;
@@ -4649,26 +4727,26 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060135
 			public const int tvQtd = 2131099957;
 			
-			// aapt resource value: 0x7f060240
-			public const int tvQtdCli = 2131100224;
+			// aapt resource value: 0x7f06025d
+			public const int tvQtdCli = 2131100253;
 			
-			// aapt resource value: 0x7f06023d
-			public const int tvQtdClientes = 2131100221;
+			// aapt resource value: 0x7f06025a
+			public const int tvQtdClientes = 2131100250;
 			
-			// aapt resource value: 0x7f06023f
-			public const int tvQtdPed = 2131100223;
+			// aapt resource value: 0x7f06025c
+			public const int tvQtdPed = 2131100252;
 			
-			// aapt resource value: 0x7f06023c
-			public const int tvQtdPedido = 2131100220;
+			// aapt resource value: 0x7f060259
+			public const int tvQtdPedido = 2131100249;
 			
 			// aapt resource value: 0x7f06017e
 			public const int tvQtdPerguntas = 2131100030;
 			
-			// aapt resource value: 0x7f060251
-			public const int tvQtdUnitaria = 2131100241;
+			// aapt resource value: 0x7f06026e
+			public const int tvQtdUnitaria = 2131100270;
 			
-			// aapt resource value: 0x7f060225
-			public const int tvQtdVisitas = 2131100197;
+			// aapt resource value: 0x7f060242
+			public const int tvQtdVisitas = 2131100226;
 			
 			// aapt resource value: 0x7f0600c8
 			public const int tvQuantidade = 2131099848;
@@ -4682,8 +4760,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060153
 			public const int tvRazao = 2131099987;
 			
-			// aapt resource value: 0x7f060218
-			public const int tvRazaoSocial = 2131100184;
+			// aapt resource value: 0x7f060235
+			public const int tvRazaoSocial = 2131100213;
 			
 			// aapt resource value: 0x7f0600f8
 			public const int tvReferencia = 2131099896;
@@ -4736,11 +4814,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06012c
 			public const int tvTotalMulta = 2131099948;
 			
-			// aapt resource value: 0x7f06024d
-			public const int tvTotalPedido = 2131100237;
+			// aapt resource value: 0x7f06026a
+			public const int tvTotalPedido = 2131100266;
 			
-			// aapt resource value: 0x7f06024c
-			public const int tvTotalProduto = 2131100236;
+			// aapt resource value: 0x7f060269
+			public const int tvTotalProduto = 2131100265;
 			
 			// aapt resource value: 0x7f060128
 			public const int tvTotalReceber = 2131099944;
@@ -4751,11 +4829,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06015d
 			public const int tvUnidadeNegocio = 2131099997;
 			
-			// aapt resource value: 0x7f060243
-			public const int tvValorDesconto = 2131100227;
+			// aapt resource value: 0x7f060260
+			public const int tvValorDesconto = 2131100256;
 			
-			// aapt resource value: 0x7f060242
-			public const int tvValorMedio = 2131100226;
+			// aapt resource value: 0x7f06025f
+			public const int tvValorMedio = 2131100255;
 			
 			// aapt resource value: 0x7f0600ea
 			public const int tvValorResultado = 2131099882;
@@ -4769,11 +4847,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060091
 			public const int tvVendaDia = 2131099793;
 			
-			// aapt resource value: 0x7f06021a
-			public const int tvVendaMes = 2131100186;
+			// aapt resource value: 0x7f060237
+			public const int tvVendaMes = 2131100215;
 			
-			// aapt resource value: 0x7f06021b
-			public const int tvVendaUltimaVisita = 2131100187;
+			// aapt resource value: 0x7f060238
+			public const int tvVendaUltimaVisita = 2131100216;
 			
 			// aapt resource value: 0x7f06012f
 			public const int tvVendedor = 2131099951;
@@ -4787,20 +4865,20 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601a8
 			public const int txtDataEntrega = 2131100072;
 			
-			// aapt resource value: 0x7f0601fd
-			public const int txtDataVencimento = 2131100157;
+			// aapt resource value: 0x7f060205
+			public const int txtDataVencimento = 2131100165;
 			
 			// aapt resource value: 0x7f0601a6
 			public const int txtDataVisita = 2131100070;
 			
-			// aapt resource value: 0x7f0601ff
-			public const int txtDescIncond = 2131100159;
+			// aapt resource value: 0x7f060211
+			public const int txtDescIncond = 2131100177;
 			
 			// aapt resource value: 0x7f0600e5
 			public const int txtDescMax = 2131099877;
 			
-			// aapt resource value: 0x7f060254
-			public const int txtDesconto = 2131100244;
+			// aapt resource value: 0x7f060271
+			public const int txtDesconto = 2131100273;
 			
 			// aapt resource value: 0x7f0601d4
 			public const int txtDescontoIndenizacao = 2131100116;
@@ -4811,11 +4889,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060107
 			public const int txtEmail = 2131099911;
 			
-			// aapt resource value: 0x7f060256
-			public const int txtImei = 2131100246;
+			// aapt resource value: 0x7f060273
+			public const int txtImei = 2131100275;
 			
-			// aapt resource value: 0x7f06024e
-			public const int txtItem = 2131100238;
+			// aapt resource value: 0x7f06026b
+			public const int txtItem = 2131100267;
 			
 			// aapt resource value: 0x7f060110
 			public const int txtMarkup = 2131099920;
@@ -4835,20 +4913,26 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f06018e
 			public const int txtProdutosVendidos = 2131100046;
 			
-			// aapt resource value: 0x7f060250
-			public const int txtQtdInteira = 2131100240;
+			// aapt resource value: 0x7f06026d
+			public const int txtQtdInteira = 2131100269;
 			
-			// aapt resource value: 0x7f060252
-			public const int txtQtdUnitaria = 2131100242;
+			// aapt resource value: 0x7f06026f
+			public const int txtQtdUnitaria = 2131100271;
 			
-			// aapt resource value: 0x7f0601fc
-			public const int txtQtdVencimento = 2131100156;
+			// aapt resource value: 0x7f060204
+			public const int txtQtdVencimento = 2131100164;
 			
 			// aapt resource value: 0x7f0600ae
 			public const int txtQtdeInteiro = 2131099822;
 			
+			// aapt resource value: 0x7f0601f5
+			public const int txtQtdeInteiroIndenizacao = 2131100149;
+			
 			// aapt resource value: 0x7f0600b0
 			public const int txtQtdeUnidade = 2131099824;
+			
+			// aapt resource value: 0x7f0601f6
+			public const int txtQtdeUnidadeIndenizacao = 2131100150;
 			
 			// aapt resource value: 0x7f06010c
 			public const int txtQuantidade = 2131099916;
@@ -4868,11 +4952,11 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0600bc
 			public const int txtSerie = 2131099836;
 			
-			// aapt resource value: 0x7f060258
-			public const int txtServidor = 2131100248;
+			// aapt resource value: 0x7f060275
+			public const int txtServidor = 2131100277;
 			
-			// aapt resource value: 0x7f0601f3
-			public const int txtTaxaIndenizacao = 2131100147;
+			// aapt resource value: 0x7f0601fa
+			public const int txtTaxaIndenizacao = 2131100154;
 			
 			// aapt resource value: 0x7f06010a
 			public const int txtTelefone = 2131099914;
@@ -4883,14 +4967,17 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f0601aa
 			public const int txtUsuario = 2131100074;
 			
-			// aapt resource value: 0x7f06020d
-			public const int txtValorFinalItem = 2131100173;
+			// aapt resource value: 0x7f060216
+			public const int txtValorFinalItem = 2131100182;
 			
-			// aapt resource value: 0x7f060201
-			public const int txtValorUnitarioSemADF = 2131100161;
+			// aapt resource value: 0x7f0601f7
+			public const int txtValorFinalItemIndenizacao = 2131100151;
 			
-			// aapt resource value: 0x7f06025b
-			public const int txtVendedor = 2131100251;
+			// aapt resource value: 0x7f060212
+			public const int txtValorUnitarioSemADF = 2131100178;
+			
+			// aapt resource value: 0x7f060278
+			public const int txtVendedor = 2131100280;
 			
 			// aapt resource value: 0x7f060009
 			public const int up = 2131099657;
@@ -4907,8 +4994,8 @@ namespace AvanteSales.Pro
 			// aapt resource value: 0x7f060123
 			public const int vwpTab = 2131099939;
 			
-			// aapt resource value: 0x7f060263
-			public const int wbvWebView = 2131100259;
+			// aapt resource value: 0x7f060280
+			public const int wbvWebView = 2131100288;
 			
 			// aapt resource value: 0x7f060022
 			public const int withText = 2131099682;
@@ -5393,118 +5480,124 @@ namespace AvanteSales.Pro
 			public const int produto = 2130903182;
 			
 			// aapt resource value: 0x7f03008f
-			public const int produto_indenizacao = 2130903183;
+			public const int produto_abatimento = 2130903183;
 			
 			// aapt resource value: 0x7f030090
-			public const int produto_vencimento = 2130903184;
+			public const int produto_indenizacao = 2130903184;
 			
 			// aapt resource value: 0x7f030091
-			public const int produto_vencimento_row = 2130903185;
+			public const int produto_informacao = 2130903185;
 			
 			// aapt resource value: 0x7f030092
-			public const int produto_venda = 2130903186;
+			public const int produto_vencimento = 2130903186;
 			
 			// aapt resource value: 0x7f030093
-			public const int produto_venda_novo = 2130903187;
+			public const int produto_vencimento_row = 2130903187;
 			
 			// aapt resource value: 0x7f030094
-			public const int produtos = 2130903188;
+			public const int produto_venda = 2130903188;
 			
 			// aapt resource value: 0x7f030095
-			public const int produtos_header = 2130903189;
+			public const int produto_venda_novo = 2130903189;
 			
 			// aapt resource value: 0x7f030096
-			public const int produtos_indenizacao_row_descricao = 2130903190;
+			public const int produtos = 2130903190;
 			
 			// aapt resource value: 0x7f030097
-			public const int produtos_vencer = 2130903191;
+			public const int produtos_header = 2130903191;
 			
 			// aapt resource value: 0x7f030098
-			public const int produtos_vencer_row = 2130903192;
+			public const int produtos_indenizacao_row_descricao = 2130903192;
 			
 			// aapt resource value: 0x7f030099
-			public const int progress_dialog = 2130903193;
+			public const int produtos_vencer = 2130903193;
 			
 			// aapt resource value: 0x7f03009a
-			public const int relatorio = 2130903194;
+			public const int produtos_vencer_row = 2130903194;
 			
 			// aapt resource value: 0x7f03009b
-			public const int relatorio_pdv = 2130903195;
+			public const int progress_dialog = 2130903195;
 			
 			// aapt resource value: 0x7f03009c
-			public const int resumo_dia = 2130903196;
+			public const int relatorio = 2130903196;
 			
 			// aapt resource value: 0x7f03009d
-			public const int resumo_dia_motivo = 2130903197;
+			public const int relatorio_pdv = 2130903197;
 			
 			// aapt resource value: 0x7f03009e
-			public const int resumo_dia_motivo_header = 2130903198;
+			public const int resumo_dia = 2130903198;
 			
 			// aapt resource value: 0x7f03009f
-			public const int resumo_dia_motivo_row = 2130903199;
+			public const int resumo_dia_motivo = 2130903199;
 			
 			// aapt resource value: 0x7f0300a0
-			public const int resumo_dia_pdv = 2130903200;
+			public const int resumo_dia_motivo_header = 2130903200;
 			
 			// aapt resource value: 0x7f0300a1
-			public const int resumo_dia_pedido = 2130903201;
+			public const int resumo_dia_motivo_row = 2130903201;
 			
 			// aapt resource value: 0x7f0300a2
-			public const int resumo_dia_produto = 2130903202;
+			public const int resumo_dia_pdv = 2130903202;
 			
 			// aapt resource value: 0x7f0300a3
-			public const int resumo_dia_produto_quantidades_header = 2130903203;
+			public const int resumo_dia_pedido = 2130903203;
 			
 			// aapt resource value: 0x7f0300a4
-			public const int resumo_dia_produto_quantidades_row = 2130903204;
+			public const int resumo_dia_produto = 2130903204;
 			
 			// aapt resource value: 0x7f0300a5
-			public const int resumo_dia_produto_valores_header = 2130903205;
+			public const int resumo_dia_produto_quantidades_header = 2130903205;
 			
 			// aapt resource value: 0x7f0300a6
-			public const int resumo_dia_produto_valores_row = 2130903206;
+			public const int resumo_dia_produto_quantidades_row = 2130903206;
 			
 			// aapt resource value: 0x7f0300a7
-			public const int resumo_peso_pedido = 2130903207;
+			public const int resumo_dia_produto_valores_header = 2130903207;
 			
 			// aapt resource value: 0x7f0300a8
-			public const int resumo_peso_pedido_grafico = 2130903208;
+			public const int resumo_dia_produto_valores_row = 2130903208;
 			
 			// aapt resource value: 0x7f0300a9
-			public const int resumo_peso_pedido_informacoes = 2130903209;
+			public const int resumo_peso_pedido = 2130903209;
 			
 			// aapt resource value: 0x7f0300aa
-			public const int select_dialog_item_material = 2130903210;
+			public const int resumo_peso_pedido_grafico = 2130903210;
 			
 			// aapt resource value: 0x7f0300ab
-			public const int select_dialog_multichoice_material = 2130903211;
+			public const int resumo_peso_pedido_informacoes = 2130903211;
 			
 			// aapt resource value: 0x7f0300ac
-			public const int select_dialog_singlechoice_material = 2130903212;
+			public const int select_dialog_item_material = 2130903212;
 			
 			// aapt resource value: 0x7f0300ad
-			public const int simulacao_preco = 2130903213;
+			public const int select_dialog_multichoice_material = 2130903213;
 			
 			// aapt resource value: 0x7f0300ae
-			public const int sincronizacao = 2130903214;
+			public const int select_dialog_singlechoice_material = 2130903214;
 			
 			// aapt resource value: 0x7f0300af
-			public const int splash_screen = 2130903215;
+			public const int simulacao_preco = 2130903215;
 			
 			// aapt resource value: 0x7f0300b0
-			public const int support_simple_spinner_dropdown_item = 2130903216;
+			public const int sincronizacao = 2130903216;
 			
 			// aapt resource value: 0x7f0300b1
-			public const int tabs_bg = 2130903217;
+			public const int splash_screen = 2130903217;
 			
 			// aapt resource value: 0x7f0300b2
-			public const int ultimas_visitas = 2130903218;
+			public const int support_simple_spinner_dropdown_item = 2130903218;
 			
 			// aapt resource value: 0x7f0300b3
-			public const int ultimos_pedidos_produto = 2130903219;
+			public const int tabs_bg = 2130903219;
 			
 			// aapt resource value: 0x7f0300b4
-			public const int ultimos_pedidos_produto_row = 2130903220;
+			public const int ultimas_visitas = 2130903220;
+			
+			// aapt resource value: 0x7f0300b5
+			public const int ultimos_pedidos_produto = 2130903221;
+			
+			// aapt resource value: 0x7f0300b6
+			public const int ultimos_pedidos_produto_row = 2130903222;
 			
 			static Layout()
 			{

@@ -217,7 +217,7 @@ namespace AvanteSales.Pro.Activities
 
                     tvUnidadeMedida.Text = pedido.PRODUTO.DSC_UNIDADE_MEDIDA;
 
-                    bool especificoCategoria = false;
+                    //bool especificoCategoria = false;
 
                     imgProdEspecifico.Visibility = ViewStates.Gone;
                 }

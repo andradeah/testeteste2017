@@ -65,9 +65,10 @@ namespace AvanteSales.Pro.Formatters
                 }
                 try
                 {
-                    mascara += str[i];
+                    if (!string.IsNullOrEmpty(str))
+                        mascara += str[i];
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
                     break;
                 }

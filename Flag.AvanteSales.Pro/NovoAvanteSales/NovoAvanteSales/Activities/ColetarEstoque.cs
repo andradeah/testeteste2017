@@ -32,12 +32,12 @@ namespace AvanteSales.Pro.Activities
         private Button btnPesquisar;
         private TextView lblQtdeInteiro;
         private TextView lblQtdeUnidade;
-        private TextView lblPerdaInteira;
-        private EditText txtPerdaInteira;
-        private TextView lblPerdaUnidade;
-        private EditText txtPerdaUnidade;
-        private CheckBox chkPerda;
-        private CheckBox chkOcultar;
+        //private TextView lblPerdaInteira;
+        //private EditText txtPerdaInteira;
+        //private TextView lblPerdaUnidade;
+        //private EditText txtPerdaUnidade;
+        //private CheckBox chkPerda;
+        //private CheckBox chkOcultar;
         private ListView lvwEstoque;
         private CSProdutos.CSProduto produtoAtual = null;
         private static CSColetaEstoquePDV coletaEstoquePDV = null;
@@ -213,11 +213,11 @@ namespace AvanteSales.Pro.Activities
             lvwEstoque.ItemLongClick += LvwEstoque_ItemLongClick;
             lvwEstoque.ItemClick += LvwEstoque_ItemClick;
 
-            if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-            {
-                chkOcultar.CheckedChange += ChkOcultar_CheckedChange;
-                chkPerda.CheckedChange += ChkPerda_CheckedChange;
-            }
+            //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+            //{
+            //    chkOcultar.CheckedChange += ChkOcultar_CheckedChange;
+            //    chkPerda.CheckedChange += ChkPerda_CheckedChange;
+            //}
         }
 
         private void ListaDados()
@@ -270,11 +270,11 @@ namespace AvanteSales.Pro.Activities
             {
                 if (produto.DESCRICAO_APELIDO_PRODUTO.ToString() == produtoProcurado)
                 {
-                    if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-                    {
-                        txtPerdaInteira.Visibility = ViewStates.Visible;
-                        lblPerdaInteira.Visibility = ViewStates.Visible;
-                    }
+                    //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+                    //{
+                    //    txtPerdaInteira.Visibility = ViewStates.Visible;
+                    //    lblPerdaInteira.Visibility = ViewStates.Visible;
+                    //}
 
                     btnColetar.Visibility = ViewStates.Visible;
                     lblProduto.Visibility = ViewStates.Visible;
@@ -291,11 +291,11 @@ namespace AvanteSales.Pro.Activities
                         txtQtdeUnidade.Visibility = ViewStates.Visible;
                         lblQtdeUnidade.Visibility = ViewStates.Visible;
 
-                        if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-                        {
-                            txtPerdaUnidade.Visibility = ViewStates.Visible;
-                            lblPerdaUnidade.Visibility = ViewStates.Visible;
-                        }
+                        //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+                        //{
+                            //txtPerdaUnidade.Visibility = ViewStates.Visible;
+                            //lblPerdaUnidade.Visibility = ViewStates.Visible;
+                        //}
                     }
                     break;
                 }
@@ -348,19 +348,19 @@ namespace AvanteSales.Pro.Activities
                                 else
                                     txtQtdeUnidade.Text = produto.QTD_COLETADA_UNIDADE.ToString("###000");
 
-                                if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-                                {
-                                    if (produto.QTD_PERDA_INTEIRA == -1)
-                                        txtPerdaInteira.Text = string.Empty;
-                                    else
-                                        txtPerdaInteira.Text = produto.QTD_PERDA_INTEIRA.ToString();
+                                //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+                                //{
+                                //    if (produto.QTD_PERDA_INTEIRA == -1)
+                                //        txtPerdaInteira.Text = string.Empty;
+                                //    else
+                                //        txtPerdaInteira.Text = produto.QTD_PERDA_INTEIRA.ToString();
 
-                                    if (txtPerdaUnidade.Visibility == ViewStates.Visible &&
-                                        produto.QTD_PERDA_UNIDADE == -1)
-                                        txtPerdaUnidade.Text = string.Empty;
-                                    else
-                                        txtPerdaUnidade.Text = produto.QTD_PERDA_UNIDADE.ToString("###000");
-                                }
+                                //    if (txtPerdaUnidade.Visibility == ViewStates.Visible &&
+                                //        produto.QTD_PERDA_UNIDADE == -1)
+                                //        txtPerdaUnidade.Text = string.Empty;
+                                //    else
+                                //        txtPerdaUnidade.Text = produto.QTD_PERDA_UNIDADE.ToString("###000");
+                                //}
                             }
 
                             txtQtdeInteiro.RequestFocus();
@@ -379,11 +379,11 @@ namespace AvanteSales.Pro.Activities
             txtQtdeUnidade.Text = string.Empty;
             produtoAtual = null;
 
-            if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-            {
-                txtPerdaInteira.Text = string.Empty;
-                txtPerdaUnidade.Text = string.Empty;
-            }
+            //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+            //{
+            //    txtPerdaInteira.Text = string.Empty;
+            //    txtPerdaUnidade.Text = string.Empty;
+            //}
         }
 
         private void LvwEstoque_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
@@ -394,13 +394,13 @@ namespace AvanteSales.Pro.Activities
             txtQtdeUnidade.Visibility = ViewStates.Gone;
             lblQtdeUnidade.Visibility = ViewStates.Gone;
 
-            if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-            {
-                txtPerdaInteira.Visibility = ViewStates.Gone;
-                lblPerdaInteira.Visibility = ViewStates.Gone;
-                txtPerdaUnidade.Visibility = ViewStates.Gone;
-                lblPerdaUnidade.Visibility = ViewStates.Gone;
-            }
+            //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+            //{
+            //    txtPerdaInteira.Visibility = ViewStates.Gone;
+            //    lblPerdaInteira.Visibility = ViewStates.Gone;
+            //    txtPerdaUnidade.Visibility = ViewStates.Gone;
+            //    lblPerdaUnidade.Visibility = ViewStates.Gone;
+            //}
 
             Position = e.Position; ;
             txtProduto.Text = ((CSColetaEstoquePDV.CSColetaEstoqueProduto)((CSListViewItem)lvwEstoque.Adapter.GetItem(e.Position)).Valor).PRODUTO.DESCRICAO_APELIDO_PRODUTO.Trim();
@@ -466,8 +466,8 @@ namespace AvanteSales.Pro.Activities
 
                                 if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
                                 {
-                                    coletaEstoquePDV.Current.QTD_PERDA_INTEIRA = CSGlobal.StrToInt(txtPerdaInteira.Text);
-                                    coletaEstoquePDV.Current.QTD_PERDA_UNIDADE = CSGlobal.StrToInt(txtPerdaUnidade.Text);
+                                    //coletaEstoquePDV.Current.QTD_PERDA_INTEIRA = CSGlobal.StrToInt(txtPerdaInteira.Text);
+                                    //coletaEstoquePDV.Current.QTD_PERDA_UNIDADE = CSGlobal.StrToInt(txtPerdaUnidade.Text);
                                     coletaEstoquePDV.CalculaGiroSellout(coletaEstoquePDV.Current);
                                     coletaEstoquePDV.Current.PRODUTO.QTD_PRODUTO_SUGERIDO = CSColetaEstoquePDV.CalculaQuantidadeSugerida(coletaEstoquePDV.Current);
 
@@ -479,12 +479,12 @@ namespace AvanteSales.Pro.Activities
 
                                         if (CSEmpresa.Current.TIPO_TROCA == 2)
                                         {
-                                            CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_EXIBICAO = CSGlobal.StrToDecimal(txtPerdaInteira.Text);
+                                            //CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_EXIBICAO = CSGlobal.StrToDecimal(txtPerdaInteira.Text);
                                             CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.VLR_INDENIZACAO_EXIBICAO = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.PRODUTO.PRECOS_PRODUTO.Current.VLR_PRODUTO * CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_INTEIRA;
                                         }
                                         else
                                         {
-                                            CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_INTEIRA = CSGlobal.StrToDecimal(txtPerdaInteira.Text);
+                                            //CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_INTEIRA = CSGlobal.StrToDecimal(txtPerdaInteira.Text);
                                             CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.VLR_INDENIZACAO_UNIDADE = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.PRODUTO.PRECOS_PRODUTO.Current.VLR_PRODUTO * CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_INTEIRA;
                                         }
                                     }
@@ -500,12 +500,12 @@ namespace AvanteSales.Pro.Activities
                                 novoProduto.QTD_COLETADA_INTEIRA = CSGlobal.StrToDecimal(txtQtdeInteiro.Text);
                                 novoProduto.QTD_COLETADA_UNIDADE = CSGlobal.StrToInt(txtQtdeUnidade.Text);
 
-                                if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-                                {
-                                    novoProduto.QTD_PERDA_INTEIRA = CSGlobal.StrToInt(txtPerdaInteira.Text);
-                                    novoProduto.QTD_PERDA_UNIDADE = CSGlobal.StrToInt(txtPerdaUnidade.Text);
-                                    novoProduto.NUM_COLETA_ESTOQUE = -1;
-                                }
+                                //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+                                //{
+                                //    novoProduto.QTD_PERDA_INTEIRA = CSGlobal.StrToInt(txtPerdaInteira.Text);
+                                //    novoProduto.QTD_PERDA_UNIDADE = CSGlobal.StrToInt(txtPerdaUnidade.Text);
+                                //    novoProduto.NUM_COLETA_ESTOQUE = -1;
+                                //}
 
                                 coletaEstoquePDV.Add(novoProduto);
                             }
@@ -516,13 +516,13 @@ namespace AvanteSales.Pro.Activities
                             txtQtdeUnidade.Visibility = ViewStates.Gone;
                             lblQtdeUnidade.Visibility = ViewStates.Gone;
 
-                            if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-                            {
-                                lblPerdaInteira.Visibility = ViewStates.Gone;
-                                txtPerdaInteira.Visibility = ViewStates.Gone;
-                                lblPerdaUnidade.Visibility = ViewStates.Gone;
-                                txtPerdaUnidade.Visibility = ViewStates.Gone;
-                            }
+                            //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+                            //{
+                            //    lblPerdaInteira.Visibility = ViewStates.Gone;
+                            //    txtPerdaInteira.Visibility = ViewStates.Gone;
+                            //    lblPerdaUnidade.Visibility = ViewStates.Gone;
+                            //    txtPerdaUnidade.Visibility = ViewStates.Gone;
+                            //}
 
                             coletaEstoquePDV.Current = null;
                             LimpaEntrada();
@@ -555,12 +555,12 @@ namespace AvanteSales.Pro.Activities
                  txtQtdeInteiro.Text = string.Empty;
                  txtQtdeUnidade.Text = string.Empty;
 
-                 if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-                 {
-                     txtPerdaInteira.Text = string.Empty;
-                     txtPerdaUnidade.Text = string.Empty;
-                 }
-                 else
+                 //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+                 //{
+                 //    txtPerdaInteira.Text = string.Empty;
+                 //    txtPerdaUnidade.Text = string.Empty;
+                 //}
+                 //else
                      ListaDados();
 
                  btnColetar.Visibility = ViewStates.Gone;
@@ -569,13 +569,13 @@ namespace AvanteSales.Pro.Activities
                  txtQtdeUnidade.Visibility = ViewStates.Gone;
                  lblQtdeUnidade.Visibility = ViewStates.Gone;
 
-                 if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
-                 {
-                     lblPerdaInteira.Visibility = ViewStates.Gone;
-                     txtPerdaInteira.Visibility = ViewStates.Gone;
-                     lblPerdaUnidade.Visibility = ViewStates.Gone;
-                     txtPerdaUnidade.Visibility = ViewStates.Gone;
-                 }
+                 //if (CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
+                 //{
+                 //    lblPerdaInteira.Visibility = ViewStates.Gone;
+                 //    txtPerdaInteira.Visibility = ViewStates.Gone;
+                 //    lblPerdaUnidade.Visibility = ViewStates.Gone;
+                 //    txtPerdaUnidade.Visibility = ViewStates.Gone;
+                 //}
 
              }, "Cancelar", null, true);
         }
@@ -681,8 +681,8 @@ namespace AvanteSales.Pro.Activities
                 if (txtQtdeInteiro.Text == string.Empty)
                     return false;
 
-                if (!chkPerda.Checked && txtPerdaInteira.Text == string.Empty)
-                    return false;
+                //if (!chkPerda.Checked && txtPerdaInteira.Text == string.Empty)
+                //    return false;
             }
             else
             {

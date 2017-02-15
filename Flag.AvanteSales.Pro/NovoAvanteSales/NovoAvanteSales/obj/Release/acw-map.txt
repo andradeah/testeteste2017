@@ -106,6 +106,10 @@ AvanteSales.Pro.Fragments.GrupoProduto/ThreadGrupoProduto/GridViewGrupoProdutoAd
 AvanteSales.Pro.Fragments.GrupoProduto+ThreadGrupoProduto+GridViewGrupoProdutoAdapter, AvanteSales.Pro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c792c221571b27782b48474fc0e8d40f.GrupoProduto_ThreadGrupoProduto_GridViewGrupoProdutoAdapter
 AvanteSales.Pro.Fragments.GrupoProduto.ThreadGrupoProduto.GridViewGrupoProdutoAdapter;md5c792c221571b27782b48474fc0e8d40f.GrupoProduto_ThreadGrupoProduto_GridViewGrupoProdutoAdapter
 avantesales.pro.fragments.GrupoProduto_ThreadGrupoProduto_GridViewGrupoProdutoAdapter;md5c792c221571b27782b48474fc0e8d40f.GrupoProduto_ThreadGrupoProduto_GridViewGrupoProdutoAdapter
+AvanteSales.Pro.Fragments.ProdutoInformacao, AvanteSales.Pro;md5c792c221571b27782b48474fc0e8d40f.ProdutoInformacao
+AvanteSales.Pro.Fragments.ProdutoInformacao, AvanteSales.Pro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c792c221571b27782b48474fc0e8d40f.ProdutoInformacao
+AvanteSales.Pro.Fragments.ProdutoInformacao;md5c792c221571b27782b48474fc0e8d40f.ProdutoInformacao
+avantesales.pro.fragments.ProdutoInformacao;md5c792c221571b27782b48474fc0e8d40f.ProdutoInformacao
 AvanteSales.Pro.Fragments.Informacoes, AvanteSales.Pro;md5c792c221571b27782b48474fc0e8d40f.Informacoes
 AvanteSales.Pro.Fragments.Informacoes, AvanteSales.Pro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c792c221571b27782b48474fc0e8d40f.Informacoes
 AvanteSales.Pro.Fragments.Informacoes;md5c792c221571b27782b48474fc0e8d40f.Informacoes
@@ -298,6 +302,10 @@ AvanteSales.Pro.Fragments.Produto/CustomAdapter, AvanteSales.Pro;md5c792c221571b
 AvanteSales.Pro.Fragments.Produto+CustomAdapter, AvanteSales.Pro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c792c221571b27782b48474fc0e8d40f.Produto_CustomAdapter
 AvanteSales.Pro.Fragments.Produto.CustomAdapter;md5c792c221571b27782b48474fc0e8d40f.Produto_CustomAdapter
 avantesales.pro.fragments.Produto_CustomAdapter;md5c792c221571b27782b48474fc0e8d40f.Produto_CustomAdapter
+AvanteSales.Pro.Fragments.ProdutoAbatimento, AvanteSales.Pro;md5c792c221571b27782b48474fc0e8d40f.ProdutoAbatimento
+AvanteSales.Pro.Fragments.ProdutoAbatimento, AvanteSales.Pro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c792c221571b27782b48474fc0e8d40f.ProdutoAbatimento
+AvanteSales.Pro.Fragments.ProdutoAbatimento;md5c792c221571b27782b48474fc0e8d40f.ProdutoAbatimento
+avantesales.pro.fragments.ProdutoAbatimento;md5c792c221571b27782b48474fc0e8d40f.ProdutoAbatimento
 AvanteSales.Pro.Fragments.ProdutoIndenizacao, AvanteSales.Pro;md5c792c221571b27782b48474fc0e8d40f.ProdutoIndenizacao
 AvanteSales.Pro.Fragments.ProdutoIndenizacao, AvanteSales.Pro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c792c221571b27782b48474fc0e8d40f.ProdutoIndenizacao
 AvanteSales.Pro.Fragments.ProdutoIndenizacao;md5c792c221571b27782b48474fc0e8d40f.ProdutoIndenizacao
@@ -818,6 +826,10 @@ Microsoft.Azure.Mobile.Crashes.AndroidCrashListener, Microsoft.Azure.Mobile.Cras
 Microsoft.Azure.Mobile.Crashes.AndroidCrashListener, Microsoft.Azure.Mobile.Crashes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;md5bf7db09e0a40f5ef5da2cf34b1b37d54.AndroidCrashListener
 Microsoft.Azure.Mobile.Crashes.AndroidCrashListener;md5bf7db09e0a40f5ef5da2cf34b1b37d54.AndroidCrashListener
 microsoft.azure.mobile.crashes.AndroidCrashListener;md5bf7db09e0a40f5ef5da2cf34b1b37d54.AndroidCrashListener
+OxyPlot.Xamarin.Android.PlotView, OxyPlot.Xamarin.Android;md5299a304c8be8cf3eb65572c1cb1ae9a4.PlotView
+OxyPlot.Xamarin.Android.PlotView, OxyPlot.Xamarin.Android, Version=2015.1.741.0, Culture=neutral, PublicKeyToken=null;md5299a304c8be8cf3eb65572c1cb1ae9a4.PlotView
+OxyPlot.Xamarin.Android.PlotView;md5299a304c8be8cf3eb65572c1cb1ae9a4.PlotView
+oxyplot.xamarin.android.PlotView;md5299a304c8be8cf3eb65572c1cb1ae9a4.PlotView
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor

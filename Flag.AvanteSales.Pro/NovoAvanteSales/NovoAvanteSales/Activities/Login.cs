@@ -33,9 +33,9 @@ namespace AvanteSales.Pro.Activities
     [Activity(Label = "Avante Sales", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/AvanteSalesTheme")]
     public class Login : Activity, TextView.IOnEditorActionListener
     {
-        private static bool isLoadingEmpresas;
+        //private static bool isLoadingEmpresas;
         private static bool CarregandoInformacoes;
-        private static bool LoginClick;
+        //private static bool LoginClick;
 
         static Button btnSair;
         static Button btnSincronizar;
@@ -147,7 +147,7 @@ namespace AvanteSales.Pro.Activities
 
             if (spnEmpresa.Adapter.Count == 0 || spnEmpresa.SelectedItem.ToString().Length == 0)
             {
-                LoginClick = false;
+                //LoginClick = false;
                 MessageBox.AlertErro(this, "Informe a empresa para logar no sistema.");
                 spnEmpresa.RequestFocus();
                 return false;
@@ -155,7 +155,7 @@ namespace AvanteSales.Pro.Activities
 
             if (txtUsuario.Text.Length == 0)
             {
-                LoginClick = false;
+                //LoginClick = false;
                 CSGlobal.Focus(this, txtUsuario);
                 FuncoesView.SetarLabelErroControles(this, tilUsuario, "Informe o usuário.");
                 return false;
@@ -163,7 +163,7 @@ namespace AvanteSales.Pro.Activities
 
             if (spnEmpresa.SelectedItemPosition == -1)
             {
-                LoginClick = false;
+                //LoginClick = false;
                 MessageBox.AlertErro(this, "Selecione o empregado.");
                 spnEmpresa.RequestFocus();
                 return false;
@@ -175,7 +175,7 @@ namespace AvanteSales.Pro.Activities
             //Valida Data de Entrega
             if (DateTime.Compare(datEntrega, datVisita) < 0)
             {
-                LoginClick = false;
+                //LoginClick = false;
                 string mensagem = string.Format("A data de entrega: {0} não pode ser menor que a data de visita: {1}.", datEntrega.ToString("dd/MM/yyyy"), datVisita.ToString("dd/MM/yyyy"));
                 CSGlobal.Focus(this, txtDataEntrega);
                 FuncoesView.SetarLabelErroControles(this, tilDataEntrega, mensagem);
@@ -223,7 +223,7 @@ namespace AvanteSales.Pro.Activities
                 mensagem.AppendFormat("Já existem pedidos com data superior a {0}", dataVisita.ToString("dd/MM/yyyy"));
                 mensagem.AppendLine();
                 mensagem.AppendFormat("Confirma mudar a data do dia de visita de {0} para {1}?", DateTime.Now.ToString("dd/MMM/yyyy"), dataVisita.ToString("dd/MMM/yyyy"));
-                LoginClick = false;
+                //LoginClick = false;
                 // Chama a rotina que altera a data caso responda que sim
                 MessageBox.Alert(this, mensagem.ToString(), "Alterar", (_sender, _e) => { MudaDataEValidaUsuario(dataVisita); }, "Não", null, true);
             }
@@ -246,7 +246,7 @@ namespace AvanteSales.Pro.Activities
         {
             if (CSUsuario.ValidaUsuario(txtUsuario.Text.Trim(), txtSenha.Text.Trim(), ((CSEmpregados.CSEmpregado)((CSItemCombo)spnEmpregado.SelectedItem).Valor).COD_EMPREGADO) == false)
             {
-                LoginClick = false;
+                //LoginClick = false;
                 CSGlobal.Focus(this, txtSenha);
                 FuncoesView.SetarLabelErroControles(this, tilSenha, "Usuário ou senha inválidos.");
             }
@@ -264,7 +264,7 @@ namespace AvanteSales.Pro.Activities
                 // FlexX GPS
                 if (!flexxGPSInstalado())
                 {
-                    LoginClick = false;
+                    //LoginClick = false;
                     MessageBox.AlertErro(this, "Login bloqueado: o FlexxGPS não está instalado.");
                     return;
                 }
@@ -274,26 +274,26 @@ namespace AvanteSales.Pro.Activities
                 // [ Cria tabelas auxiliares do sistema ]
                 CSGlobal.CriaTabelasAuxiliares();
 
-                if (!CSEmpresa.ColunaExiste("INFORMACOES_SINCRONIZACAO", "VERSAO_LOJA"))
-                    AbrirMain();
-                else
-                {
-                    progress = new ProgressDialogCustomizado(this, LayoutInflater).Customizar();
-                    progress.Show();
+                //if (!CSEmpresa.ColunaExiste("INFORMACOES_SINCRONIZACAO", "VERSAO_LOJA"))
+                AbrirMain();
+                //else
+                //{
+                //    progress = new ProgressDialogCustomizado(this, LayoutInflater).Customizar();
+                //    progress.Show();
 
-                    ThreadPool.QueueUserWorkItem(o => ThreadVerificarVersao());
-                }
+                //    ThreadPool.QueueUserWorkItem(o => ThreadVerificarVersao());
+                //}
             }
             else
             {
-                LoginClick = false;
+                //LoginClick = false;
                 throw new Exception("Não foi possivel encontrar informações sobre o empregado.");
             }
         }
 
         public void AbrirMain()
         {
-            LoginClick = false;
+            //LoginClick = false;
             Intent i = new Intent();
             i.SetClass(this, typeof(Main));
             this.StartActivity(i);
@@ -334,10 +334,10 @@ namespace AvanteSales.Pro.Activities
                         AbrirMain();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 AbrirMain();
-                LoginClick = false;
+                //LoginClick = false;
             }
         }
 
@@ -446,11 +446,11 @@ namespace AvanteSales.Pro.Activities
                 else
                     AppInstalado = true;
             }
-            catch (PackageManager.NameNotFoundException e)
+            catch (PackageManager.NameNotFoundException)
             {
                 AppInstalado = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new Exception("Favor relatar o problema ao Help Desk Flag");
             }
@@ -614,7 +614,7 @@ namespace AvanteSales.Pro.Activities
 
             private void CarregaComboBoxEmpresa()
             {
-                isLoadingEmpresas = true;
+                //isLoadingEmpresas = true;
 
                 string empresaAtual = null;
 
@@ -666,7 +666,7 @@ namespace AvanteSales.Pro.Activities
                     }
                 }
 
-                isLoadingEmpresas = false;
+                //isLoadingEmpresas = false;
             }
         }
 
@@ -701,7 +701,7 @@ namespace AvanteSales.Pro.Activities
             private void CarregaComboBoxEmpregado()
             {
                 try
-                { 
+                {
                     var codigoVendedorRevenda = CSConfiguracao.GetConfig("vendedor" + CSGlobal.COD_REVENDA);
                     if (string.IsNullOrEmpty(codigoVendedorRevenda))
                     {

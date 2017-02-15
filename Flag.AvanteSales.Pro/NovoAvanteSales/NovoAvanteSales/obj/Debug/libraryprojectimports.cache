@@ -11,6 +11,7 @@
     <ResolvedResourceDirectory>D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\NovoAvanteSales\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.Android.Bindings\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\NovoAvanteSales\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\NovoAvanteSales\obj\Debug\__library_projects__\Microsoft.Azure.Mobile\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\NovoAvanteSales\obj\Debug\__library_projects__\OxyPlot.Xamarin.Android\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\AvanteSales.SyncManager\library_project_imports\assets</ResolvedAssetDirectory>
@@ -22,6 +23,7 @@
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.Android.Bindings\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.Azure.Mobile\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\OxyPlot.Xamarin.Android\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
@@ -34,5 +36,6 @@
     <ResolvedResourceDirectoryStamp>D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\NovoAvanteSales\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.Android.Bindings.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\NovoAvanteSales\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.Crashes.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\NovoAvanteSales\obj\Debug\__library_projects__\Microsoft.Azure.Mobile.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\NovoAvanteSales\obj\Debug\__library_projects__\OxyPlot.Xamarin.Android.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

@@ -34,7 +34,7 @@ namespace AvanteSales.Pro.Fragments
         private static int? indexProdutoSelecionado = null;
         private decimal txtAdf;
         private static decimal txtDescontoIndenizacao;
-        private LinearLayout HeaderListView;
+        //private LinearLayout HeaderListView;
         public static bool ListarApelido = false;
         public static List<CSItemsPedido.CSItemPedido> ItemsAdapter;
         string DescontoIndenizacao;

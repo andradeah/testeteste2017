@@ -88,7 +88,7 @@ namespace AvanteSales.Pro.Fragments
 
                 SetScrollPosition();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -100,7 +100,7 @@ namespace AvanteSales.Pro.Fragments
             {
                 currentPostion = listProdutos.FirstVisiblePosition;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -112,7 +112,7 @@ namespace AvanteSales.Pro.Fragments
             {
                 listProdutos.SetSelection(currentPostion);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -154,7 +154,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-ProdutoFoiVendidoNasUltimasVisitas", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return false;
@@ -254,7 +254,7 @@ namespace AvanteSales.Pro.Fragments
         private class ThreadCarregarFamiliaProduto : AsyncTask
         {
             int position = 0;
-            static int codFamilia;
+            //static int codFamilia;
 
             protected override Java.Lang.Object DoInBackground(params Java.Lang.Object[] @params)
             {
@@ -297,11 +297,11 @@ namespace AvanteSales.Pro.Fragments
                             ic.Valor = fam;
                             FamiliaAdapter.Add(ic);
 
-                            if (codFamilia != -1)
-                            {
-                                if (fam.COD_FAMILIA_PRODUTO == codFamilia)
+                            //if (codFamilia != -1)
+                            //{
+                            //    if (fam.COD_FAMILIA_PRODUTO == codFamilia)
                                     position = i;
-                            }
+                            //}
 
 
                             i++;
@@ -354,7 +354,7 @@ namespace AvanteSales.Pro.Fragments
                     if (progressFamilia != null)
                         progressFamilia.Dismiss();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }
@@ -517,7 +517,7 @@ namespace AvanteSales.Pro.Fragments
                 {
                     return CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 2;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-IsBroker", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                     return false;
@@ -537,7 +537,7 @@ namespace AvanteSales.Pro.Fragments
                     prodFiltrados = prodFiltrados.Where(p => !codigoDosProdutosJaAdicionados.Contains(p.COD_PRODUTO)).ToList();
                     return prodFiltrados;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return null;
                 }

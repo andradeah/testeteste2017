@@ -175,7 +175,7 @@ namespace AvanteSales.Pro.Dialogs
                 i.SetClass(Activity, typeof(DialogInformacaoProduto));
                 this.StartActivity(i);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

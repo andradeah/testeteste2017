@@ -62,10 +62,10 @@ namespace AvanteSales.Pro.Activities
         private static bool executandoCargaTotal = false;
         private delegate void delegateUpdateStatus(object sender, EventArgs e);
         public delegate string delegateGetString();
-        private static bool bolOcorreuErroAtualizarData = false;
-        private static bool SomenteDescarga;
-        private static string m_Imei;
-        private static string versaoCompatibilidadeAvante;
+        //private static bool bolOcorreuErroAtualizarData = false;
+        //private static bool SomenteDescarga;
+        //private static string m_Imei;
+        //private static string versaoCompatibilidadeAvante;
 
 
         static ProgressDialog progressTesteConexao;
@@ -305,7 +305,7 @@ namespace AvanteSales.Pro.Activities
             {
                 return Convert.ToInt32(CSConfiguracao.GetConfig("vendedorDefault"));
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 if (string.IsNullOrEmpty(txtVendedor.Text))
                     return 0;
@@ -548,7 +548,7 @@ namespace AvanteSales.Pro.Activities
                 return true;
 
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 MessageBox.AlertErro(CurrentActivity, "Falha na conexão");
                 return false;
@@ -577,7 +577,7 @@ namespace AvanteSales.Pro.Activities
                 }
                 throw new System.Exception("O código do empregado não está com um valor numérico válido.");
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 MessageBox.AlertErro(CurrentActivity, "Empregado Inválido");
                 return false;
@@ -678,7 +678,7 @@ namespace AvanteSales.Pro.Activities
                     DisableButtons();
 
                     string mensagem = string.Empty;
-                    syncProvider.VerificaVersaoDLL(ref mensagem, versaoCompatibilidadeAvante, VersaoAvante);
+                    syncProvider.VerificaVersaoDLL(ref mensagem, "", VersaoAvante);
 
                     if (cargaParcial)
                         syncProvider.CargaParcial(syncProvider.ProviderName, CSConfiguracao.GetConfig("vendedor" + CSGlobal.COD_REVENDA), CSGlobal.COD_REVENDA, Imei, "P");
@@ -1313,7 +1313,7 @@ namespace AvanteSales.Pro.Activities
 
                     return false;
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
                     return false;
                 }
@@ -1496,7 +1496,7 @@ namespace AvanteSales.Pro.Activities
                     if (progressBuscaEmpresa != null)
                         progressBuscaEmpresa.Dismiss();
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
 
                 }
@@ -1624,7 +1624,7 @@ namespace AvanteSales.Pro.Activities
         private static void syncProvider_DownloadCompleted(object sender, System.EventArgs e)
         {
 
-            bolOcorreuErroAtualizarData = false;
+            //bolOcorreuErroAtualizarData = false;
             try
             {
                 if (executandoCargaTotal)
@@ -1648,7 +1648,7 @@ namespace AvanteSales.Pro.Activities
             catch (System.Exception ex)
             {
                 MessageBox.AlertErro(CurrentActivity, ex.Message);
-                bolOcorreuErroAtualizarData = true;
+                //bolOcorreuErroAtualizarData = true;
             }
         }
 
@@ -1721,7 +1721,7 @@ namespace AvanteSales.Pro.Activities
 
                     Java.IO.InputStream imp = new Java.IO.BufferedInputStream(conexao.InputStream);
                 }
-                catch (System.Exception e)
+                catch (System.Exception)
                 {
 
                 }

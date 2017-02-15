@@ -46,6 +46,7 @@ namespace AvanteSales.Pro.Fragments
                 base.OnViewCreated(view, savedInstanceState);
 
                 vwpProduto.Adapter = new CustomAdapter(ChildFragmentManager, cliente.ApplicationContext);
+                vwpProduto.OffscreenPageLimit = 2;
 
                 tblProduto.SetOnTabSelectedListener(new Listener(vwpProduto));
                 tblProduto.SetupWithViewPager(vwpProduto);
@@ -100,16 +101,43 @@ namespace AvanteSales.Pro.Fragments
             }
         }
 
+        public static bool IsBroker()
+        {
+            return CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 2;
+        }
+
+        private static bool IsBunge()
+        {
+            return CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 3;
+        }
+
         private class CustomAdapter : FragmentPagerAdapter
         {
             private Context applicationContext;
             private Android.Support.V4.App.FragmentManager supportFragmentManager;
-            string[] fragments = { "Venda", "Vencimento" };
+            string[] fragments;// = { "Venda", "Vencimento" };
 
             public CustomAdapter(Android.Support.V4.App.FragmentManager fm, Context context) : base(fm)
             {
                 applicationContext = context;
                 supportFragmentManager = fm;
+
+                if (!IsBroker() &&
+                    !IsBunge())
+                {
+                    fragments = new string[3];
+                    //fragments[0] = "Info";
+                    fragments[0] = "Venda";
+                    fragments[1] = "Abatimento";
+                    fragments[2] = "Vencimento";
+                }
+                else
+                {
+                    fragments = new string[2];
+                    //fragments[0] = "Info";
+                    fragments[0] = "Venda";
+                    fragments[1] = "Vencimento";
+                }
             }
 
             public override int Count
@@ -122,14 +150,37 @@ namespace AvanteSales.Pro.Fragments
 
             public override Android.Support.V4.App.Fragment GetItem(int position)
             {
-                switch (position)
+                if (!IsBroker() &&
+                    !IsBunge())
                 {
-                    case 0:
-                        return new ProdutoVenda();
-                    case 1:
-                        return new ProdutoVencimento();
-                    default:
-                        return null;
+                    switch (position)
+                    {
+                        //case 0:
+                        //    return new ProdutoInformacao();
+                        case 0:
+                            return new ProdutoVenda();
+                        case 1:
+                            return new ProdutoAbatimento();
+                        case 2:
+                            return new ProdutoVencimento();
+                        default:
+                            return null;
+                    }
+                }
+                else
+                {
+                    switch (position)
+                    {
+                        //case 0:
+                        //    return new ProdutoInformacao();
+                        case 0:
+                            return new ProdutoVenda();
+                        case 1:
+                            return new ProdutoVencimento();
+                        default:
+                            return null;
+
+                    }
                 }
             }
 

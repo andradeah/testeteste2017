@@ -20,8 +20,9 @@ namespace AvanteSales.Pro.Fragments
 {
     public class ProdutoVenda : Android.Support.V4.App.Fragment, TextView.IOnEditorActionListener
     {
+        public static decimal VlrTabPreco;
         private decimal quantidadeGiroProduto = 0;
-        private bool IsLoading = false;
+        //private bool IsLoading = false;
         private decimal quantidadeVendidoAnterior = 0;
         private static bool m_IsDirty = false;
         private static bool ZerarDesconto = true;
@@ -76,9 +77,8 @@ namespace AvanteSales.Pro.Fragments
         public static EditText txtQtdeUnidade;
         public static EditText txtDescIncond;
         static TextView lblValorTotalItem;
-        //static EditText txtQtdeInteiroIndenizacao;
-        //static EditText txtQtdeUnidadeIndenizacao;
-        static TextView txtValorFinalItem;
+
+        public static TextView txtValorFinalItem;
         static Spinner cboTabelaPreco;
         static EditText txtValorUnitarioSemADF;
         public static TextView lblValorTabela;
@@ -89,7 +89,7 @@ namespace AvanteSales.Pro.Fragments
         public static TextView lblValorDescontoUnitario;
         public static TextView lblValorAdicionalFinanceiro;
         static TextView lblValorFinalItem;
-        //static EditText txtValorFinalItemIndenizacao;
+
         static TextView lblPctLucratividade;
         static TextView lblSaldoEstoque;
         static TextView lblPz;
@@ -99,7 +99,7 @@ namespace AvanteSales.Pro.Fragments
         //static TextView lblInfoQ2;
         //static TextView lblInfoQ3;
         //static TextView lblInfoMedia;
-        static TextView lblIndenizacao;
+        //static TextView lblIndenizacao;
         //static TextView lblEstoque;
         //static TextView lblInfo1;
         //static TextView lblInfo2;
@@ -109,16 +109,12 @@ namespace AvanteSales.Pro.Fragments
         static Button btnCalcular;
         static TextView lblOrganizVendasTit;
         static TextView lblDescPctLucratividade;
-        //static TextView lblQtdeIndenizacaoInt;
-        //static TextView lblQtdeIndenizacaoUnit;
-        //static TextView lblValorUnitarioIndenizacao;
         //static Button btnGiro;
         //static Button btnMedia;
         static TextView lblDesc;
         static TextView lblCalcular;
         static TextView lblOrganizVendasBunge;
         static TextView lblOrganizVendasTitBunge;
-        //static ImageView imvAbatimento;
         #endregion
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -132,7 +128,16 @@ namespace AvanteSales.Pro.Fragments
             {
                 case Resource.Id.txtQtdeInteiro:
                 case Resource.Id.txtQtdeUnidade:
-                    BtnCalcular_Click(null, null);
+                    {
+                        if (!IsBroker() &&
+                            !IsBunge())
+                            BtnCalcular_Click(null, null);
+                    }
+                    break;
+                case Resource.Id.txtDescIncond:
+                    {
+                        BtnCalcular_Click(null, null);
+                    }
                     break;
                 default:
                     break;
@@ -146,11 +151,16 @@ namespace AvanteSales.Pro.Fragments
             var view = inflater.Inflate(Resource.Layout.produto_venda_novo, container, false);
             ActivityContext = ((Cliente)Activity);
             FindViewsById(view);
-            
+
             Eventos();
             thisLayoutInflater = inflater;
 
             ConfiguraTela();
+
+            if (CSProdutos.Current == null)
+                ((Cliente)ActivityContext).OnBackPressed();
+            else
+                ExibirInformacoes();
 
             return view;
         }
@@ -183,6 +193,8 @@ namespace AvanteSales.Pro.Fragments
                     lblOrganizVendasTit.Visibility = ViewStates.Visible;
                     lblOrganizVendas.Visibility = ViewStates.Visible;
 
+                    txtDescIncond.ImeOptions = Android.Views.InputMethods.ImeAction.Done;
+
                     if (CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 2)
                     {
                         lblValorUnitarioSemADF.Visibility = ViewStates.Invisible;
@@ -200,14 +212,14 @@ namespace AvanteSales.Pro.Fragments
                         lblCalcular.Visibility = ViewStates.Visible;
                         txtDescIncond.Visibility = ViewStates.Gone;
                         lblDescIncond.Visibility = ViewStates.Gone;
-                        lblIndenizacao.Visibility = ViewStates.Gone;
+                        //lblIndenizacao.Visibility = ViewStates.Gone;
                         //lblQtdeIndenizacaoInt.Visibility = ViewStates.Gone;
                         //lblQtdeIndenizacaoUnit.Visibility = ViewStates.Gone;
                         //lblValorUnitarioIndenizacao.Visibility = ViewStates.Gone;
                         //txtQtdeInteiroIndenizacao.Visibility = ViewStates.Gone;
                         //txtQtdeUnidadeIndenizacao.Visibility = ViewStates.Gone;
                         //txtValorFinalItemIndenizacao.Visibility = ViewStates.Gone;
-                        lblIndenizacao.Visibility = ViewStates.Gone;
+                        //lblIndenizacao.Visibility = ViewStates.Gone;
                     }
                 }
 
@@ -227,40 +239,40 @@ namespace AvanteSales.Pro.Fragments
                 // [ Operação diferente de vendas;                 ]            
                 // [ Quando Broker;                                ]
                 // [ Quando o produto é um Combo;                  ]
-                if ((CSPDVs.Current.PEDIDOS_PDV.Current.OPERACAO.COD_OPERACAO_CFO != 1 && CSPDVs.Current.PEDIDOS_PDV.Current.OPERACAO.COD_OPERACAO_CFO != 21) ||
-                    CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.LOCK_QTD == true ||
-                    IsBroker() ||
-                    CSGlobal.PedidoTroca)
-                {
-                    lblIndenizacao.Visibility = ViewStates.Gone;
-                    //lblQtdeIndenizacaoInt.Visibility = ViewStates.Gone;
-                    //lblQtdeIndenizacaoUnit.Visibility = ViewStates.Gone;
-                    //lblValorUnitarioIndenizacao.Visibility = ViewStates.Gone;
-                    //txtQtdeInteiroIndenizacao.Visibility = ViewStates.Gone;
-                    //txtQtdeUnidadeIndenizacao.Visibility = ViewStates.Gone;
-                    //txtValorFinalItemIndenizacao.Visibility = ViewStates.Gone;
+                //if ((CSPDVs.Current.PEDIDOS_PDV.Current.OPERACAO.COD_OPERACAO_CFO != 1 && CSPDVs.Current.PEDIDOS_PDV.Current.OPERACAO.COD_OPERACAO_CFO != 21) ||
+                //    CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.LOCK_QTD == true ||
+                //    IsBroker() ||
+                //    CSGlobal.PedidoTroca)
+                //{
+                //    lblIndenizacao.Visibility = ViewStates.Gone;
+                //    //lblQtdeIndenizacaoInt.Visibility = ViewStates.Gone;
+                //    //lblQtdeIndenizacaoUnit.Visibility = ViewStates.Gone;
+                //    //lblValorUnitarioIndenizacao.Visibility = ViewStates.Gone;
+                //    //txtQtdeInteiroIndenizacao.Visibility = ViewStates.Gone;
+                //    //txtQtdeUnidadeIndenizacao.Visibility = ViewStates.Gone;
+                //    //txtValorFinalItemIndenizacao.Visibility = ViewStates.Gone;
 
-                    if (IsBroker())
-                    {
-                        lblIndenizacao.Text = "Estoque";
-                    }
+                //    if (IsBroker())
+                //    {
+                //        lblIndenizacao.Text = "Estoque";
+                //    }
 
-                }
-                else if (!IsBunge())
-                {
-                    lblIndenizacao.Visibility = ViewStates.Visible;
-                    //lblQtdeIndenizacaoInt.Visibility = ViewStates.Visible;
-                    //lblQtdeIndenizacaoUnit.Visibility = ViewStates.Visible;
-                    //lblValorUnitarioIndenizacao.Visibility = ViewStates.Visible;
-                    //txtQtdeInteiroIndenizacao.Visibility = ViewStates.Visible;
-                    //txtQtdeUnidadeIndenizacao.Visibility = ViewStates.Visible;
-                    //txtValorFinalItemIndenizacao.Visibility = ViewStates.Visible;
-                    lblIndenizacao.Visibility = ViewStates.Visible;
+                //}
+                //else if (!IsBunge())
+                //{
+                //    lblIndenizacao.Visibility = ViewStates.Visible;
+                //    //lblQtdeIndenizacaoInt.Visibility = ViewStates.Visible;
+                //    //lblQtdeIndenizacaoUnit.Visibility = ViewStates.Visible;
+                //    //lblValorUnitarioIndenizacao.Visibility = ViewStates.Visible;
+                //    //txtQtdeInteiroIndenizacao.Visibility = ViewStates.Visible;
+                //    //txtQtdeUnidadeIndenizacao.Visibility = ViewStates.Visible;
+                //    //txtValorFinalItemIndenizacao.Visibility = ViewStates.Visible;
+                //    lblIndenizacao.Visibility = ViewStates.Visible;
 
-                    lblIndenizacao.Text = "Abatimento";
-                }
+                //    lblIndenizacao.Text = "Abatimento";
+                //}
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -273,13 +285,6 @@ namespace AvanteSales.Pro.Fragments
             txtQtdeUnidade.TextChanged += TxtQtdeUnidade_TextChanged;
             txtDescIncond.TextChanged += TxtDescIncond_TextChanged;
             txtValorUnitarioSemADF.TextChanged += TxtValorUnitarioSemADF_TextChanged;
-            //txtValorFinalItemIndenizacao.TextChanged += TxtValorFinalItemIndenizacao_TextChanged;
-
-            //if (txtQtdeInteiroIndenizacao.Visibility == ViewStates.Visible)
-            //    txtQtdeInteiroIndenizacao.TextChanged += TxtQtdeInteiroIndenizacao_TextChanged;
-
-            //if (txtQtdeUnidadeIndenizacao.Visibility == ViewStates.Visible)
-            //    txtQtdeUnidadeIndenizacao.TextChanged += TxtQtdeUnidadeIndenizacao_TextChanged;
 
             btnCalcular.Click += BtnCalcular_Click;
 
@@ -291,6 +296,7 @@ namespace AvanteSales.Pro.Fragments
 
             txtQtdeInteiro.SetOnEditorActionListener(this);
             txtQtdeUnidade.SetOnEditorActionListener(this);
+            txtDescIncond.SetOnEditorActionListener(this);
         }
 
         private void BtnGiro_Click(object sender, EventArgs e)
@@ -314,7 +320,7 @@ namespace AvanteSales.Pro.Fragments
                     }
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -341,54 +347,7 @@ namespace AvanteSales.Pro.Fragments
                     }
                 }
             }
-            catch (System.Exception ex)
-            {
-
-            }
-        }
-
-        private void TxtQtdeUnidadeIndenizacao_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
-        {
-            try
-            {
-                if (CSProdutos.Current.COD_UNIDADE_MEDIDA == "UN")
-                {
-                    MessageBox.ShowShortMessageCenter(Activity, "Este produto só pode ser indenizado inteiro.");
-
-                    //if (txtQtdeUnidadeIndenizacao.Text.Length == 1)
-                    //    txtQtdeUnidadeIndenizacao.Text = string.Empty;
-
-                    return;
-                }
-
-                if (IgnorarEvento)
-                    return;
-
-                // Marca que foi alterado
-                IsDirty = true;
-
-                // Marca que o objeto foi alterado e deve ser salvo durante o flush
-                if (CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE == ObjectState.INALTERADO || CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE == ObjectState.SALVO)
-                    CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE = ObjectState.ALTERADO;
-
-                // nao deixa que entre em um loop de eventos ao se modificar...
-                IgnorarEvento = true;
-
-                // [ Se não for broker e bunge... ]
-                if ((CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA != 2 &&
-                    CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA != 3) ||
-                    CSGlobal.PedidoSugerido)
-                {
-                    //if (!IsLoading)
-                    //{
-                    //    // calcula e mostra o valor total      
-                    //    txtValorFinalItemIndenizacao.Text = CalculaValorTotalItemIndenizacao().ToString(CSGlobal.DecimalStringFormat);
-                    //}
-                }
-
-                IgnorarEvento = false;
-            }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -413,11 +372,11 @@ namespace AvanteSales.Pro.Fragments
 
                 valorTotalUnitario = decimal.Round(valorFinalItem / CSProdutos.Current.QTD_UNIDADE_EMBALAGEM, 4);
 
-                //// Calculo dos produtos com a caixa fechada
-                //valorTotalItem = valorFinalItem * CSGlobal.StrToDecimal(txtQtdeInteiroIndenizacao.Text);
+                // Calculo dos produtos com a caixa fechada
+                valorTotalItem = valorFinalItem * CSGlobal.StrToDecimal(ProdutoAbatimento.txtQtdeInteiroIndenizacao.Text);
 
-                //// Calculo dos produtos com a caixa aberta
-                //valorTotalItem += (valorTotalUnitario * CSGlobal.StrToDecimal(txtQtdeUnidadeIndenizacao.Text));
+                // Calculo dos produtos com a caixa aberta
+                valorTotalItem += (valorTotalUnitario * CSGlobal.StrToDecimal(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text));
 
             }
             catch (System.Exception ex)
@@ -426,102 +385,6 @@ namespace AvanteSales.Pro.Fragments
             }
 
             return valorTotalItem;
-        }
-
-        private void TxtQtdeInteiroIndenizacao_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
-        {
-            try
-            {
-                if (IgnorarEvento)
-                    return;
-
-                // Marca que foi alterado
-                IsDirty = true;
-
-                // Marca que o objeto foi alterado e deve ser salvo durante o flush
-                if (CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE == ObjectState.INALTERADO || CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE == ObjectState.SALVO)
-                    CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE = ObjectState.ALTERADO;
-
-                // nao deixa que entre em um loop de eventos ao se modificar...
-                IgnorarEvento = true;
-
-                // [ Se não for broker e bunge... ]
-                //if ((CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA != 2 &&
-                //     CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA != 3) ||
-                //    CSGlobal.PedidoSugerido)
-                //{
-                //    //if (!IsLoading)
-                //    //{
-                //    // calcula e mostra o valor total      
-                //    txtValorFinalItemIndenizacao.Text = CalculaValorTotalItemIndenizacao().ToString(CSGlobal.DecimalStringFormat);
-                //    //}
-                //}
-
-                IgnorarEvento = false;
-            }
-            catch (System.Exception ex)
-            {
-
-            }
-        }
-
-        private void TxtValorFinalItemIndenizacao_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
-        {
-            try
-            {
-                if (!ValidaFormatacaoNumerica())
-                    return;
-
-                //if (!string.IsNullOrEmpty(txtValorFinalItemIndenizacao.Text))
-                //    if (txtValorFinalItemIndenizacao.Text.Contains("."))
-                //    {
-                //        txtValorFinalItemIndenizacao.Text = txtValorFinalItemIndenizacao.Text.Replace(".", ",");
-                //        txtValorFinalItemIndenizacao.SetSelection(txtValorFinalItemIndenizacao.Text.Length);
-                //    }
-
-                //if (txtValorFinalItemIndenizacao.Text.Contains(','))
-                //{
-                //    int posicao = txtValorFinalItemIndenizacao.Text.IndexOf(',');
-
-                //    if (txtValorFinalItemIndenizacao.Text.Substring(posicao + 1, txtValorFinalItemIndenizacao.Text.Length - posicao - 1).Length > 2)
-                //    {
-                //        txtValorFinalItemIndenizacao.Text = txtValorFinalItemIndenizacao.Text.Remove(txtValorFinalItemIndenizacao.Text.Length - 1);
-                //        txtValorFinalItemIndenizacao.SetSelection(txtValorFinalItemIndenizacao.Text.Length);
-                //        return;
-                //    }
-                //}
-
-                if (IgnorarEvento)
-                    return;
-
-                // Marca que foi alterado
-                IsDirty = true;
-
-                // Marca que o objeto foi alterado e deve ser salvo durante o flush
-                if (CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE == ObjectState.INALTERADO || CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE == ObjectState.SALVO)
-                    CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE = ObjectState.ALTERADO;
-
-                // nao deixa que entre em um loop de eventos ao se modificar...
-                IgnorarEvento = true;
-
-                // [ Se não for broker e bunge... ]
-                if (CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA != 2 &&
-                    CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA != 3)
-                {
-                    if (!IsLoading)
-                    {
-                        // calcula e mostra o valor total                      
-                        //lblValorTotalItemIndenizacao.Text = CalculaValorTotalItemIndenizacao().ToString(CSGlobal.DecimalStringFormat);
-
-                    }
-                }
-
-                IgnorarEvento = false;
-            }
-            catch (OverflowException)
-            {
-                MessageBox.AlertErro(Activity, "Número de caracteres máximo atingido.");
-            }
         }
 
         private void TxtValorUnitarioSemADF_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
@@ -625,7 +488,7 @@ namespace AvanteSales.Pro.Fragments
                 {
                     if (CSGlobal.StrToDecimal(txtDescIncond.Text) >= 100)
                     {
-                        txtDescIncond.Text.Remove(txtDescIncond.Text.Length - 1, 1);
+                        txtDescIncond.Text = txtDescIncond.Text.Remove(txtDescIncond.Text.Length - 1, 1);
                         txtDescIncond.SetSelection(txtDescIncond.Text.Length);
                         return;
                     }
@@ -742,7 +605,12 @@ namespace AvanteSales.Pro.Fragments
                 if (!IsBunge())
                 {
                     // Busca o valor de tabela do PDA
-                    decimal valorTabela = ((CSProdutos.CSProduto.CSPrecosProdutos.CSPrecoProduto)((CSItemCombo)cboTabelaPreco.SelectedItem).Valor).VLR_PRODUTO;
+                    decimal valorTabela;
+
+                    if (cboTabelaPreco.SelectedItem == null)
+                        valorTabela = VlrTabPreco;
+                    else
+                        valorTabela = ((CSProdutos.CSProduto.CSPrecosProdutos.CSPrecoProduto)((CSItemCombo)cboTabelaPreco.SelectedItem).Valor).VLR_PRODUTO;
 
                     if (CSGlobal.StrToInt(txtQtdeUnidade.Text) == 0)
                     {
@@ -887,6 +755,10 @@ namespace AvanteSales.Pro.Fragments
                         VendaBungePermitida = true;
                     }
                 }
+
+                if (IsBroker() ||
+                    IsBunge())
+                    CSGlobal.EsconderTeclado(ActivityContext);
             }
             catch (OverflowException)
             {
@@ -910,7 +782,7 @@ namespace AvanteSales.Pro.Fragments
                 if (CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE == ObjectState.INALTERADO || CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE == ObjectState.SALVO)
                     CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.STATE = ObjectState.ALTERADO;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -976,7 +848,12 @@ namespace AvanteSales.Pro.Fragments
 
                 if (!IsBunge())
                 {
-                    decimal valorTabela = ((CSProdutos.CSProduto.CSPrecosProdutos.CSPrecoProduto)((CSItemCombo)cboTabelaPreco.SelectedItem).Valor).VLR_PRODUTO;
+                    decimal valorTabela;
+
+                    if (cboTabelaPreco.SelectedItem == null)
+                        valorTabela = VlrTabPreco;
+                    else
+                        valorTabela = ((CSProdutos.CSProduto.CSPrecosProdutos.CSPrecoProduto)((CSItemCombo)cboTabelaPreco.SelectedItem).Valor).VLR_PRODUTO;
 
                     if (CSGlobal.StrToInt(txtQtdeUnidade.Text) == 0)
                     {
@@ -1039,7 +916,7 @@ namespace AvanteSales.Pro.Fragments
                 CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_PEDIDA_UNIDADE = CSGlobal.StrToInt(txtQtdeUnidade.Text);
                 CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.VLR_TOTAL_ITEM = CSGlobal.StrToDecimal(lblValorTotalItem.Text);
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -1096,7 +973,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 //}
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -1130,7 +1007,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1148,7 +1025,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1166,7 +1043,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1187,7 +1064,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1199,20 +1076,20 @@ namespace AvanteSales.Pro.Fragments
             {
                 decimal Qtd = 0;
 
-                //switch (CSProdutos.Current.COD_UNIDADE_MEDIDA)
-                //{
-                //    case "CX":
-                //    case "DZ":
-                //        Qtd = (CSGlobal.StrToInt(txtQtdeInteiroIndenizacao.Text) * CSProdutos.Current.QTD_UNIDADE_EMBALAGEM) + CSGlobal.StrToInt(txtQtdeUnidadeIndenizacao.Text);
-                //        break;
-                //    default:
-                //        Qtd = CSGlobal.StrToDecimal(txtQtdeInteiroIndenizacao.Text) + CSGlobal.StrToInt(txtQtdeUnidadeIndenizacao.Text);
-                //        break;
-                //}
+                switch (CSProdutos.Current.COD_UNIDADE_MEDIDA)
+                {
+                    case "CX":
+                    case "DZ":
+                        Qtd = (CSGlobal.StrToInt(ProdutoAbatimento.txtQtdeInteiroIndenizacao.Text) * CSProdutos.Current.QTD_UNIDADE_EMBALAGEM) + CSGlobal.StrToInt(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text);
+                        break;
+                    default:
+                        Qtd = CSGlobal.StrToDecimal(ProdutoAbatimento.txtQtdeInteiroIndenizacao.Text) + CSGlobal.StrToInt(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text);
+                        break;
+                }
 
                 return Qtd;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return 0;
             }
@@ -1230,7 +1107,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1240,27 +1117,27 @@ namespace AvanteSales.Pro.Fragments
         {
             try
             {
-                //if (CSGlobal.StrToInt(txtQtdeUnidadeIndenizacao.Text) != 0)
-                //{
-                //    if (CSProdutos.Current.COD_UNIDADE_MEDIDA == "CX" || CSProdutos.Current.COD_UNIDADE_MEDIDA == "DZ")
-                //    {
-                //        if (CSGlobal.StrToInt(txtQtdeUnidadeIndenizacao.Text) >= CSProdutos.Current.QTD_UNIDADE_EMBALAGEM)
-                //        {
-                //            MessageBox.ShowShortMessageCenter(ActivityContext, "A quantidade fracionaria não pode ser maior ou igual a: " + CSProdutos.Current.QTD_UNIDADE_EMBALAGEM.ToString());
-                //            txtQtdeUnidadeIndenizacao.RequestFocus();
-                //            return false;
-                //        }
-                //    }
-                //    else
-                //    {
-                //        MessageBox.ShowShortMessageCenter(ActivityContext, "Este produto só pode ser abatido inteiro.");
-                //        txtQtdeUnidade.RequestFocus();
-                //        return false;
-                //    }
-                //}
+                if (CSGlobal.StrToInt(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text) != 0)
+                {
+                    if (CSProdutos.Current.COD_UNIDADE_MEDIDA == "CX" || CSProdutos.Current.COD_UNIDADE_MEDIDA == "DZ")
+                    {
+                        if (CSGlobal.StrToInt(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text) >= CSProdutos.Current.QTD_UNIDADE_EMBALAGEM)
+                        {
+                            MessageBox.ShowShortMessageCenter(ActivityContext, "A quantidade fracionaria não pode ser maior ou igual a: " + CSProdutos.Current.QTD_UNIDADE_EMBALAGEM.ToString());
+                            ProdutoAbatimento.txtQtdeUnidadeIndenizacao.RequestFocus();
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.ShowShortMessageCenter(ActivityContext, "Este produto só pode ser abatido inteiro.");
+                        txtQtdeUnidade.RequestFocus();
+                        return false;
+                    }
+                }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1293,7 +1170,7 @@ namespace AvanteSales.Pro.Fragments
                     }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1311,7 +1188,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1357,7 +1234,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1375,7 +1252,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1393,7 +1270,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return false;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1464,7 +1341,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return ValidaBloqueios();
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1502,7 +1379,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1556,13 +1433,13 @@ namespace AvanteSales.Pro.Fragments
                     itempedido.QTD_PEDIDA_UNIDADE = CSGlobal.StrToInt(txtQtdeUnidade.Text);
 
                     // Preenche a quantidade pedida de indenização
-                    //itempedido.QTD_INDENIZACAO_INTEIRA = CSGlobal.StrToDecimal(txtQtdeInteiroIndenizacao.Text);
-                    //itempedido.QTD_INDENIZACAO_UNIDADE = CSGlobal.StrToInt(txtQtdeUnidadeIndenizacao.Text);
+                    itempedido.QTD_INDENIZACAO_INTEIRA = CSGlobal.StrToDecimal(ProdutoAbatimento.txtQtdeInteiroIndenizacao.Text);
+                    itempedido.QTD_INDENIZACAO_UNIDADE = CSGlobal.StrToInt(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text);
 
-                    //if (itempedido.QTD_INDENIZACAO_INTEIRA != 0 || itempedido.QTD_INDENIZACAO_UNIDADE != 0)
-                    //    //itempedido.VLR_INDENIZACAO_UNIDADE = decimal.Round(CSGlobal.StrToDecimal(txtValorFinalItemIndenizacao.Text) / (decimal)CSProdutos.Current.QTD_UNIDADE_MEDIDA, 4);
-                    //    itempedido.VLR_INDENIZACAO_UNIDADE = CSGlobal.StrToDecimal(txtValorFinalItemIndenizacao.Text);
-                    //else
+                    if (itempedido.QTD_INDENIZACAO_INTEIRA != 0 || itempedido.QTD_INDENIZACAO_UNIDADE != 0)
+                        //itempedido.VLR_INDENIZACAO_UNIDADE = decimal.Round(CSGlobal.StrToDecimal(txtValorFinalItemIndenizacao.Text) / (decimal)CSProdutos.Current.QTD_UNIDADE_MEDIDA, 4);
+                        itempedido.VLR_INDENIZACAO_UNIDADE = CSGlobal.StrToDecimal(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text);
+                    else
                         itempedido.VLR_INDENIZACAO_UNIDADE = 0;
 
                     decimal valorTabela = 0m;
@@ -1770,7 +1647,7 @@ namespace AvanteSales.Pro.Fragments
                 }
 
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 MessageBox.AlertErro(ActivityContext, "Erro ao salvar produto pedido");
             }
@@ -1833,7 +1710,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return quantidade;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return 0;
             }
@@ -1897,18 +1774,17 @@ namespace AvanteSales.Pro.Fragments
             try
             {
                 if (CSGlobal.StrToDecimal(txtQtdeInteiro.Text) == 0 &&
-                    CSGlobal.StrToInt(txtQtdeUnidade.Text) == 0 //&&
-                    //CSGlobal.StrToInt(txtQtdeInteiroIndenizacao.Text) == 0 &&
-                    //CSGlobal.StrToInt(txtQtdeUnidadeIndenizacao.Text) == 0 &&
-                    //CSGlobal.StrToDecimal(txtValorFinalItemIndenizacao.Text) == 0
-                    )
+                    CSGlobal.StrToInt(txtQtdeUnidade.Text) == 0 &&
+                    CSGlobal.StrToInt(ProdutoAbatimento.txtQtdeInteiroIndenizacao.Text) == 0 &&
+                    CSGlobal.StrToInt(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text) == 0 &&
+                    CSGlobal.StrToDecimal(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text) == 0)
                 {
                     return false;
                 }
 
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1951,13 +1827,13 @@ namespace AvanteSales.Pro.Fragments
                     }
                 }
 
-                //if (txtValorFinalItemIndenizacao.Text != string.Empty &&
-                //    StringFormatter.NaoDecimal(txtValorFinalItemIndenizacao.Text))
-                //{
-                //    txtValorFinalItemIndenizacao.Text = txtValorFinalItemIndenizacao.Text.Remove(txtValorFinalItemIndenizacao.Text.Length - 1);
-                //    txtValorFinalItemIndenizacao.SetSelection(txtValorFinalItemIndenizacao.Text.Length);
-                //    return false;
-                //}
+                if (ProdutoAbatimento.txtValorFinalItemIndenizacao.Text != string.Empty &&
+                    StringFormatter.NaoDecimal(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text))
+                {
+                    ProdutoAbatimento.txtValorFinalItemIndenizacao.Text = ProdutoAbatimento.txtValorFinalItemIndenizacao.Text.Remove(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text.Length - 1);
+                    ProdutoAbatimento.txtValorFinalItemIndenizacao.SetSelection(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text.Length);
+                    return false;
+                }
 
                 if (txtValorUnitarioSemADF.Text != string.Empty &&
                     StringFormatter.NaoDecimal(txtValorUnitarioSemADF.Text))
@@ -1983,7 +1859,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -1997,6 +1873,7 @@ namespace AvanteSales.Pro.Fragments
                 if (txtQtdeUnidade.Text != "000" || txtQtdeUnidade.Text != "0")
                     VlrTabela1 = ((CSProdutos.CSProduto.CSPrecosProdutos.CSPrecoProduto)((CSItemCombo)cboTabelaPreco.SelectedItem).Valor).VLR_PRODUTO;
                 decimal vlrUni = VlrTabela1;
+                VlrTabPreco = VlrTabela1;
                 decimal vlrAcreUni = 0;
                 decimal QtdeInt = CSGlobal.StrToDecimal(txtQtdeInteiro.Text);
                 Recalc_Desconto = false;
@@ -2037,7 +1914,7 @@ namespace AvanteSales.Pro.Fragments
                 this.Recalc_Desconto = true;
                 TxtDescIncond_TextChanged(null, null);
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
             }
         }
@@ -2063,8 +1940,6 @@ namespace AvanteSales.Pro.Fragments
             txtQtdeUnidade = view.FindViewById<EditText>(Resource.Id.txtQtdeUnidade);
             txtDescIncond = view.FindViewById<EditText>(Resource.Id.txtDescIncond);
             lblValorTotalItem = view.FindViewById<TextView>(Resource.Id.lblValorTotalItem);
-            //txtQtdeInteiroIndenizacao = view.FindViewById<EditText>(Resource.Id.txtQtdeInteiroIndenizacao);
-            //txtQtdeUnidadeIndenizacao = view.FindViewById<EditText>(Resource.Id.txtQtdeUnidadeIndenizacao);
             txtValorFinalItem = view.FindViewById<TextView>(Resource.Id.txtValorFinalItem);
             cboTabelaPreco = view.FindViewById<Spinner>(Resource.Id.cboTabelaPreco);
             txtValorUnitarioSemADF = view.FindViewById<EditText>(Resource.Id.txtValorUnitarioSemADF);
@@ -2076,7 +1951,6 @@ namespace AvanteSales.Pro.Fragments
             lblValorDescontoUnitario = view.FindViewById<TextView>(Resource.Id.lblValorDescontoUnitario);
             lblValorAdicionalFinanceiro = view.FindViewById<TextView>(Resource.Id.lblValorAdicionalFinanceiro);
             lblValorFinalItem = view.FindViewById<TextView>(Resource.Id.lblValorFinalItem);
-            //txtValorFinalItemIndenizacao = view.FindViewById<EditText>(Resource.Id.txtValorFinalItemIndenizacao);
             lblPctLucratividade = view.FindViewById<TextView>(Resource.Id.lblPctLucratividade);
             lblSaldoEstoque = view.FindViewById<TextView>(Resource.Id.lblSaldoEstoque);
             lblPz = view.FindViewById<TextView>(Resource.Id.lblPz);
@@ -2086,7 +1960,7 @@ namespace AvanteSales.Pro.Fragments
             //lblInfoQ2 = view.FindViewById<TextView>(Resource.Id.lblInfoQ2);
             //lblInfoQ3 = view.FindViewById<TextView>(Resource.Id.lblInfoQ3);
             //lblInfoMedia = view.FindViewById<TextView>(Resource.Id.lblInfoMedia);
-            lblIndenizacao = view.FindViewById<TextView>(Resource.Id.lblIndenizacao);
+            //lblIndenizacao = view.FindViewById<TextView>(Resource.Id.lblIndenizacao);
             //lblEstoque = view.FindViewById<TextView>(Resource.Id.lblEstoque);
             //lblInfo1 = view.FindViewById<TextView>(Resource.Id.lblInfo1);
             //lblInfo2 = view.FindViewById<TextView>(Resource.Id.lblInfo2);
@@ -2109,11 +1983,6 @@ namespace AvanteSales.Pro.Fragments
         public override void OnViewCreated(View view, Bundle savedInstanceState)
         {
             base.OnViewCreated(view, savedInstanceState);
-
-            if (CSProdutos.Current == null)
-                ((Cliente)ActivityContext).OnBackPressed();
-            else
-                ExibirInformacoes();
         }
 
         private static bool IsBroker()
@@ -2174,14 +2043,6 @@ namespace AvanteSales.Pro.Fragments
                     txtQtdeUnidade.Text = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_PEDIDA_UNIDADE == decimal.Zero ? "" : CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_PEDIDA_UNIDADE.ToString();
                     txtDescIncond.Text = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.PRC_DESCONTO == decimal.Zero ? "" : CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.PRC_DESCONTO.ToString();
                     lblValorTotalItem.Text = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.VLR_TOTAL_ITEM.ToString(CSGlobal.DecimalStringFormat);
-
-                    //if (CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_INTEIRA > 0)
-                    //    txtQtdeInteiroIndenizacao.Text = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_INTEIRA.ToString();
-                    //else
-                    //    txtQtdeInteiroIndenizacao.Text = "";
-
-                    //if (CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_UNIDADE > 0)
-                    //    txtQtdeUnidadeIndenizacao.Text = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.QTD_INDENIZACAO_UNIDADE.ToString();
 
                     if (CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.LOCK_QTD == true)
                     {
@@ -2286,12 +2147,6 @@ namespace AvanteSales.Pro.Fragments
                     {
                         lblValorFinalItem.Text = (CSGlobal.StrToDecimal(txtValorUnitarioSemADF.Text) + CSGlobal.StrToDecimal(lblValorAdicionalFinanceiro.Text)).ToString(CSGlobal.DecimalStringFormat);
                         txtValorFinalItem.Text = (CSGlobal.StrToDecimal(txtValorUnitarioSemADF.Text) + CSGlobal.StrToDecimal(lblValorAdicionalFinanceiro.Text)).ToString(CSGlobal.DecimalStringFormat);
-
-                        //if (CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.VLR_INDENIZACAO_UNIDADE != 0)
-                        //    txtValorFinalItemIndenizacao.Text = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current.VLR_INDENIZACAO_UNIDADE.ToString(CSGlobal.DecimalStringFormat);
-                        //else
-                        //    txtValorFinalItemIndenizacao.Text = "";
-
                     }
                     else
                     {
@@ -2352,7 +2207,7 @@ namespace AvanteSales.Pro.Fragments
                             tabelaPadrao = i;
                     }
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
 
                 }
@@ -2401,7 +2256,7 @@ namespace AvanteSales.Pro.Fragments
                 RecalculaValorFinalDoItemPraTextBox();
                 CalculaEMostraValorTotal();
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -2546,7 +2401,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return Qtd;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return 0;
             }
@@ -2556,22 +2411,21 @@ namespace AvanteSales.Pro.Fragments
         {
             try
             {
-                //if (GetQtdPedidaUnidadeIndenizacao() > 0)
-                //{
-                if (!ValidaAbatimentoInvalido())
-                    return false;
+                if (GetQtdPedidaUnidadeIndenizacao() > 0)
+                {
+                    if (!ValidaAbatimentoInvalido())
+                        return false;
 
-                decimal VlrAbatimentoTabela = CalculaValorTotalItemIndenizacao();
+                    decimal VlrAbatimentoTabela = CalculaValorTotalItemIndenizacao();
 
-                //if (CSGlobal.StrToDecimal(txtValorFinalItemIndenizacao.Text) > VlrAbatimentoTabela)
-                //{
-                //    MessageBox.ShowShortMessageCenter(ActivityContext, "O valor do abatimento (" + CSGlobal.StrToDecimal(txtValorFinalItemIndenizacao.Text).ToString(CSGlobal.DecimalStringFormat) + ") maior que o preço de venda (" + VlrAbatimentoTabela.ToString(CSGlobal.DecimalStringFormat) + ").");
-                //    //return false;
-                //}
-                //}
+                    if (CSGlobal.StrToDecimal(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text) > VlrAbatimentoTabela)
+                    {
+                        MessageBox.ShowShortMessageCenter(ActivityContext, "O valor do abatimento (" + CSGlobal.StrToDecimal(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text).ToString(CSGlobal.DecimalStringFormat) + ") maior que o preço de venda (" + VlrAbatimentoTabela.ToString(CSGlobal.DecimalStringFormat) + ").");
+                    }
+                }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2581,27 +2435,26 @@ namespace AvanteSales.Pro.Fragments
         {
             try
             {
-                //if ((CSGlobal.StrToDecimal(txtQtdeInteiroIndenizacao.Text) != 0 ||
-                //    CSGlobal.StrToDecimal(txtQtdeUnidadeIndenizacao.Text) != 0) &&
-                //    CSGlobal.StrToDecimal(txtValorFinalItemIndenizacao.Text) == 0)
-                //{
-                //    MessageBox.ShowShortMessageCenter(ActivityContext, "Valor de abatimento inválido.");
-                //    txtValorFinalItemIndenizacao.RequestFocus();
-                //    return false;
-                //}
+                if ((CSGlobal.StrToDecimal(ProdutoAbatimento.txtQtdeInteiroIndenizacao.Text) != 0 ||
+                    CSGlobal.StrToDecimal(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text) != 0) &&
+                    CSGlobal.StrToDecimal(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text) == 0)
+                {
+                    MessageBox.ShowShortMessageCenter(ActivityContext, "Valor de abatimento inválido.");
+                    ProdutoAbatimento.txtValorFinalItemIndenizacao.RequestFocus();
+                    return false;
+                }
 
-                //if (CSGlobal.StrToDecimal(txtValorFinalItemIndenizacao.Text) != 0 &&
-                //    CSGlobal.StrToDecimal(txtQtdeInteiroIndenizacao.Text) == 0 &&
-                //    CSGlobal.StrToDecimal(txtQtdeUnidadeIndenizacao.Text) == 0)
-                //{
-                //    MessageBox.ShowShortMessageCenter(ActivityContext, "Quantidade de abatimento inválida.");
-                //    txtValorFinalItemIndenizacao.RequestFocus();
-                //    return false;
-                //}
+                if (CSGlobal.StrToDecimal(ProdutoAbatimento.txtValorFinalItemIndenizacao.Text) != 0 &&
+                    CSGlobal.StrToDecimal(ProdutoAbatimento.txtQtdeInteiroIndenizacao.Text) == 0 &&
+                    CSGlobal.StrToDecimal(ProdutoAbatimento.txtQtdeUnidadeIndenizacao.Text) == 0)
+                {
+                    MessageBox.ShowShortMessageCenter(ActivityContext, "Quantidade de abatimento inválida.");
+                    return false;
+                }
 
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2630,7 +2483,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 //CSGlobal.GravarLog("ProdutoPedido-ValidacaoNaoBroker", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return false;
@@ -2647,7 +2500,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2660,7 +2513,7 @@ namespace AvanteSales.Pro.Fragments
                 if (CSGlobal.StrToDecimal(txtDescIncond.Text) > CSProdutos.Current.PRC_MAXIMO_DESCONTO && CSProdutos.Current.PRC_MAXIMO_DESCONTO > 0)
                     MessageBox.ShowShortMessageCenter(ActivityContext, "Atenção, percentual de desconto maior que \"" + CSProdutos.Current.PRC_MAXIMO_DESCONTO.ToString(CSGlobal.DecimalStringFormat) + "\".");
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
 
             }
@@ -2677,7 +2530,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2710,7 +2563,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2749,7 +2602,7 @@ namespace AvanteSales.Pro.Fragments
                 else
                     return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2772,7 +2625,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2868,7 +2721,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return valorSaldoDesconto;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return 0;
             }
@@ -2896,7 +2749,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2925,7 +2778,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
@@ -2969,7 +2822,7 @@ namespace AvanteSales.Pro.Fragments
                 else
                     return false;
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }

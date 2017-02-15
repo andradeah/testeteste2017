@@ -2148,9 +2148,9 @@ namespace AvanteSales
                                 CSGlobal.PesquisarComoSugerido ||
                                 CSEmpregados.Current.IND_UTILIZA_PEDIDO_SUGERIDO)
                             {
-                                TimeSpan Diferença = DateTime.Now - reader.GetDateTime(1);
+                                TimeSpan Diferenca = DateTime.Now - reader.GetDateTime(1);
 
-                                aGiroProduto[4] = Convert.ToDecimal(Diferença.Days);
+                                aGiroProduto[4] = Convert.ToDecimal(Diferenca.Days);
                             }
 
                             break;

@@ -454,7 +454,7 @@ namespace AvanteSales
 
         public static string[] CalculaQuantidadeSugeridaDetalhada(CSColetaEstoquePDV.CSColetaEstoqueProduto produto)
         {
-            string[] Variáveis = new string[8];
+            string[] Variaveis = new string[8];
 
             int ParametroEmpresa = 0;
 
@@ -470,10 +470,10 @@ namespace AvanteSales
 
             giroMedio = CalculaGiroMedio(produto);
 
-            Variáveis[0] = ParametroEmpresa.ToString();
-            Variáveis[1] = (produto.SOM_UTM_QTD_GIRO_SELLOUT + produto.PRODUTO.QTD_GIRO_SELLOUT).ToString(CSGlobal.DecimalStringFormat);
+            Variaveis[0] = ParametroEmpresa.ToString();
+            Variaveis[1] = (produto.SOM_UTM_QTD_GIRO_SELLOUT + produto.PRODUTO.QTD_GIRO_SELLOUT).ToString(CSGlobal.DecimalStringFormat);
             //Variáveis[2] = produto.PRODUTO.QTD_GIRO_SELLOUT.ToString(CSGlobal.DecimalStringFormat);
-            Variáveis[2] = giroMedio.ToString(CSGlobal.DecimalStringFormat);
+            Variaveis[2] = giroMedio.ToString(CSGlobal.DecimalStringFormat);
 
             var intervaloDiasPlanejado = 0;
             switch (CSPDVs.Current.DSC_CICLO_VISITA.Trim().Length)
@@ -499,10 +499,10 @@ namespace AvanteSales
 
             var percentualDesconto = (PCT_SEGURANCA / 100) * intervaloDiasPlanejado;
 
-            Variáveis[3] = intervaloDiasPlanejado.ToString(CSGlobal.DecimalStringFormat);
-            Variáveis[4] = percentualDesconto.ToString(CSGlobal.DecimalStringFormat);
-            Variáveis[5] = produto.QTD_COLETADA_TOTAL.ToString();
-            Variáveis[6] = "(" + giroMedio.ToString(CSGlobal.DecimalStringFormat) + "*(" + intervaloDiasPlanejado.ToString(CSGlobal.DecimalStringFormat) + " + " + percentualDesconto.ToString(CSGlobal.DecimalStringFormat) + ")) - " + produto.QTD_COLETADA_TOTAL.ToString();
+            Variaveis[3] = intervaloDiasPlanejado.ToString(CSGlobal.DecimalStringFormat);
+            Variaveis[4] = percentualDesconto.ToString(CSGlobal.DecimalStringFormat);
+            Variaveis[5] = produto.QTD_COLETADA_TOTAL.ToString();
+            Variaveis[6] = "(" + giroMedio.ToString(CSGlobal.DecimalStringFormat) + "*(" + intervaloDiasPlanejado.ToString(CSGlobal.DecimalStringFormat) + " + " + percentualDesconto.ToString(CSGlobal.DecimalStringFormat) + ")) - " + produto.QTD_COLETADA_TOTAL.ToString();
 
             int Resultado;
 
@@ -513,9 +513,9 @@ namespace AvanteSales
                 Resultado = 0;
             }
 
-            Variáveis[7] = Resultado.ToString();
+            Variaveis[7] = Resultado.ToString();
 
-            return Variáveis;
+            return Variaveis;
         }
 
         public int Add(CSColetaEstoquePDV.CSColetaEstoqueProduto produtoColetado)

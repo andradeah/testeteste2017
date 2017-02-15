@@ -32,9 +32,10 @@ namespace AvanteSales.Pro.Fragments
         private const int frmPedidoSugerido = 6;
         private const int frmProdutosIndicados = 7;
         private const int frmFoto = 8;
-        private string NomeFoto;
+        //private string NomeFoto;
         public static decimal Vlr_antes_exclusao = 0m;
         private static bool CarregandoDados;
+        bool EdicaoPedido;
         #region [ Controles ]
 
         private TextView lblPolitica;
@@ -59,8 +60,8 @@ namespace AvanteSales.Pro.Fragments
         private Button btnNovoProduto;
         private static TextView lblVolume;
         private static TextView lblPesoBruto;
-        static ProgressDialog progressDialogVerificar;
-        static ProgressDialog progressDialogIndicados;
+        //static ProgressDialog progressDialogVerificar;
+        //static ProgressDialog progressDialogIndicados;
         static ProgressDialog progressDialogRecalculo;
 
         #endregion
@@ -120,7 +121,7 @@ namespace AvanteSales.Pro.Fragments
                 Fechar();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -136,7 +137,7 @@ namespace AvanteSales.Pro.Fragments
                 else
                     return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -154,7 +155,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -172,7 +173,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -204,7 +205,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return ValidaDados2();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -229,7 +230,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -253,7 +254,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return ValidaDados3();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -293,7 +294,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -374,7 +375,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -391,7 +392,7 @@ namespace AvanteSales.Pro.Fragments
                     CSPDVs.Current.PEDIDOS_PDV.Current.COD_PDV_SOLDTO = emissorSelecionado;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -442,7 +443,7 @@ namespace AvanteSales.Pro.Fragments
                 CSPDVs.Current.PEDIDOS_PDV.Current = null;
                 ((Cliente)ActivityContext).AbrirPedidos();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -479,7 +480,7 @@ namespace AvanteSales.Pro.Fragments
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -493,7 +494,7 @@ namespace AvanteSales.Pro.Fragments
                     SalvarPedidoEmail();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -511,7 +512,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -564,7 +565,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -585,7 +586,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -625,7 +626,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -642,7 +643,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -659,7 +660,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -691,7 +692,7 @@ namespace AvanteSales.Pro.Fragments
                     //Finish();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -705,7 +706,7 @@ namespace AvanteSales.Pro.Fragments
 
                 DeletaPedidoAtual();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -724,7 +725,7 @@ namespace AvanteSales.Pro.Fragments
 
                 ((Cliente)ActivityContext).AbrirPedidos();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -760,7 +761,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -775,7 +776,7 @@ namespace AvanteSales.Pro.Fragments
                     SalvarPedidoEmail();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -826,7 +827,7 @@ namespace AvanteSales.Pro.Fragments
                 //    }
                 //}
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -876,7 +877,7 @@ namespace AvanteSales.Pro.Fragments
                     else
                         return false;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return false;
                 }
@@ -948,6 +949,7 @@ namespace AvanteSales.Pro.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.pedido, container, false);
+            EdicaoPedido = Arguments == null ? false : Arguments.GetBoolean("edicaoPedido", false);
             FindViewsById(view);
             Eventos();
             ConfiguraTela();
@@ -1009,7 +1011,7 @@ namespace AvanteSales.Pro.Fragments
                     }
                 }
 
-                Inicializacao(Arguments.GetBoolean("edicaoPedido", false));
+                Inicializacao(EdicaoPedido);
             }
             catch (Exception ex)
             {
@@ -1046,7 +1048,8 @@ namespace AvanteSales.Pro.Fragments
             progressDialog = new ProgressDialogCustomizado(ActivityContext, thisLayoutInflater).Customizar();
             progressDialog.Show();
 
-            if (!edicao &&
+            if (!IsBroker() &&
+                !edicao &&
                 !((Cliente)ActivityContext).MotivoNaoCompraProdutoIndicado &&
                   CSMotivos.ItemsMotivoIndicados.Count > 0 &&
                   CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Cast<CSItemsPedido.CSItemPedido>().Where(i => i.STATE != ObjectState.DELETADO).ToList().Count > 0)
@@ -1195,7 +1198,7 @@ namespace AvanteSales.Pro.Fragments
                             indexOperacao = 0;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }
@@ -1230,7 +1233,7 @@ namespace AvanteSales.Pro.Fragments
                     if (cboEmissor.SelectedItem == null && adapterEmissor.Count > 0)
                         indexEmissor = 0;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }
@@ -1273,7 +1276,7 @@ namespace AvanteSales.Pro.Fragments
 
                     CSPDVs.Current.PEDIDOS_PDV.Current.VLR_INDENIZACAO = totalIndenizacaoPedido;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }
@@ -1297,7 +1300,7 @@ namespace AvanteSales.Pro.Fragments
 
                 IsDirty = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -1336,7 +1339,7 @@ namespace AvanteSales.Pro.Fragments
                     lblPesoBruto.Text = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Cast<CSItemsPedido.CSItemPedido>().Where(c => c.STATE != ObjectState.DELETADO).Sum(c => Math.Round((c.PRODUTO.VLR_PESO_PRODUTO * c.QTD_PEDIDA_TOTAL) / c.PRODUTO.QTD_UNIDADE_EMBALAGEM, 2)).ToString(CSGlobal.DecimalStringFormat);
                 });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -1356,7 +1359,7 @@ namespace AvanteSales.Pro.Fragments
                     btnListaProdutos.Text = string.Format("Lista ({0})", qtdProdutos);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -1417,7 +1420,7 @@ namespace AvanteSales.Pro.Fragments
                 txtDescontoIndenizacao.Text = totalIndenizacaoPedido.ToString(CSGlobal.DecimalStringFormat);
                 CSPDVs.Current.PEDIDOS_PDV.Current.VLR_INDENIZACAO = totalIndenizacaoPedido;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -1472,7 +1475,7 @@ namespace AvanteSales.Pro.Fragments
                     IsDirty = true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -1498,7 +1501,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -1615,7 +1618,7 @@ namespace AvanteSales.Pro.Fragments
                 {
                     return CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Cast<CSItemsPedido.CSItemPedido>().Count(c => c.STATE != ObjectState.INALTERADO) > 0;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return false;
                 }
@@ -1701,7 +1704,7 @@ namespace AvanteSales.Pro.Fragments
 
                     return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return false;
                 }
@@ -1788,7 +1791,7 @@ namespace AvanteSales.Pro.Fragments
                             condicoesInativasAteAgora++;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }
@@ -1811,7 +1814,7 @@ namespace AvanteSales.Pro.Fragments
                     new ThreadSelectedOperacao().Execute();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -1955,7 +1958,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -1990,7 +1993,7 @@ namespace AvanteSales.Pro.Fragments
                 //i.PutExtra("txtAdf", lblAdf.Text);
                 //this.StartActivityForResult(i, frmProdutos);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -2324,7 +2327,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -2341,7 +2344,7 @@ namespace AvanteSales.Pro.Fragments
                     ((Cliente)Activity).AbrirListaProdutos((int)ActivitiesNames.Pedido, txtDescontoIndenizacao.Text, lblAdf.Text);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -2448,7 +2451,7 @@ namespace AvanteSales.Pro.Fragments
                     chkIndenizacao.Enabled = false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }

@@ -26,5 +26,3 @@ D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager\obj\Rel
 D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager\obj\Release\uploadflags.txt
 D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager\obj\Release\AvanteSales.SyncManager.dll.mdb
 D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager\bin\Release\AvanteSales.SyncManager.dll.mdb
-D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager\obj\Release\AvanteSales.SyncManager.dll.mdb
-D:\Projetos\Flag.AvanteSales.Pro\NovoAvanteSales\AvanteSales.SyncManager\bin\Release\AvanteSales.SyncManager.dll.mdb

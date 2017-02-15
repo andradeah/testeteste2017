@@ -119,7 +119,7 @@ namespace AvanteSales.Pro.Activities
                     CarregarFotoSetParametros(CSPDVs.Current.DSC_NOME_FOTO);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

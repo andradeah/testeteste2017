@@ -40,7 +40,7 @@ namespace AvanteSales.Pro.Formatters
 
                 return progress;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }

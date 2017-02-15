@@ -164,6 +164,7 @@ namespace AvanteSales.Pro.Fragments
             else if (TipoMotivo == CSMotivos.CSTipoMotivo.NAO_COMPRA_PRODUTOS_INDICADOS)
             {
                 CSPDVs.Current.PEDIDOS_PDV.Current.COD_MOTIVO = motivo.COD_MOTIVO;
+                CSPDVs.Current.PEDIDOS_PDV.Current.STATE = ObjectState.ALTERADO;
             }
         }
 

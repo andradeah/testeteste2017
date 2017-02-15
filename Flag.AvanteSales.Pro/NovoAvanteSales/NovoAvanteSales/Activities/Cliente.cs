@@ -440,13 +440,11 @@ namespace AvanteSales.Pro.Activities
         private class DrawerMenuAdapter : ArrayAdapter<string>
         {
             List<string> MenuItems;
-            Context Context;
             int LayoutResourceId;
 
             public DrawerMenuAdapter(Context context, List<string> menuItems, int layoutResourceId) : base(context, layoutResourceId, menuItems)
             {
                 MenuItems = menuItems;
-                Context = context;
                 LayoutResourceId = layoutResourceId;
             }
 
@@ -662,7 +660,7 @@ namespace AvanteSales.Pro.Activities
                 ft.SetCustomAnimations(Resource.Animation.slide_right_to_left, Resource.Animation.slide_left_to_right);
                 ft.Commit();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -1150,7 +1148,7 @@ namespace AvanteSales.Pro.Activities
                     if (CSEmpresa.Current.IND_UTILIZA_FLEXX_GPS == "S")
                         localizacaoFlexxGpsFinal = CSGlobal.GetLocalizacaoFlexXGPS();
                 }
-                catch (UnauthorizedAccessException ex)
+                catch (UnauthorizedAccessException)
                 {
                     MessageBox.AlertErro(CurrentActivity, "Acesso negado à pasta de gravação de dados do FlexX GPS");
                     return;
@@ -1177,7 +1175,7 @@ namespace AvanteSales.Pro.Activities
                         GravaInformacaoFlexxGPS();
                     }
                 }
-                catch (UnauthorizedAccessException ex)
+                catch (UnauthorizedAccessException)
                 {
                     MessageBox.AlertErro(CurrentActivity, "Acesso negado à pasta de gravação de dados do FlexX GPS");
                     return;
@@ -1744,7 +1742,7 @@ namespace AvanteSales.Pro.Activities
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

@@ -87,7 +87,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return vendaValidaBunge;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -478,7 +478,7 @@ namespace AvanteSales.Pro.Fragments
                     CSGruposComercializacao classeGrupoComercializacao = new CSGruposComercializacao();
                     Linhas.AddRange(classeGrupoComercializacao.GrupoComercializacaoFiltrado());
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-CarregaComboBoxGrupoComercializacao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 }

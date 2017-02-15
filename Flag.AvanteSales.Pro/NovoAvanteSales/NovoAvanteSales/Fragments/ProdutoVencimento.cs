@@ -193,7 +193,7 @@ namespace AvanteSales.Pro.Fragments
                     LimparCampos();
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 MessageBox.Alert(Activity, "Verifique o formato da data.");
             }

@@ -47,11 +47,11 @@ namespace AvanteSales.Pro.Activities
         private const int frmProdutoIndenizao = 6;
         private const int frmOpcaoOrdenacaoProduto = 7;
         private static ProgressDialog progressDialog;
-        private static ProgressDialog progressDialogStart;
+        //private static ProgressDialog progressDialogStart;
         private static AppCompatActivity CurrentActivity;
-        private CSItemsPedido.CSItemPedido backupItem;
+        //private CSItemsPedido.CSItemPedido backupItem;
         public static bool RealizouVendaCombo = false;
-        static CSProdutos.CSProduto produtoCombo = null;
+        //static CSProdutos.CSProduto produtoCombo = null;
         private static int COD_GRUPO;
         private static List<CSProdutos.CSProduto> produtosCarregadosBunge;
         private List<CSProdutos.CSProduto> ProdutosAdapter;
@@ -68,8 +68,8 @@ namespace AvanteSales.Pro.Activities
         private static TextView tvHeaderValor;
         private LinearLayout HeaderListView;
         private ExpandableListView elvResultado;
-        private static bool thread_executando;
-        private int Repeticao = 0;
+        //private static bool thread_executando;
+        //private int Repeticao = 0;
         ProdutosListViewBaseAdapter ProdutosListViewBaseAdapterProp;
         static ProgressDialog progressDialogFamilia;
 
@@ -82,7 +82,7 @@ namespace AvanteSales.Pro.Activities
         static ListView lvwProdutos;
         private static bool m_ExecutandoMostraProdutos = false;
         private int m_NumeroProdutosPedido;
-        private static bool m_IndClicouFiltroEspCat = false;
+        //private static bool m_IndClicouFiltroEspCat = false;
         private static bool m_executarMontaProdutos = true;
         private bool m_IsDirty = false;
         private static bool CarregandoCombo;
@@ -186,7 +186,7 @@ namespace AvanteSales.Pro.Activities
                 }
                 base.OnActivityResult(requestCode, resultCode, data);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-OnActivityResult", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -224,7 +224,7 @@ namespace AvanteSales.Pro.Activities
                 }
                 familia = (CSFamiliasProduto.CSFamiliaProduto)((CSItemCombo)cboFamiliaProduto.SelectedItem).Valor;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-FiltrosProdutos", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -255,7 +255,7 @@ namespace AvanteSales.Pro.Activities
                     frmProdutos_OnProdutoEncontrado(produto);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-RetornoDeProcuraProdutoIndenizacao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -274,7 +274,7 @@ namespace AvanteSales.Pro.Activities
                 // marca que nao existe nenhum produto mais selecionado
                 CSProdutos.Current = null;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-RetornoDeProdutoIndenizacao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -322,7 +322,7 @@ namespace AvanteSales.Pro.Activities
                 lblCodPdv.Text = CSPDVs.Current.COD_PDV.ToString();
                 lblNomePdv.Text = CSPDVs.Current.DSC_RAZAO_SOCIAL;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-OnCreate", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -403,7 +403,7 @@ namespace AvanteSales.Pro.Activities
                     AbrirProduto();
                 //}
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-OnListItemClick", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -422,7 +422,7 @@ namespace AvanteSales.Pro.Activities
 
                 SetScrollPosition();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-ChkExibirImagens", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -453,7 +453,7 @@ namespace AvanteSales.Pro.Activities
 
                 SetScrollPosition();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-HeaderListView", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -472,7 +472,7 @@ namespace AvanteSales.Pro.Activities
                 if (CSProdutos.Existe_Produto_Categoria_Exclusiva)
                     chkProdutosExclusivos.Visibility = visibilityState;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-AlterarVisibilidadeCabecalho", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -490,7 +490,7 @@ namespace AvanteSales.Pro.Activities
                     MostraProdutosComFiltrosSelecionados();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-CboFamiliaProdutoItemSelected", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -516,7 +516,7 @@ namespace AvanteSales.Pro.Activities
                     new ThreadGrupoProduto().Execute();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-CboGrupoComercializacao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -552,7 +552,7 @@ namespace AvanteSales.Pro.Activities
                 if (CSPDVs.Current.PEDIDOS_INDENIZACAO.Current != null)
                     SelecionarGrupoComercializacaoIndenizacao();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-OnStart", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -576,7 +576,7 @@ namespace AvanteSales.Pro.Activities
 
                 cboGrupoComercializacao.Enabled = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-SelecionarGrupoComercializacaoIndenizacao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -611,7 +611,7 @@ namespace AvanteSales.Pro.Activities
                         return base.OnOptionsItemSelected(item);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-OnOptionsItemSelected", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return false;
@@ -627,7 +627,7 @@ namespace AvanteSales.Pro.Activities
                 base.OnBackPressed();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-OnBackPressed", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -645,7 +645,7 @@ namespace AvanteSales.Pro.Activities
                 trCheckBoxes.Visibility = ViewStates.Visible;
                 return retorno;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-DismissPopupSearch", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return false;
@@ -658,7 +658,7 @@ namespace AvanteSales.Pro.Activities
             {
                 Fechar();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-Fechar", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -671,7 +671,7 @@ namespace AvanteSales.Pro.Activities
                 mnuPesquisar_Click();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-OnSearchedRequested", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return false;
@@ -705,7 +705,7 @@ namespace AvanteSales.Pro.Activities
 
                 return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-PedidoSugerido", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return false;
@@ -825,7 +825,7 @@ namespace AvanteSales.Pro.Activities
                 this.StartActivityForResult(i, dialogProduto);
                 //StartActivityForResult(i, dialogProduto);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-AbrirDialogProduto", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -871,7 +871,7 @@ namespace AvanteSales.Pro.Activities
                 }
                 return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-ProdutoFoiVendidoNasUltimasVisitas", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return false;
@@ -907,7 +907,7 @@ namespace AvanteSales.Pro.Activities
                         break;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-RetornoDeDialogProduto", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -925,7 +925,7 @@ namespace AvanteSales.Pro.Activities
             {
                 return CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 2;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-IsBroker", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return false;
@@ -977,7 +977,7 @@ namespace AvanteSales.Pro.Activities
                     SelecionarProduto(produto);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-OnProdutoEncontrado", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1018,7 +1018,7 @@ namespace AvanteSales.Pro.Activities
 
                 new ThreadGrupoComercializacao().Execute();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-FrmProdutosLoad", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1084,7 +1084,7 @@ namespace AvanteSales.Pro.Activities
                         i++;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-CarregarComboBoxGrupoProduto", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 }
@@ -1165,7 +1165,7 @@ namespace AvanteSales.Pro.Activities
                     ictodos.Valor = grptodos;
                     adapter.Add(ictodos);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-CarregaComboBoxGrupoComercializacao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 }
@@ -1181,7 +1181,7 @@ namespace AvanteSales.Pro.Activities
                 else
                     chkProdutosExclusivos.Visibility = ViewStates.Gone;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-ExibeCheckProdutosExclusivos", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1202,7 +1202,7 @@ namespace AvanteSales.Pro.Activities
 
                 new ThreadCarregarFamiliaProduto().Execute();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-CboGrupoProdutoItemSelected", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1215,7 +1215,7 @@ namespace AvanteSales.Pro.Activities
 
             protected override Java.Lang.Object DoInBackground(params Java.Lang.Object[] @params)
             {
-                m_IndClicouFiltroEspCat = false;
+                //m_IndClicouFiltroEspCat = false;
 
                 int i = 0;
 
@@ -1317,17 +1317,17 @@ namespace AvanteSales.Pro.Activities
         {
             try
             {
-                m_IndClicouFiltroEspCat = true;
+                //m_IndClicouFiltroEspCat = true;
 
-                if (!m_ExecutandoMostraProdutos)
-                    m_IndClicouFiltroEspCat = true;
+                //if (!m_ExecutandoMostraProdutos)
+                //    m_IndClicouFiltroEspCat = true;
 
                 if (m_ExecutandoMostraProdutos)
                     return;
 
                 MostraProdutosComFiltrosSelecionados();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-ChkProdutosExclusivosCheckedChange", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1399,7 +1399,7 @@ namespace AvanteSales.Pro.Activities
         {
             protected override decimal RunInBackground(params int[] @params)
             {
-                thread_executando = true;
+                //thread_executando = true;
                 MostraProdutos(COD_COMERCIALIZACAO, COD_GRUPO, familia.COD_FAMILIA_PRODUTO, 0);
 
                 return 0;
@@ -1415,13 +1415,13 @@ namespace AvanteSales.Pro.Activities
                         Produtos.progressDialog.Dispose();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-OnPostExecute", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 }
                 finally
                 {
-                    thread_executando = false;
+                    //thread_executando = false;
                     base.OnPostExecute(result);
                 }
             }
@@ -1488,9 +1488,9 @@ namespace AvanteSales.Pro.Activities
                     produtosCarregadosBunge = prodsFiltrados;
 
                     m_ExecutandoMostraProdutos = false;
-                    m_IndClicouFiltroEspCat = false;
+                    //m_IndClicouFiltroEspCat = false;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-MostraProdutosThread", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 }
@@ -1505,7 +1505,7 @@ namespace AvanteSales.Pro.Activities
                     CSPoliticaBunge pricingBunge = new CSPoliticaBunge(produto.COD_PRODUTO, CSEmpresa.Current.COD_NOTEBOOK1);
                     retorno = pricingBunge.ValidacaoPrecoProduto();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-ValidarDadosBungeThread", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
 
@@ -1643,10 +1643,10 @@ namespace AvanteSales.Pro.Activities
                     //ThreadBuscaPrecos.Execute(prodsFiltrados.ToArray());
 
                     m_ExecutandoMostraProdutos = false;
-                    m_IndClicouFiltroEspCat = false;
+                    //m_IndClicouFiltroEspCat = false;
                 });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-MostraProdutos", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1660,7 +1660,7 @@ namespace AvanteSales.Pro.Activities
                 prodFiltrados = prodFiltrados.Where(p => !codigoDosProdutosJaAdicionados.Contains(p.COD_PRODUTO)).ToList();
                 return prodFiltrados;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-RemoveProdutosJaAdicionadosAoPedido", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return null;
@@ -1675,7 +1675,7 @@ namespace AvanteSales.Pro.Activities
                 prodFiltrados = prodFiltrados.Where(p => !codigoDosProdutosJaAdicionados.Contains(p.COD_PRODUTO)).ToList();
                 return prodFiltrados;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-RemoveProdutosJaAdicionadosAIndenizacao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                 return null;
@@ -1855,7 +1855,7 @@ namespace AvanteSales.Pro.Activities
             {
                 Fechar();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-Finish", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1878,7 +1878,7 @@ namespace AvanteSales.Pro.Activities
                 }
                 base.Finish();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-Fechar", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1892,7 +1892,7 @@ namespace AvanteSales.Pro.Activities
 
                 lvwProdutosIndenizacao_ItemActivate();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-SelecionarProduto", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1906,7 +1906,7 @@ namespace AvanteSales.Pro.Activities
 
                 lvwProdutosIndenizacao_ItemActivate();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-SelecionarProduto", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1948,7 +1948,7 @@ namespace AvanteSales.Pro.Activities
                 this.StartActivityForResult(i, frmProdutoIndenizao);
                 //StartActivityForResult(new Intent(this, new ProdutoIndenizacao().Class), frmProdutoIndenizao);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-LvwProdutosIndenizacao", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1959,7 +1959,7 @@ namespace AvanteSales.Pro.Activities
             {
                 currentPostion = lvwProdutos.FirstVisiblePosition;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-SaveScrollPosition", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -1971,7 +1971,7 @@ namespace AvanteSales.Pro.Activities
             {
                 lvwProdutos.SetSelection(currentPostion);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CSGlobal.GravarLog("Produto-SetScrollPosition", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
             }
@@ -2099,7 +2099,7 @@ namespace AvanteSales.Pro.Activities
                 {
                     return CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 2;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-IsBroker", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                     return false;
@@ -2112,7 +2112,7 @@ namespace AvanteSales.Pro.Activities
                 {
                     return CSTiposDistribPolicitcaPrecos.Current.COD_TIPO_DISTRIBUICAO_POLITICA == 3;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-IsBroker", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                     return false;
@@ -2141,7 +2141,7 @@ namespace AvanteSales.Pro.Activities
             public IList<CSProdutos.CSProduto> produtos;
             public static Dictionary<int, decimal> dicPrecoProdutos;
             int resourceId;
-            bool produtosExclusivos;
+            //bool produtosExclusivos;
 
             public ProdutosListViewAdapter(ListActivity c, int textViewResourceId, IList<CSProdutos.CSProduto> objects, bool chkProdutosExclusivos)
                 : base(c, textViewResourceId, objects)
@@ -2188,7 +2188,7 @@ namespace AvanteSales.Pro.Activities
                     }
                     return produtosFiltrados.Distinct().ToList();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //CSGlobal.GravarLog("Produto-FilterDada", ex.Message, ex.InnerException != null ? ex.InnerException.ToString() : "", ex.StackTrace);
                     return null;

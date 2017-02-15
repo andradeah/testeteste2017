@@ -24,7 +24,7 @@ namespace AvanteSales.Pro.Fragments
         private const int dialogProduto = 1;
         private const int frmProdutoPedido = 2;
         private static int PositionItemVendido;
-        private CSItemsPedido.CSItemPedido backupItem;
+        //private CSItemsPedido.CSItemPedido backupItem;
         public static decimal decimalPedido;
         private static int currentPosition;
         static TextView txtProdutosVendidos;
@@ -32,11 +32,12 @@ namespace AvanteSales.Pro.Fragments
         static TextView txtPesquisa;
         static List<CSProdutos.CSProduto> CurrentAdapter;
         static CheckBox chkFiltroProdutos;
-        private static bool ExisteProdutoTop;
+        //private static bool ExisteProdutoTop;
         static ProgressDialog progressDialog;
         static ListView listProdutos;
         static Android.Support.V4.App.FragmentActivity CurrentActivity;
         LayoutInflater thisLayoutInflater;
+        static bool CarregandoDados;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -47,13 +48,14 @@ namespace AvanteSales.Pro.Fragments
         {
             var view = inflater.Inflate(Resource.Layout.lista_produtos_indicados, container, false);
             PositionItemVendido = 0;
-            ExisteProdutoTop = false;
+            //ExisteProdutoTop = false;
             CurrentActivity = Activity;
             thisLayoutInflater = inflater;
             FindViewsById(view);
             Eventos();
             ProdutosIndicados = null;
             ((Cliente)Activity).RotinaProdutosIndicados = false;
+            CarregandoDados = true;
             return view;
         }
 
@@ -74,6 +76,8 @@ namespace AvanteSales.Pro.Fragments
 
                 new ThreadCarregarProdutosIndicados().Execute();
             }
+            else
+                CarregandoDados = false;
         }
 
         private void FindViewsById(View view)
@@ -94,7 +98,7 @@ namespace AvanteSales.Pro.Fragments
                 listProdutos.ItemClick += ListProdutos_ItemClick;
                 chkFiltroProdutos.CheckedChange += ChkFiltroProdutos_CheckedChange;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -106,7 +110,7 @@ namespace AvanteSales.Pro.Fragments
             {
                 CarregarAdapterAtualComFiltros();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -118,7 +122,7 @@ namespace AvanteSales.Pro.Fragments
             {
                 SelecionarProduto(e.Position);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -130,7 +134,7 @@ namespace AvanteSales.Pro.Fragments
             {
                 AbrirDialogProduto(produtoVendido);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -151,7 +155,7 @@ namespace AvanteSales.Pro.Fragments
                             SetScrollPosition();
                         }, "Cancelar", (_sender, _e) => { }, true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -161,9 +165,10 @@ namespace AvanteSales.Pro.Fragments
         {
             try
             {
-                TodosProdutosIndicadosFiltradoPesquisa();
+                if (!CarregandoDados)
+                    TodosProdutosIndicadosFiltradoPesquisa();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -183,7 +188,7 @@ namespace AvanteSales.Pro.Fragments
                     TodosProdutosIndicadosFiltradoPesquisa();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -197,7 +202,7 @@ namespace AvanteSales.Pro.Fragments
 
                 return produtosNaoVendidos;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -209,7 +214,10 @@ namespace AvanteSales.Pro.Fragments
             {
                 if (string.IsNullOrEmpty(txtPesquisa.Text))
                 {
-                    listProdutos.Adapter.Dispose();
+
+                    if (listProdutos.Adapter != null)
+                        listProdutos.Adapter.Dispose();
+
                     if (chkFiltroProdutos.Checked)
                     {
                         var produtosNaoVendidos = RetornaAdapterComRegraDeProdutosNaoVendidos(ProdutosIndicados);
@@ -246,7 +254,7 @@ namespace AvanteSales.Pro.Fragments
                     CurrentAdapter = produtosFiltrados;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -258,7 +266,7 @@ namespace AvanteSales.Pro.Fragments
                 txtTotal.Text = CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Cast<CSItemsPedido.CSItemPedido>().Where(i => i.STATE != ObjectState.DELETADO && i.PRODUTO.IND_PROD_ESPECIFICO_CATEGORIA).Sum(ip => ip.VLR_TOTAL_ITEM).ToString(".00");
                 txtProdutosVendidos.Text = string.Format("{0}/{1}", CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Cast<CSItemsPedido.CSItemPedido>().Where(i => i.STATE != ObjectState.DELETADO && i.PRODUTO.IND_PROD_ESPECIFICO_CATEGORIA).Count(), ProdutosIndicados.Count);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -269,7 +277,7 @@ namespace AvanteSales.Pro.Fragments
             {
                 currentPosition = listProdutos.FirstVisiblePosition;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -281,7 +289,7 @@ namespace AvanteSales.Pro.Fragments
                 listProdutos.Adapter = new ProdutosIndicadosLitemItemAdapter(CurrentActivity, Resource.Layout.lista_produtos_pedido_indicado_row, CurrentAdapter);
                 listProdutos.SetSelection(currentPosition);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -294,7 +302,7 @@ namespace AvanteSales.Pro.Fragments
 
                 lvwProdutos_ItemActivate(position);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -359,7 +367,7 @@ namespace AvanteSales.Pro.Fragments
             {
                 if (!CSGlobal.PedidoComCombo)
                 {
-                    ((Cliente)Activity).AbrirDialogProduto(ProdutoFoiVendidoNasUltimasVisitas(), !CSGlobal.PedidoComCombo, true,produtoVendido);
+                    ((Cliente)Activity).AbrirDialogProduto(ProdutoFoiVendidoNasUltimasVisitas(), !CSGlobal.PedidoComCombo, true, produtoVendido);
 
                     if (IsBunge())
                     {
@@ -372,7 +380,7 @@ namespace AvanteSales.Pro.Fragments
                 else
                     MessageBox.Alert(CurrentActivity, "Não é possível adicionar produtos em um pedido combo.");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -415,7 +423,7 @@ namespace AvanteSales.Pro.Fragments
                 }
                 return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -441,6 +449,7 @@ namespace AvanteSales.Pro.Fragments
                 listProdutos.SetSelection(currentPosition);
                 CSPDVs.Current.PEDIDOS_PDV.Current.ITEMS_PEDIDOS.Current = null;
 
+                CarregandoDados = false;
                 progressDialog.Dismiss();
 
                 base.OnPostExecute(result);
@@ -469,7 +478,7 @@ namespace AvanteSales.Pro.Fragments
                         ProdutosIndicados = listaProdutosIndicados;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                 }
             }
@@ -513,7 +522,7 @@ namespace AvanteSales.Pro.Fragments
                         if (produto.IND_PROD_TOP_CATEGORIA)
                         {
                             imgProdEspecifico.SetImageResource(Resource.Drawable.circulo_verde_top);
-                            ExisteProdutoTop = true;
+                            //ExisteProdutoTop = true;
                         }
                         else
                             imgProdEspecifico.SetImageResource(Resource.Drawable.circulo_azul);
@@ -552,7 +561,7 @@ namespace AvanteSales.Pro.Fragments
                     }
                     return convertView;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return null;
                 }

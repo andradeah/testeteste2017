@@ -82,7 +82,7 @@ namespace AvanteSales.Pro.Controles
 
         public void OnDateSet(Object view, DatePickerDialog.DateSetEventArgs e)
         {
-            Data = new DateTime(e.Year, e.MonthOfYear + 1, e.DayOfMonth);
+            Data = new DateTime(e.Year, e.Month + 1, e.DayOfMonth);
             UpdateDisplay();
 
         }

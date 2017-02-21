@@ -1,1 +1,0 @@
-<menu android:background="@drawable/listitem_selector" xmlns:android="http://schemas.android.com/apk/res/android"><item android:id="@+id/itmPesquisar" android:title="Pesquisar" /></menu>
